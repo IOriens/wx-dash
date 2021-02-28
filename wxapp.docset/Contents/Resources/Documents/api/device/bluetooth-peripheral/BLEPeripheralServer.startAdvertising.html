@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>BLEPeripheralServer.startAdvertising(Object Object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="BLEPeripheralServer-startAdvertising-Object-Object"><a href="#BLEPeripheralServer-startAdvertising-Object-Object" aria-hidden="true" class="header-anchor">#</a> BLEPeripheralServer.startAdvertising(Object Object)</h1> <blockquote><p>基础库 2.10.3 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>开始广播本地创建的外围设备。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-Object"><a href="#Object-Object" aria-hidden="true" class="header-anchor">#</a> Object Object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>advertiseRequest</td> <td>Object</td> <td></td> <td>是</td> <td>广播自定义参数</td></tr> <tr><td>powerLevel</td> <td>String</td> <td>medium</td> <td>否</td> <td>广播功率</td></tr></tbody></table></div><p><strong>Object.advertiseRequest 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>connectable</td> <td>Boolean</td> <td>true</td> <td>否</td> <td>当前Service是否可连接</td></tr> <tr><td>deviceName</td> <td>String</td> <td></td> <td>否</td> <td>广播中deviceName字段，默认为空</td></tr> <tr><td>serviceUuids</td> <td>Array.&lt;String&gt;</td> <td></td> <td>否</td> <td>要广播的serviceUuid列表</td></tr> <tr><td>manufacturerData</td> <td>Array.&lt;Object&gt;</td> <td></td> <td>否</td> <td>广播的制造商信息, 仅安卓支持</td></tr></tbody></table></div><p><strong>manufacturerData 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>manufacturerId</td> <td>String</td> <td></td> <td>是</td> <td>制造商ID，0x 开头的十六进制</td></tr> <tr><td>manufacturerSpecificData</td> <td>ArrayBuffer</td> <td></td> <td>否</td> <td>制造商信息</td></tr></tbody></table></div><p><strong>Object.powerLevel 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>low</td> <td>功率低</td> <td></td></tr> <tr><td>medium</td> <td>功率适中</td> <td></td></tr> <tr><td>high</td> <td>功率高</td> <td></td></tr></tbody></table></div></div></div> <!---->    
+</body>
+</html>

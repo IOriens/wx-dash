@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>用户信息</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.getUserInfo(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,208 +12,62 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxgetuserinfoobject-object">wx.getUserInfo(Object object)</h3>
-<blockquote>
-<p>&#x8C03;&#x7528;&#x524D;&#x9700;&#x8981; <a href="../../../framework/open-ability/authorize.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.userInfo&#x3002;</p>
-</blockquote>
-<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>withCredentials</td>
-<td>boolean</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x5E26;&#x4E0A;&#x767B;&#x5F55;&#x6001;&#x4FE1;&#x606F;&#x3002;&#x5F53; withCredentials &#x4E3A; true &#x65F6;&#xFF0C;&#x8981;&#x6C42;&#x6B64;&#x524D;&#x6709;&#x8C03;&#x7528;&#x8FC7; wx.login &#x4E14;&#x767B;&#x5F55;&#x6001;&#x5C1A;&#x672A;&#x8FC7;&#x671F;&#xFF0C;&#x6B64;&#x65F6;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x5305;&#x542B; encryptedData, iv &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF1B;&#x5F53; withCredentials &#x4E3A; false &#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x6C42;&#x6709;&#x767B;&#x5F55;&#x6001;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x5305;&#x542B; encryptedData, iv &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>lang</td>
-<td>string</td>
-<td>en</td>
-<td>&#x5426;</td>
-<td>&#x663E;&#x793A;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x8BED;&#x8A00;</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>object.lang &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>en</td>
-<td>&#x82F1;&#x6587;</td>
-</tr>
-<tr>
-<td>zh_CN</td>
-<td>&#x7B80;&#x4F53;&#x4E2D;&#x6587;</td>
-</tr>
-<tr>
-<td>zh_TW</td>
-<td>&#x7E41;&#x4F53;&#x4E2D;&#x6587;</td>
-</tr>
-</tbody>
-</table>
-<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
-<p><strong>&#x53C2;&#x6570;</strong></p>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>userInfo</td>
-<td><a href="UserInfo.html">UserInfo</a></td>
-<td>&#x7528;&#x6237;&#x4FE1;&#x606F;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x5305;&#x542B; openid &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;</td>
-<td></td>
-</tr>
-<tr>
-<td>rawData</td>
-<td>string</td>
-<td>&#x4E0D;&#x5305;&#x62EC;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x7B7E;&#x540D;</td>
-<td></td>
-</tr>
-<tr>
-<td>signature</td>
-<td>string</td>
-<td>&#x4F7F;&#x7528; sha1( rawData + sessionkey ) &#x5F97;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x4E8E;&#x6821;&#x9A8C;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x8BE6;&#x89C1; <a href="../../../framework/open-ability/signature.html">&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x548C;&#x52A0;&#x89E3;&#x5BC6;</a></td>
-<td></td>
-</tr>
-<tr>
-<td>encryptedData</td>
-<td>string</td>
-<td>&#x5305;&#x62EC;&#x654F;&#x611F;&#x6570;&#x636E;&#x5728;&#x5185;&#x7684;&#x5B8C;&#x6574;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#xFF0C;&#x8BE6;&#x89C1; <a href="../../../framework/open-ability/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x548C;&#x52A0;&#x89E3;&#x5BC6;</a></td>
-<td></td>
-</tr>
-<tr>
-<td>iv</td>
-<td>string</td>
-<td>&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x521D;&#x59CB;&#x5411;&#x91CF;&#xFF0C;&#x8BE6;&#x89C1; <a href="../../../framework/open-ability/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x548C;&#x52A0;&#x89E3;&#x5BC6;</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-comment">// &#x5FC5;&#x987B;&#x662F;&#x5728;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x6388;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;</span>
-wx.getUserInfo({
-    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-keyword">var</span> userInfo = res.userInfo
-        <span class="hljs-keyword">var</span> nickName = userInfo.nickName
-        <span class="hljs-keyword">var</span> avatarUrl = userInfo.avatarUrl
-        <span class="hljs-keyword">var</span> gender = userInfo.gender <span class="hljs-comment">//&#x6027;&#x522B; 0&#xFF1A;&#x672A;&#x77E5;&#x3001;1&#xFF1A;&#x7537;&#x3001;2&#xFF1A;&#x5973;</span>
-        <span class="hljs-keyword">var</span> province = userInfo.province
-        <span class="hljs-keyword">var</span> city = userInfo.city
-        <span class="hljs-keyword">var</span> country = userInfo.country
-    }
-})
-</code></pre>
-<p>encryptedData &#x89E3;&#x5BC6;&#x540E;&#x4E3A;&#x4EE5;&#x4E0B; json &#x7ED3;&#x6784;&#xFF0C;&#x8BE6;&#x89C1;<a href="../../../framework/open-ability/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></p>
-<pre><code class="language-javascript">{
-    <span class="hljs-string">&quot;openId&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;nickName&quot;</span>: <span class="hljs-string">&quot;NICKNAME&quot;</span>,
-    <span class="hljs-string">&quot;gender&quot;</span>: GENDER,
-    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;CITY&quot;</span>,
-    <span class="hljs-string">&quot;province&quot;</span>: <span class="hljs-string">&quot;PROVINCE&quot;</span>,
-    <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;COUNTRY&quot;</span>,
-    <span class="hljs-string">&quot;avatarUrl&quot;</span>: <span class="hljs-string">&quot;AVATARURL&quot;</span>,
-    <span class="hljs-string">&quot;unionId&quot;</span>: <span class="hljs-string">&quot;UNIONID&quot;</span>,
-    <span class="hljs-string">&quot;watermark&quot;</span>: {
-        <span class="hljs-string">&quot;appid&quot;</span>: <span class="hljs-string">&quot;APPID&quot;</span>,
-        <span class="hljs-string">&quot;timestamp&quot;</span>: TIMESTAMP
-    }
-}
-</code></pre>
-<h4 id="&#x63A5;&#x53E3;&#x8C03;&#x6574;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8C03;&#x6574;&#x8BF4;&#x660E;</h4>
-<p>&#x5728;&#x7528;&#x6237;&#x672A;&#x6388;&#x6743;&#x8FC7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#xFF0C;&#x5C06;&#x4E0D;&#x518D;&#x51FA;&#x73B0;&#x6388;&#x6743;&#x5F39;&#x7A97;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x8FDB;&#x5165; fail &#x56DE;&#x8C03;&#xFF08;&#x8BE6;&#x89C1;<a href="https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01" target="_blank">&#x300A;&#x516C;&#x544A;&#x300B;</a>)&#x3002;&#x5728;&#x7528;&#x6237;&#x5DF2;&#x6388;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x6210;&#x529F;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;-2">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x5982;&#x679C;&#x53EA;&#x662F;&#x5C55;&#x793A;&#x7528;&#x6237;&#x5934;&#x50CF;&#x6635;&#x79F0;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &lt;open-data /&gt; &#x7EC4;&#x4EF6; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userAvatarUrl&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userNickName&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- &#x9700;&#x8981;&#x4F7F;&#x7528; button &#x6765;&#x6388;&#x6743;&#x767B;&#x5F55; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{canIUse}}&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;getUserInfo&quot;</span> <span class="hljs-attr">bindgetuserinfo</span>=<span class="hljs-string">&quot;bindGetUserInfo&quot;</span>&gt;</span>&#x6388;&#x6743;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>&gt;</span>&#x8BF7;&#x5347;&#x7EA7;&#x5FAE;&#x4FE1;&#x7248;&#x672C;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-</code></pre>
-<pre><code class="language-js">Page({
-  <span class="hljs-attr">data</span>: {
-    <span class="hljs-attr">canIUse</span>: wx.canIUse(<span class="hljs-string">&apos;button.open-type.getUserInfo&apos;</span>)
-  },
-  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// &#x67E5;&#x770B;&#x662F;&#x5426;&#x6388;&#x6743;</span>
-    wx.getSetting({
-      success (res){
-        <span class="hljs-keyword">if</span> (res.authSetting[<span class="hljs-string">&apos;scope.userInfo&apos;</span>]) {
-          <span class="hljs-comment">// &#x5DF2;&#x7ECF;&#x6388;&#x6743;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528; getUserInfo &#x83B7;&#x53D6;&#x5934;&#x50CF;&#x6635;&#x79F0;</span>
-          wx.getUserInfo({
-            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-              <span class="hljs-built_in">console</span>.log(res.userInfo)
-            }
-          })
-        }
-      }
-    })
-  },
-  bindGetUserInfo (e) {
-    <span class="hljs-built_in">console</span>.log(e.detail.userInfo)
-  }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-getUserInfo-Object-object"><a href="#wx-getUserInfo-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.getUserInfo(Object object)</h1> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">2.3.1</a> 起支持在小程序插件中使用</p></blockquote> <blockquote><p>调用前需要 <a href="../../../framework/open-ability/authorize.html">用户授权</a> scope.userInfo。</p></blockquote> <p>获取用户信息。</p> <p>在小程序插件中使用时，需要在用户信息功能页中获得用户授权之后调用。否则将返回 fail。详见 <a href="../../../framework/plugin/functional-pages/user-info.html">用户信息功能页</a></p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>withCredentials</td> <td>boolean</td> <td></td> <td>否</td> <td>是否带上登录态信息。当 withCredentials 为 true 时，要求此前有调用过 wx.login 且登录态尚未过期，此时返回的数据会包含 encryptedData, iv 等敏感信息；当 withCredentials 为 false 时，不要求有登录态，返回的数据不包含 encryptedData, iv 等敏感信息。</td></tr> <tr><td>lang</td> <td>string</td> <td>en</td> <td>否</td> <td>显示用户信息的语言</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><p><strong>object.lang 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>en</td> <td>英文</td> <td></td></tr> <tr><td>zh_CN</td> <td>简体中文</td> <td></td></tr> <tr><td>zh_TW</td> <td>繁体中文</td> <td></td></tr></tbody></table></div><h4 id="object-success-回调函数"><a href="#object-success-回调函数" aria-hidden="true" class="header-anchor">#</a> object.success 回调函数</h4> <h5 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h5> <h6 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h6> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>userInfo</td> <td><a href="UserInfo.html">UserInfo</a></td> <td>用户信息对象，不包含 openid 等敏感信息</td> <td></td></tr> <tr><td>rawData</td> <td>string</td> <td>不包括敏感信息的原始数据字符串，用于计算签名</td> <td></td></tr> <tr><td>signature</td> <td>string</td> <td>使用 sha1( rawData + sessionkey ) 得到字符串，用于校验用户信息，详见 <a href="../../../framework/open-ability/signature.html">用户数据的签名验证和加解密</a></td> <td></td></tr> <tr><td>encryptedData</td> <td>string</td> <td>包括敏感数据在内的完整用户信息的加密数据，详见 <a href="../../../framework/open-ability/signature.html#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95">用户数据的签名验证和加解密</a></td> <td></td></tr> <tr><td>iv</td> <td>string</td> <td>加密算法的初始向量，详见 <a href="../../../framework/open-ability/signature.html#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95">用户数据的签名验证和加解密</a></td> <td></td></tr> <tr><td>cloudID</td> <td>string</td> <td>敏感数据对应的云 ID，开通<a href="../../../wxcloud/basis/getting-started.html">云开发</a>的小程序才会返回，可通过云调用直接获取开放数据，详细见<a href="../../../framework/open-ability/signature.html#method-cloud">云调用直接获取开放数据</a></td> <td><a href="../../../framework/compatibility.html">2.7.0</a></td></tr></tbody></table></div><h2 id="接口调整说明"><a href="#接口调整说明" aria-hidden="true" class="header-anchor">#</a> 接口调整说明</h2> <p>在用户未授权过的情况下调用此接口，将不再出现授权弹窗，会直接进入 fail 回调（详见<a href="https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01" target="_blank" rel="noopener noreferrer">《公告》<span></span></a>)。在用户已授权的情况下调用此接口，可成功获取用户信息。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 必须是在用户已经授权的情况下调用</span>
+wx<span class="token punctuation">.</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> userInfo <span class="token operator">=</span> res<span class="token punctuation">.</span>userInfo
+    <span class="token keyword">var</span> nickName <span class="token operator">=</span> userInfo<span class="token punctuation">.</span>nickName
+    <span class="token keyword">var</span> avatarUrl <span class="token operator">=</span> userInfo<span class="token punctuation">.</span>avatarUrl
+    <span class="token keyword">var</span> gender <span class="token operator">=</span> userInfo<span class="token punctuation">.</span>gender <span class="token comment">//性别 0：未知、1：男、2：女</span>
+    <span class="token keyword">var</span> province <span class="token operator">=</span> userInfo<span class="token punctuation">.</span>province
+    <span class="token keyword">var</span> city <span class="token operator">=</span> userInfo<span class="token punctuation">.</span>city
+    <span class="token keyword">var</span> country <span class="token operator">=</span> userInfo<span class="token punctuation">.</span>country
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>敏感数据有两种获取方式，一是使用 <a href="../../../framework/open-ability/signature.html#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95">加密数据解密算法</a> 。
+获取得到的开放数据为以下 json 结构：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">"openId"</span><span class="token operator">:</span> <span class="token string">"OPENID"</span><span class="token punctuation">,</span>
+  <span class="token property">"nickName"</span><span class="token operator">:</span> <span class="token string">"NICKNAME"</span><span class="token punctuation">,</span>
+  <span class="token property">"gender"</span><span class="token operator">:</span> GENDER<span class="token punctuation">,</span>
+  <span class="token property">"city"</span><span class="token operator">:</span> <span class="token string">"CITY"</span><span class="token punctuation">,</span>
+  <span class="token property">"province"</span><span class="token operator">:</span> <span class="token string">"PROVINCE"</span><span class="token punctuation">,</span>
+  <span class="token property">"country"</span><span class="token operator">:</span> <span class="token string">"COUNTRY"</span><span class="token punctuation">,</span>
+  <span class="token property">"avatarUrl"</span><span class="token operator">:</span> <span class="token string">"AVATARURL"</span><span class="token punctuation">,</span>
+  <span class="token property">"unionId"</span><span class="token operator">:</span> <span class="token string">"UNIONID"</span><span class="token punctuation">,</span>
+  <span class="token property">"watermark"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"appid"</span><span class="token operator">:</span><span class="token string">"APPID"</span><span class="token punctuation">,</span>
+    <span class="token property">"timestamp"</span><span class="token operator">:</span>TIMESTAMP
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="小程序用户信息组件示例代码"><a href="#小程序用户信息组件示例代码" aria-hidden="true" class="header-anchor">#</a> 小程序用户信息组件示例代码</h2> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 如果只是展示用户头像昵称，可以使用 &lt;open-data /&gt; 组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>open-data</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>userAvatarUrl<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>open-data</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>open-data</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>userNickName<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>open-data</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- 需要使用 button 来授权登录 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{canIUse}}<span class="token punctuation">"</span></span> <span class="token attr-name">open-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>getUserInfo<span class="token punctuation">"</span></span> <span class="token attr-name">bindgetuserinfo</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindGetUserInfo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>授权登录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>else</span><span class="token punctuation">&gt;</span></span>请升级微信版本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    canIUse<span class="token punctuation">:</span> wx<span class="token punctuation">.</span><span class="token function">canIUse</span><span class="token punctuation">(</span><span class="token string">'button.open-type.getUserInfo'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onLoad</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 查看是否授权</span>
+    wx<span class="token punctuation">.</span><span class="token function">getSetting</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>authSetting<span class="token punctuation">[</span><span class="token string">'scope.userInfo'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 已经授权，可以直接调用 getUserInfo 获取头像昵称</span>
+          wx<span class="token punctuation">.</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>userInfo<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">bindGetUserInfo</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>userInfo<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

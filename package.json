@@ -4,18 +4,22 @@
   "description": "Create dash docset for wechat app",
   "scripts": {
     "build": "node index.js",
-    "publish": "./publish.sh"
+    "publish": "./publish.sh",
+    "dev": "npm run build && npm run check:db ",
+    "check:db": "cp wxapp.docset/Contents/Resources/docSet.dsidx dist/docSet.db"
   },
   "author": "Qiming Zhao <chemzqm@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "cp-file": "^5.0.0",
+    "cheerio": "1.0.0-rc.5",
+    "cp-file": "^9.0.0",
     "del": "^3.0.0",
     "et-improve": "^1.0.0",
-    "glob": "^7.1.2",
+    "fs-extra": "^9.1.0",
+    "glob": "^7.1.6",
+    "glob-promise": "^4.0.1",
     "got": "^8.3.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.4",
     "parse5": "^4.0.0",
     "pify": "^3.0.0",
     "sequelize": "^4.37.6",

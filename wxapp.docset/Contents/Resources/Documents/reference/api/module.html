@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Object module</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h3 id="Object-module"><a href="#Object-module" aria-hidden="true" class="header-anchor">#</a> Object module</h3> <p>当前模块对象</p> <h4 id="属性"><a href="#属性" aria-hidden="true" class="header-anchor">#</a> 属性</h4> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>exports</td> <td>Object</td> <td>模块向外暴露的对象，使用<code>require</code>引用该模块时可以获取</td></tr></tbody></table></div><h4 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// common.js</span>
+<span class="token keyword">function</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Hello </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> !`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">sayGoodbye</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Goodbye </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> !`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>sayHello <span class="token operator">=</span> sayHello
+exports<span class="token punctuation">.</span>sayGoodbye <span class="token operator">=</span> sayGoodbye
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

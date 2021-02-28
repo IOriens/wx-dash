@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>InnerAudioContext.onError</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>InnerAudioContext.onError(function callback)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,71 +12,6 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="inneraudiocontextonerrorfunction-callback">InnerAudioContext.onError(function callback)</h3>
-<p>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="function-callback">function callback</h5>
-<p>&#x97F3;&#x9891;&#x64AD;&#x653E;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
-<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>errCode</td>
-<td>number</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>errCode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10001</td>
-<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
-</tr>
-<tr>
-<td>10002</td>
-<td>&#x7F51;&#x7EDC;&#x9519;&#x8BEF;</td>
-</tr>
-<tr>
-<td>10003</td>
-<td>&#x6587;&#x4EF6;&#x9519;&#x8BEF;</td>
-</tr>
-<tr>
-<td>10004</td>
-<td>&#x683C;&#x5F0F;&#x9519;&#x8BEF;</td>
-</tr>
-<tr>
-<td>-1</td>
-<td>&#x672A;&#x77E5;&#x9519;&#x8BEF;</td>
-</tr>
-</tbody>
-</table>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="InnerAudioContext-onError-function-callback"><a href="#InnerAudioContext-onError-function-callback" aria-hidden="true" class="header-anchor">#</a> InnerAudioContext.onError(function callback)</h1> <p>监听音频播放错误事件</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="function-callback"><a href="#function-callback" aria-hidden="true" class="header-anchor">#</a> function callback</h3> <p>音频播放错误事件的回调函数</p> <h4 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>errMsg</td> <td>string</td> <td></td></tr> <tr><td>errCode</td> <td>number</td> <td></td></tr></tbody></table></div><p><strong>errCode 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>10001</td> <td>系统错误</td> <td></td></tr> <tr><td>10002</td> <td>网络错误</td> <td></td></tr> <tr><td>10003</td> <td>文件错误</td> <td></td></tr> <tr><td>10004</td> <td>格式错误</td> <td></td></tr> <tr><td>-1</td> <td>未知错误</td> <td></td></tr></tbody></table></div><h2 id="Tips"><a href="#Tips" aria-hidden="true" class="header-anchor">#</a> Tips</h2> <ol><li>errCode=100001 时，如若 errMsg 中有 INNERCODE -11828 ，请先检查 response header 是否缺少 Content-Length</li> <li>errCode=100001 时，如若 errMsg 中有 systemErrCode:200333420，请检查文件编码格式和 fileExtension 是否一致</li></ol></div></div> <!---->    
 </body>
 </html>

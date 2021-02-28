@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.connectSocket</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>SocketTask</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,106 +12,13 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="sockettask-wxconnectsocketobject-object"><a href="SocketTask.html">SocketTask</a> wx.connectSocket(Object object)</h3>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#x3002;&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x6CE8;&#x610F;&#x9605;&#x8BFB;<a href="../../../framework/ability/network.html">&#x76F8;&#x5173;&#x8BF4;&#x660E;</a>&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>url</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668; wss &#x63A5;&#x53E3;&#x5730;&#x5740;</td>
-<td></td>
-</tr>
-<tr>
-<td>header</td>
-<td>Object</td>
-<td></td>
-<td>&#x5426;</td>
-<td>HTTP Header&#xFF0C;Header &#x4E2D;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E; Referer</td>
-<td></td>
-</tr>
-<tr>
-<td>protocols</td>
-<td>Array.&lt;string&gt;</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x5B50;&#x534F;&#x8BAE;&#x6570;&#x7EC4;</td>
-<td><a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="sockettask"><a href="SocketTask.html">SocketTask</a></h5>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>WebSocket &#x4EFB;&#x52A1;</p>
-<h4 id="&#x5E76;&#x53D1;&#x6570;">&#x5E76;&#x53D1;&#x6570;</h4>
-<ul>
-<li>1.7.0 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5B58;&#x5728; 5&#xFF08;&#x5C0F;&#x6E38;&#x620F;&#xFF09;/2&#xFF08;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF09;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#x3002;</li>
-<li>1.7.0 &#x4EE5;&#x4E0B;&#x7248;&#x672C;&#xFF0C;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x540C;&#x65F6;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5DF2;&#x5B58;&#x5728;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x8BE5;&#x8FDE;&#x63A5;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#x3002;</li>
-</ul>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.connectSocket({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;wss://example.qq.com&apos;</span>,
-  <span class="hljs-attr">data</span>:{
-    <span class="hljs-attr">x</span>: <span class="hljs-string">&apos;&apos;</span>,
-    <span class="hljs-attr">y</span>: <span class="hljs-string">&apos;&apos;</span>
-  },
-  <span class="hljs-attr">header</span>:{
-    <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>
-  },
-  <span class="hljs-attr">protocols</span>: [<span class="hljs-string">&apos;protocol1&apos;</span>],
-  <span class="hljs-attr">method</span>:<span class="hljs-string">&quot;GET&quot;</span>
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="SocketTask-wx-connectSocket-Object-object"><a href="#SocketTask-wx-connectSocket-Object-object" aria-hidden="true" class="header-anchor">#</a> <a href="SocketTask.html">SocketTask</a> wx.connectSocket(Object object)</h1> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">1.9.6</a> 起支持在小程序插件中使用</p></blockquote> <p>创建一个 WebSocket 连接。使用前请注意阅读<a href="../../../framework/ability/network.html">相关说明</a>。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>url</td> <td>string</td> <td></td> <td>是</td> <td>开发者服务器 wss 接口地址</td> <td></td></tr> <tr><td>header</td> <td>Object</td> <td></td> <td>否</td> <td>HTTP Header，Header 中不能设置 Referer</td> <td></td></tr> <tr><td>protocols</td> <td>Array.&lt;string&gt;</td> <td></td> <td>否</td> <td>子协议数组</td> <td><a href="../../../framework/compatibility.html">1.4.0</a></td></tr> <tr><td>tcpNoDelay</td> <td>boolean</td> <td>false</td> <td>否</td> <td>建立 TCP 连接的时候的 TCP_NODELAY 设置</td> <td><a href="../../../framework/compatibility.html">2.4.0</a></td></tr> <tr><td>perMessageDeflate</td> <td>boolean</td> <td>false</td> <td>否</td> <td>是否开启压缩扩展</td> <td><a href="../../../framework/compatibility.html">2.8.0</a></td></tr> <tr><td>timeout</td> <td>number</td> <td></td> <td>否</td> <td>超时时间，单位为毫秒</td> <td><a href="../../../framework/compatibility.html">2.10.0</a></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="SocketTask"><a href="#SocketTask" aria-hidden="true" class="header-anchor">#</a> <a href="SocketTask.html">SocketTask</a></h3> <blockquote><p>基础库 1.7.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>WebSocket 任务</p> <h2 id="并发数"><a href="#并发数" aria-hidden="true" class="header-anchor">#</a> 并发数</h2> <ul><li>1.7.0 及以上版本，最多可以同时存在 5 个 WebSocket 连接。</li> <li>1.7.0 以下版本，一个小程序同时只能有一个 WebSocket 连接，如果当前已存在一个 WebSocket 连接，会自动关闭该连接，并重新创建一个 WebSocket 连接。</li></ul> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">connectSocket</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'wss://example.qq.com'</span><span class="token punctuation">,</span>
+  header<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token string">'content-type'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  protocols<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'protocol1'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

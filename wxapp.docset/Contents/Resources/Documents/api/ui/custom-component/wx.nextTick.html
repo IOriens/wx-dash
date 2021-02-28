@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>自定义组件</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.nextTick(function callback)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,44 +12,17 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxnexttickfunction-callback">wx.nextTick(function callback)</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x5EF6;&#x8FDF;&#x4E00;&#x90E8;&#x5206;&#x64CD;&#x4F5C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7247;&#x518D;&#x6267;&#x884C;&#x3002;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E; setTimeout&#xFF09;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="function-callback">function callback</h5>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript">Component({
-    doSth() {
-        <span class="hljs-keyword">this</span>.setData({
-            <span class="hljs-attr">number</span>: <span class="hljs-number">1</span>
-        }) <span class="hljs-comment">// &#x76F4;&#x63A5;&#x5728;&#x5F53;&#x524D;&#x540C;&#x6B65;&#x6D41;&#x7A0B;&#x4E2D;&#x6267;&#x884C;</span>
+   <div id="docContent"><div class="content custom"><h1 id="wx-nextTick-function-callback"><a href="#wx-nextTick-function-callback" aria-hidden="true" class="header-anchor">#</a> wx.nextTick(function callback)</h1> <blockquote><p>基础库 2.2.3 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">2.7.1</a> 起支持在小程序插件中使用</p></blockquote> <p>延迟一部分操作到下一个时间片再执行。（类似于 setTimeout）</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="function-callback"><a href="#function-callback" aria-hidden="true" class="header-anchor">#</a> function callback</h3> <h2 id="说明"><a href="#说明" aria-hidden="true" class="header-anchor">#</a> 说明</h2> <p>因为自定义组件中的 setData 和 triggerEvent 等接口本身是同步的操作，当这几个接口被连续调用时，都是在一个同步流程中执行完的，因此若逻辑不当可能会导致出错。</p> <p>一个极端的案例：当父组件的 setData 引发了子组件的 triggerEvent，进而使得父组件又进行了一次 setData，期间有通过 wx:if 语句对子组件进行卸载，就有可能引发奇怪的错误，所以对于不需要在一个同步流程内完成的逻辑，可以使用此接口延迟到下一个时间片再执行。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">doSth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> number<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 直接在当前同步流程中执行</span>
 
-        wx.nextTick(() = &gt; {
-            <span class="hljs-keyword">this</span>.setData({
-                <span class="hljs-attr">number</span>: <span class="hljs-number">3</span>
-            }) <span class="hljs-comment">// &#x5728;&#x5F53;&#x524D;&#x540C;&#x6B65;&#x6D41;&#x7A0B;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x4E0B;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7247;&#x6267;&#x884C;</span>
-        })
+    wx<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> number<span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 在当前同步流程结束后，下一个时间片执行</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-        <span class="hljs-keyword">this</span>.setData({
-            <span class="hljs-attr">number</span>: <span class="hljs-number">2</span>
-        }) <span class="hljs-comment">// &#x76F4;&#x63A5;&#x5728;&#x5F53;&#x524D;&#x540C;&#x6B65;&#x6D41;&#x7A0B;&#x4E2D;&#x6267;&#x884C;</span>
-    }
-})
-</code></pre>
-<h4 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h4>
-<p>&#x56E0;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684; setData &#x548C; triggerEvent &#x7B49;&#x63A5;&#x53E3;&#x672C;&#x8EAB;&#x662F;&#x540C;&#x6B65;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5F53;&#x8FD9;&#x51E0;&#x4E2A;&#x63A5;&#x53E3;&#x88AB;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x6D41;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#x5B8C;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x82E5;&#x903B;&#x8F91;&#x4E0D;&#x5F53;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x51FA;&#x9519;&#x3002;</p>
-<p>&#x4E00;&#x4E2A;&#x6781;&#x7AEF;&#x7684;&#x6848;&#x4F8B;&#xFF1A;&#x5F53;&#x7236;&#x7EC4;&#x4EF6;&#x7684; setData &#x5F15;&#x53D1;&#x4E86;&#x5B50;&#x7EC4;&#x4EF6;&#x7684; triggerEvent&#xFF0C;&#x8FDB;&#x800C;&#x4F7F;&#x5F97;&#x7236;&#x7EC4;&#x4EF6;&#x53C8;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x6B21; setData&#xFF0C;&#x671F;&#x95F4;&#x6709;&#x901A;&#x8FC7; wx:if &#x8BED;&#x53E5;&#x5BF9;&#x5B50;&#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x5378;&#x8F7D;&#xFF0C;&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x5F15;&#x53D1;&#x5947;&#x602A;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x6240;&#x4EE5;&#x5BF9;&#x4E8E;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x6D41;&#x7A0B;&#x5185;&#x5B8C;&#x6210;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x5EF6;&#x8FDF;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7247;&#x518D;&#x6267;&#x884C;&#x3002;</p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> number<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 直接在当前同步流程中执行</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.fill</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.fill()</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,50 +12,32 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextfill">CanvasContext.fill()</h3>
-<p>&#x5BF9;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x586B;&#x5145;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x586B;&#x5145;&#x8272;&#x4E3A;&#x9ED1;&#x8272;&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<p>&#x5982;&#x679C;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x95ED;&#x5408;&#xFF0C;fill() &#x65B9;&#x6CD5;&#x4F1A;&#x5C06;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#xFF0C;&#x7136;&#x540E;&#x586B;&#x5145;&#x3002;</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
-ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>)
-ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
-ctx.fill()
-ctx.draw()
-</code></pre>
-<p>fill() &#x586B;&#x5145;&#x7684;&#x7684;&#x8DEF;&#x5F84;&#x662F;&#x4ECE; beginPath() &#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x4F1A;&#x5C06; fillRect() &#x5305;&#x542B;&#x8FDB;&#x53BB;&#x3002;</p>
-<p><img src="../../image/canvas/fill-line.png" alt=""></p>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-<span class="hljs-comment">// begin path</span>
-ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
-ctx.setFillStyle(<span class="hljs-string">&apos;yellow&apos;</span>)
-ctx.fill()
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-fill"><a href="#CanvasContext-fill" aria-hidden="true" class="header-anchor">#</a> CanvasContext.fill()</h1> <p>对当前路径中的内容进行填充。默认的填充色为黑色。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p>如果当前路径没有闭合，fill() 方法会将起点和终点进行连接，然后填充。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>fill() 填充的的路径是从 beginPath() 开始计算，但是不会将 fillRect() 包含进去。</p> <p><img src="data:image/png;base64,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" alt=""></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+<span class="token comment">// begin path</span>
+ctx<span class="token punctuation">.</span><span class="token function">rect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'yellow'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// begin another path</span>
-ctx.beginPath()
-ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+<span class="token comment">// begin another path</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">rect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// only fill this rect, not in current path</span>
-ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
-ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+<span class="token comment">// only fill this rect, not in current path</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'blue'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
 
-ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+ctx<span class="token punctuation">.</span><span class="token function">rect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// it will fill current path</span>
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
-ctx.fill()
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/fill-path.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+<span class="token comment">// it will fill current path</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUEAAACrCAYAAAD4pi5hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbTSURBVHhe7dpBjtVIEEBB3//SH/ViBmbFlAT5sl2B1Durs/xcGbDg+fijgAIKXFzgufjdvboCCijwgaBLoIACVxeA4NWf38sroAAE3QEFFLi6AASv/vxeXgEFIOgOKKDA1QUgePXn9/IKKABBd0ABBa4u8FsEn+f5+NHAHXAHvtMdOFH9fyF48gs9q4ACCpQFvrA++fPbp09/4clwzyqggAJ/usCpWRD801/A71NAgbQABNP8hiugQF0AgvUXMF8BBdICEEzzG66AAnUBCNZfwHwFFEgLQDDNb7gCCtQFIFh/AfMVUCAtAME0v+EKKFAXiBH8+m+HfvY0qK+j+QrMF4AghH/5i2j+ApqoQF0AghCEYL2F5qcFIAhBCKYraHhdAIIQhGC9heanBSAIQQimK2h4XQCCEIRgvYXmpwUgCEEIpitoeF0AghCEYL2F5qcFIAhBCKYraHhdAIIQhGC9heanBSAIQQimK2h4XQCCEIRgvYXmpwUgCEEIpitoeF0AghCEYL2F5qcFIAhBCKYraHhdAIIQhGC9heanBSAIQQimK2h4XQCCEIRgvYXmpwUgCEEIpitoeF0AghCEYL2F5qcFIAhBCKYraHhdAIIQhGC9heanBSAIQQimK2h4XQCCEIRgvYXmpwUgCEEIpitoeF0AghCEYL2F5qcFIAhBCKYraHhdAIIQhGC9heanBSAIQQimK2h4XaBF8Hk+Hz97GtS30XwFggIQhPBPhIMLaKQCdQEIQhCC9RaanxaAIAQhmK6g4XUBCEIQgvUWmp8WgCAEIZiuoOF1AQhCEIL1FpqfFoAgBCGYrqDhdQEIQhCC9RaanxaAIAQhmK6g4XUBCEIQgvUWmp8WgCAEIZiuoOF1AQhCEIL1FpqfFoAgBCGYrqDhdQEIQhCC9RaanxaAIAQhmK6g4XUBCEIQgvUWmp8WgCAEIZiuoOF1AQhCEIL1FpqfFoAgBCGYrqDhdQEIQhCC9RaanxaAIAQhmK6g4XUBCEIQgvUWmp8WgCAEIZiuoOF1AQhCEIL1FpqfFoAgBCGYrqDhdQEIQhCC9RaanxaAIAQhmK6g4XUBCEIQgvUWmp8WgCAEIZiuoOF1gRRB/vz0Z0OL+jKar0BRAILPLohKDIsLaKYCdQEIQvDzD7z1ZTRfgaIABCEIwWLzzFxTAIIQhOCadXSQogAEIQjBYvPMXFMAghCE4Jp1dJCiAAQhCMFi88xcUwCCEITgmnV0kKIABCEIwWLzzFxTAIIQhOCadXSQogAEIQjBYvPMXFMAghCE4Jp1dJCiAAQhCMFi88xcUwCCEITgmnV0kKIABCEIwWLzzFxTAIIQhOCadXSQogAEIQjBYvPMXFMAghCE4Jp1dJCiAAQhCMFi88xcUwCCEITgmnV0kKIABCEIwWLzzFxTAIIQhOCadXSQogAEIQjBYvPMXFMAghCE4Jp1dJCiAAQhCMFi88xcUwCCEITgmnV0kKIABCEIwWLzzFxTAIIQhOCadXSQogAEIQjBYvPMXFMgRfDf7XtItKLFmmvpIArMFYAggD/+KTi3cCbtKwBBCEJw31460WABCEIQgoMLZ9S+AhCEIAT37aUTDRaAIAQhOLhwRu0rAEEIQnDfXjrRYAEIQhCCgwtn1L4CEIQgBPftpRMNFoAgBCE4uHBG7SsAQQhCcN9eOtFgAQhCEIKDC2fUvgIQhCAE9+2lEw0WgCAEITi4cEbtKwBBCEJw31460WABCEIQgoMLZ9S+AhCEIAT37aUTDRaAIAQhOLhwRu0rAEEIQnDfXjrRYAEIQhCCgwtn1L4CEIQgBPftpRMNFoAgBCE4uHBG7SsAQQhCcN9eOtFgAQhCEIKDC2fUvgIQhCAE9+2lEw0WgCAEITi4cEbtKwBBCEJw31460WABCEIQgoMLZ9S+AhCEIAT37aUTDRaAIAQhOLhwRu0r0CK4r4cTKaDAZQUgeNkH97oKKPDfAhB0IxRQ4OoCELz683t5BRSAoDuggAJXF4Dg1Z/fyyugAATdAQUUuLoABK/+/F5eAQUg6A4ooMDVBSB49ef38gooAEF3QAEFri4Awas/v5dXQAEIugMKKHB1AQhe/fm9vAIKQNAdUECBqwtA8OrP7+UVUACC7oACClxdAIJXf34vr4ACEHQHFFDg6gIQvPrze3kFFPgrCH79Uj8auAPuwHe5Ayd/FTwnD3tWAQUUeFsBCL7ti3ofBRQ4KgDBo1weVkCBtxWA4Nu+qPdRQIGjAhA8yuVhBRR4WwEIvu2Leh8FFDgqAMGjXB5WQIG3FYDg276o91FAgaMCEDzK5WEFFHhbAQi+7Yt6HwUUOCrwA6rKO5uTfTLSAAAAAElFTkSuQmCC" alt=""></p></div></div> <!---->    
 </body>
 </html>

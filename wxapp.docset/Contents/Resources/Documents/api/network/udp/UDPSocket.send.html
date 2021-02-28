@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>UDPSocket.send(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="UDPSocket-send-Object-object"><a href="#UDPSocket-send-Object-object" aria-hidden="true" class="header-anchor">#</a> UDPSocket.send(Object object)</h1> <p>向指定的 IP 和 port 发送消息</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>address</td> <td>string</td> <td></td> <td>是</td> <td>要发消息的地址。在基础库 2.9.3 及之前版本可以是一个和本机同网段的 IP 地址，也可以是在安全域名列表内的域名地址；在基础库 2.9.4 及之后版本，可以是任意 IP 和域名</td></tr> <tr><td>port</td> <td>number</td> <td></td> <td>是</td> <td>要发送消息的端口号</td></tr> <tr><td>message</td> <td>string/ArrayBuffer</td> <td></td> <td>是</td> <td>要发送的数据</td></tr> <tr><td>offset</td> <td>number</td> <td>0</td> <td>否</td> <td>发送数据的偏移量，仅当 message 为 ArrayBuffer 类型时有效</td></tr> <tr><td>length</td> <td>number</td> <td>message.byteLength</td> <td>否</td> <td>发送数据的长度，仅当 message 为 ArrayBuffer 类型时有效</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+  <span class="token keyword">const</span> udp <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createUDPSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">udp</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  udp<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    address<span class="token punctuation">:</span> <span class="token string">'192.168.193.2'</span><span class="token punctuation">,</span>
+    port<span class="token punctuation">:</span> <span class="token number">8848</span><span class="token punctuation">,</span>
+    message<span class="token punctuation">:</span> <span class="token string">'hello, how are you'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

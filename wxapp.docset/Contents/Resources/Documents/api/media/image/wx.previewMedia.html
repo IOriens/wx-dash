@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.previewMedia(Object object, boolean showmenu)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="wx-previewMedia-Object-object-boolean-showmenu"><a href="#wx-previewMedia-Object-object-boolean-showmenu" aria-hidden="true" class="header-anchor">#</a> wx.previewMedia(Object object, boolean showmenu)</h1> <blockquote><p>基础库 2.12.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">2.15.0</a> 起支持在小程序插件中使用</p></blockquote> <p>预览图片和视频。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>sources</td> <td>Array.&lt;Object&gt;</td> <td></td> <td>是</td> <td>需要预览的资源列表</td></tr> <tr><td>current</td> <td>number</td> <td>0</td> <td>否</td> <td>当前显示的资源序号</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><p><strong>object.sources 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>url</td> <td>String</td> <td></td> <td>是</td> <td>图片或视频的地址</td></tr> <tr><td>type</td> <td>String</td> <td>image</td> <td>否</td> <td>资源的类型，默认为图片</td></tr> <tr><td>poster</td> <td>string</td> <td></td> <td>否</td> <td>视频的封面图片</td></tr></tbody></table></div><p><strong>type 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>image</td> <td>图片</td> <td></td></tr> <tr><td>video</td> <td>视频</td> <td></td></tr></tbody></table></div><h3 id="boolean-showmenu"><a href="#boolean-showmenu" aria-hidden="true" class="header-anchor">#</a> boolean showmenu</h3> <blockquote><p>基础库 2.13.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>是否显示长按菜单</p></div></div> <!---->    
+</body>
+</html>

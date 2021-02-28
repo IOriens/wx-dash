@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>number UDPSocket.bind(number port)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="number-UDPSocket-bind-number-port"><a href="#number-UDPSocket-bind-number-port" aria-hidden="true" class="header-anchor">#</a> number UDPSocket.bind(number port)</h1> <p>绑定一个系统随机分配的可用端口，或绑定一个指定的端口号</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-port"><a href="#number-port" aria-hidden="true" class="header-anchor">#</a> number port</h3> <blockquote><p>基础库 2.9.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>指定要绑定的端口号，不传则返回系统随机分配的可用端口</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="number"><a href="#number" aria-hidden="true" class="header-anchor">#</a> number</h3> <p>绑定成功的端口号</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+  <span class="token keyword">const</span> udp <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createUDPSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token function">udp</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

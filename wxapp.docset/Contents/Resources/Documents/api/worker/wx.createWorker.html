@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Worker</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,26 +12,12 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="worker-wxcreateworkerstring-scriptpath"><a href="Worker.html">Worker</a> wx.createWorker(string scriptPath)</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <a href="../../framework/workers.html">Worker &#x7EBF;&#x7A0B;</a>&#x3002;&#x76EE;&#x524D;&#x9650;&#x5236;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Worker&#xFF0C;&#x521B;&#x5EFA;&#x4E0B;&#x4E00;&#x4E2A; Worker &#x524D;&#x8BF7;&#x5148;&#x8C03;&#x7528; <a href="Worker.terminate.html">Worker.terminate</a></p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-scriptpath">string scriptPath</h5>
-<p>worker &#x5165;&#x53E3;&#x6587;&#x4EF6;&#x7684;<strong>&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</strong></p>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="worker"><a href="Worker.html">Worker</a></h5>
-<p>Worker &#x5BF9;&#x8C61;</p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="Worker-wx-createWorker-string-scriptPath-object-options"><a href="#Worker-wx-createWorker-string-scriptPath-object-options" aria-hidden="true" class="header-anchor">#</a> <a href="Worker.html">Worker</a> wx.createWorker(string scriptPath, object options)</h1> <blockquote><p>基础库 1.9.90 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>创建一个 <a href="../../framework/workers.html">Worker 线程</a></p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-scriptPath"><a href="#string-scriptPath" aria-hidden="true" class="header-anchor">#</a> string scriptPath</h3> <p>worker 入口文件的<strong>绝对路径</strong></p> <h3 id="object-options"><a href="#object-options" aria-hidden="true" class="header-anchor">#</a> object options</h3> <p>可选参数</p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>useExperimentalWorker</td> <td>boolean</td> <td>false</td> <td>否</td> <td>是否使用实验worker。在iOS下，实验worker的JS运行效率比非实验worker提升近十倍，如需在worker内进行重度计算的建议开启此选项。</td> <td><a href="../../framework/compatibility.html">2.13.0</a></td></tr></tbody></table></div><h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="Worker"><a href="#Worker" aria-hidden="true" class="header-anchor">#</a> <a href="Worker.html">Worker</a></h3> <p>Worker 对象</p> <h2 id="注意事项"><a href="#注意事项" aria-hidden="true" class="header-anchor">#</a> 注意事项</h2> <ul><li>接口使用前需要在 app.json （小游戏为 game.json） 中配置 workers 字段，表示 worker 代码根目录。</li> <li>scriptPath 为入口文件的绝对路径，且不以 / 开头。</li> <li>目前限制最多只能创建一个 Worker，创建下一个 Worker 前请先调用 <a href="Worker.terminate.html">Worker.terminate</a></li> <li>更多细节详见 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/workers.html" target="_blank" rel="noopener noreferrer">多线程 worker 指南(小程序)<span></span></a>、 <a href="https://developers.weixin.qq.com/minigame/dev/guide/base-ability/worker.html" target="_blank" rel="noopener noreferrer">多线程 worker 指南(小游戏)<span></span></a></li></ul> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 创建普通worker</span>
+wx<span class="token punctuation">.</span><span class="token function">createWorker</span><span class="token punctuation">(</span><span class="token string">'workers/index.js'</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 创建实验worker</span>
+wx<span class="token punctuation">.</span><span class="token function">createWorker</span><span class="token punctuation">(</span><span class="token string">'workers/index.js'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  useExperimentalWorker<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

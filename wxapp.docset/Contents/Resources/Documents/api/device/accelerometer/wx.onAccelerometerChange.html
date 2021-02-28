@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>设备</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.onAccelerometerChange(function callback)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,59 +12,7 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxonaccelerometerchangefunction-callback">wx.onAccelerometerChange(function callback)</h3>
-<p>&#x76D1;&#x542C;&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;&#x4E8B;&#x4EF6;&#x3002;&#x9891;&#x7387;&#x6839;&#x636E; <a href="wx.startAccelerometer.html">wx.startAccelerometer()</a> &#x7684; interval &#x53C2;&#x6570;&#x3002;&#x53EF;&#x4F7F;&#x7528; <a href="wx.stopAccelerometer.html">wx.stopAccelerometer()</a> &#x505C;&#x6B62;&#x76D1;&#x542C;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="function-callback">function callback</h5>
-<p>&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;&#x4E8B;&#x4EF6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
-<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x</td>
-<td>number</td>
-<td>X &#x8F74;</td>
-<td></td>
-</tr>
-<tr>
-<td>y</td>
-<td>number</td>
-<td>Y &#x8F74;</td>
-<td></td>
-</tr>
-<tr>
-<td>z</td>
-<td>number</td>
-<td>Z &#x8F74;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.onAccelerometerChange(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(res.x)
-  <span class="hljs-built_in">console</span>.log(res.y)
-  <span class="hljs-built_in">console</span>.log(res.z)
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-onAccelerometerChange-function-callback"><a href="#wx-onAccelerometerChange-function-callback" aria-hidden="true" class="header-anchor">#</a> wx.onAccelerometerChange(function callback)</h1> <p>监听加速度数据事件。频率根据 <a href="wx.startAccelerometer.html">wx.startAccelerometer()</a> 的 interval 参数, 接口调用后会自动开始监听。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="function-callback"><a href="#function-callback" aria-hidden="true" class="header-anchor">#</a> function callback</h3> <p>加速度数据事件的回调函数</p> <h4 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>x</td> <td>number</td> <td>X 轴</td></tr> <tr><td>y</td> <td>number</td> <td>Y 轴</td></tr> <tr><td>z</td> <td>number</td> <td>Z 轴</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">onAccelerometerChange</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

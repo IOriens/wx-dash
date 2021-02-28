@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AppObject getApp(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h3 id="AppObject-getApp-Object-object"><a href="#AppObject-getApp-Object-object" aria-hidden="true" class="header-anchor">#</a> AppObject getApp(Object object)</h3> <p>获取到小程序全局唯一的 <code>App</code> 实例。</p> <h4 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>allowDefault</td> <td>boolean</td> <td>false</td> <td>否</td> <td>在 <code>App</code> 未定义时返回默认实现。当App被调用时，默认实现中定义的属性会被覆盖合并到App中。一般用于<a href="../../framework/subpackages/independent.html">独立分包</a></td> <td><a href="../../framework/compatibility.html">2.2.4</a></td></tr></tbody></table></div><h4 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// other.js</span>
+<span class="token keyword">var</span> appInstance <span class="token operator">=</span> <span class="token function">getApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>appInstance<span class="token punctuation">.</span>globalData<span class="token punctuation">)</span> <span class="token comment">// I am global data</span>
+</code></pre></div><h4 id="注意"><a href="#注意" aria-hidden="true" class="header-anchor">#</a> 注意</h4> <ul><li>不要在定义于 <code>App()</code> 内的函数中，或调用 <code>App</code> 前调用 <code>getApp()</code> ，使用 <code>this</code> 就可以拿到 app 实例。</li> <li>通过 <code>getApp()</code> 获取实例之后，不要私自调用生命周期函数。</li></ul></div></div> <!---->    
+</body>
+</html>

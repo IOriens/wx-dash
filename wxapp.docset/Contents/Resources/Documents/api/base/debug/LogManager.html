@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>LogManager</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="LogManager"><a href="#LogManager" aria-hidden="true" class="header-anchor">#</a> LogManager</h1> <p>日志管理器实例，可以通过 <a href="wx.getLogManager.html">wx.getLogManager</a> 获取。</p> <h2 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h2> <h3 id="LogManager-debug"><a href="#LogManager-debug" aria-hidden="true" class="header-anchor">#</a> <a href="LogManager.debug.html">LogManager.debug()</a></h3> <p>写 debug 日志</p> <h3 id="LogManager-info"><a href="#LogManager-info" aria-hidden="true" class="header-anchor">#</a> <a href="LogManager.info.html">LogManager.info()</a></h3> <p>写 info 日志</p> <h3 id="LogManager-log"><a href="#LogManager-log" aria-hidden="true" class="header-anchor">#</a> <a href="LogManager.log.html">LogManager.log()</a></h3> <p>写 log 日志</p> <h3 id="LogManager-warn"><a href="#LogManager-warn" aria-hidden="true" class="header-anchor">#</a> <a href="LogManager.warn.html">LogManager.warn()</a></h3> <p>写 warn 日志</p> <h2 id="使用说明"><a href="#使用说明" aria-hidden="true" class="header-anchor">#</a> 使用说明</h2> <p>最多保存5M的日志内容，超过5M后，旧的日志内容会被删除。<br>
+对于<strong>小程序</strong>，用户可以通过使用 <a href="../../../component/button.html">button</a> 组件的 <code>open-type="feedback"</code> 来上传打印的日志。<br>
+对于<strong>小游戏</strong>，用户可以通过使用 <a href="(wx.createFeedbackButton)">wx.createFeedbackButton</a> 来创建上传打印的日志的按钮。<br>
+开发者可以通过小程序管理后台左侧菜单“反馈管理”页面查看相关打印日志。<br> <br>
+基础库默认会把 <code>App</code>、<code>Page</code> 的生命周期函数和 <code>wx</code> 命名空间下的函数调用写入日志。</p></div></div> <!---->    
+</body>
+</html>

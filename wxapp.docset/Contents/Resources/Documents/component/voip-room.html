@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <title>voip-room</title>
+  <link rel="stylesheet" href="../../../../../style.css">
+  <link rel="stylesheet" href="../../../../../website.css">
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="voip-room"><a href="#voip-room" aria-hidden="true" class="header-anchor">#</a> voip-room</h1> <blockquote><p>基础库 2.11.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>多人音视频对话。需<a href="../framework/open-ability/authorize.html">用户授权</a> <code>scope.camera</code>、<code>scope.record</code>。相关接口： <a href="../api/media/voip/wx.joinVoIPChat.html">wx.joinVoIPChat</a></p> <p>暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台，「开发」-「接口设置」中自助开通该组件权限。</p> <div class="table-wrp"><table><thead><tr><th>一级类目/主体类型</th> <th>二级类目</th> <th>小程序内容场景</th></tr></thead> <tbody><tr><td>教育</td> <td>在线视频课程</td> <td>网课、在线培训、讲座等教育类直播</td></tr> <tr><td>医疗</td> <td>互联网医院，公立医院</td> <td>问诊、大型健康讲座等直播</td></tr> <tr><td>医疗</td> <td>私立医疗机构</td> <td>/</td></tr> <tr><td>金融</td> <td>银行、信托、基金、证券/期货、证券、期货投资咨询、保险、征信业务、新三板信息服务平台、股票信息服务平台（港股/美股）、消费金融</td> <td>金融产品视频客服理赔、金融产品推广直播等</td></tr> <tr><td>汽车</td> <td>汽车预售服务</td> <td>汽车预售、推广直播</td></tr> <tr><td>政府主体帐号</td> <td>/</td> <td>政府相关工作推广直播、领导讲话直播等</td></tr> <tr><td>IT 科技</td> <td>多方通信</td> <td>在线会议</td></tr> <tr><td>IT 科技</td> <td>硬件设备</td> <td>智能硬件</td></tr></tbody></table></div><p>开通该组件权限后，开发者可在 <code>joinVoIPChat</code> 成功后，获取房间成员的 <code>openid</code>，传递给 <code>voip-room</code> 组件，以显示成员画面。</p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>openid</td> <td>string</td> <td></td> <td>是</td> <td>进入房间用户的 openid</td> <td><a href="../framework/compatibility.html">2.11.0</a></td></tr> <tr><td>mode</td> <td>string</td> <td>camera</td> <td>否</td> <td>对话窗口类型，自身传入 camera，其它用户传入 video</td> <td><a href="../framework/compatibility.html">2.11.0</a></td></tr> <tr><td>device-position</td> <td>string</td> <td>front</td> <td>否</td> <td>仅在 mode 为 camera 时有效，前置或后置，值为<code>front</code>, <code>back</code></td> <td><a href="../framework/compatibility.html">2.11.0</a></td></tr> <tr><td>binderror</td> <td>eventhandle</td> <td></td> <td>否</td> <td>创建对话窗口失败时触发</td> <td><a href="../framework/compatibility.html">2.11.0</a></td></tr></tbody></table></div><h2 id="Bug-Tip"><a href="#Bug-Tip" aria-hidden="true" class="header-anchor">#</a> Bug &amp; Tip</h2> <ol><li><code>tip</code>：开发者工具上暂不支持</li> <li><code>tip</code>：请注意<a href="./native-component.html#原生组件的使用限制">原生组件使用限制</a></li></ol> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>block</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{openIdList}}<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>*this<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>voip-room</span>
+    <span class="token attr-name">openid</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{item}}<span class="token punctuation">"</span></span>
+    <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{selfOpenId === item ? 'camera' : 'video'}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>voip-room</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>block</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div></div> <!---->    
+
+
+</body></html>

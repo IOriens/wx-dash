@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.drawImage</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.drawImage(string imageResource, number sx, number sy, number sWidth, number sHeight, number dx, number dy, number dWidth, number dHeight)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,54 +12,15 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextdrawimagestring-imageresource-number-dx-number-dy-number-dwidth-number-dheight-number-sx-number-sy-number-swidth-number-sheight">CanvasContext.drawImage(string imageResource, number dx, number dy, number dWidth, number dHeight, number sx, number sy, number sWidth, number sHeight)</h3>
-<p>&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x5230;&#x753B;&#x5E03;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-imageresource">string imageResource</h5>
-<p>&#x6240;&#x8981;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x7247;&#x8D44;&#x6E90;</p>
-<h5 id="number-dx">number dx</h5>
-<p>&#x56FE;&#x50CF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x5728;&#x76EE;&#x6807; canvas &#x4E0A; x &#x8F74;&#x7684;&#x4F4D;&#x7F6E;</p>
-<h5 id="number-dy">number dy</h5>
-<p>&#x56FE;&#x50CF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x5728;&#x76EE;&#x6807; canvas &#x4E0A; y &#x8F74;&#x7684;&#x4F4D;&#x7F6E;</p>
-<h5 id="number-dwidth">number dWidth</h5>
-<p>&#x5728;&#x76EE;&#x6807;&#x753B;&#x5E03;&#x4E0A;&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x5141;&#x8BB8;&#x5BF9;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x7F29;&#x653E;</p>
-<h5 id="number-dheight">number dHeight</h5>
-<p>&#x5728;&#x76EE;&#x6807;&#x753B;&#x5E03;&#x4E0A;&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x5141;&#x8BB8;&#x5BF9;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x7F29;&#x653E;</p>
-<h5 id="number-sx">number sx</h5>
-<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; x &#x5750;&#x6807;</p>
-<h5 id="number-sy">number sy</h5>
-<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; y &#x5750;&#x6807;</p>
-<h5 id="number-swidth">number sWidth</h5>
-<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5BBD;&#x5EA6;</p>
-<h5 id="number-sheight">number sHeight</h5>
-<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x9AD8;&#x5EA6;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<p>&#x6709;&#x4E09;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
-<ul>
-<li>drawImage(dx, dy)</li>
-<li>drawImage(dx, dy, dWidth, dHeight)</li>
-<li>drawImage(sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) &#x4ECE; 1.9.0 &#x8D77;&#x652F;&#x6301;</li>
-</ul>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-drawImage-string-imageResource-number-sx-number-sy-number-sWidth-number-sHeight-number-dx-number-dy-number-dWidth-number-dHeight"><a href="#CanvasContext-drawImage-string-imageResource-number-sx-number-sy-number-sWidth-number-sHeight-number-dx-number-dy-number-dWidth-number-dHeight" aria-hidden="true" class="header-anchor">#</a> CanvasContext.drawImage(string imageResource, number sx, number sy, number sWidth, number sHeight, number dx, number dy, number dWidth, number dHeight)</h1> <p>绘制图像到画布</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-imageResource"><a href="#string-imageResource" aria-hidden="true" class="header-anchor">#</a> string imageResource</h3> <p>所要绘制的图片资源（网络图片要通过 getImageInfo / downloadFile 先下载）</p> <h3 id="number-sx"><a href="#number-sx" aria-hidden="true" class="header-anchor">#</a> number sx</h3> <p>需要绘制到画布中的，imageResource的矩形（裁剪）选择框的左上角 x 坐标</p> <h3 id="number-sy"><a href="#number-sy" aria-hidden="true" class="header-anchor">#</a> number sy</h3> <p>需要绘制到画布中的，imageResource的矩形（裁剪）选择框的左上角 y 坐标</p> <h3 id="number-sWidth"><a href="#number-sWidth" aria-hidden="true" class="header-anchor">#</a> number sWidth</h3> <p>需要绘制到画布中的，imageResource的矩形（裁剪）选择框的宽度</p> <h3 id="number-sHeight"><a href="#number-sHeight" aria-hidden="true" class="header-anchor">#</a> number sHeight</h3> <p>需要绘制到画布中的，imageResource的矩形（裁剪）选择框的高度</p> <h3 id="number-dx"><a href="#number-dx" aria-hidden="true" class="header-anchor">#</a> number dx</h3> <p>imageResource的左上角在目标 canvas 上 x 轴的位置</p> <h3 id="number-dy"><a href="#number-dy" aria-hidden="true" class="header-anchor">#</a> number dy</h3> <p>imageResource的左上角在目标 canvas 上 y 轴的位置</p> <h3 id="number-dWidth"><a href="#number-dWidth" aria-hidden="true" class="header-anchor">#</a> number dWidth</h3> <p>在目标画布上绘制imageResource的宽度，允许对绘制的imageResource进行缩放</p> <h3 id="number-dHeight"><a href="#number-dHeight" aria-hidden="true" class="header-anchor">#</a> number dHeight</h3> <p>在目标画布上绘制imageResource的高度，允许对绘制的imageResource进行缩放</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p>有三个版本的写法：</p> <ul><li>drawImage(imageResource, dx, dy)</li> <li>drawImage(imageResource, dx, dy, dWidth, dHeight)</li> <li>drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) 从 1.9.0 起支持</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
 
-wx.chooseImage({
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-    ctx.drawImage(res.tempFilePaths[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
-    ctx.draw()
-  }
-})
+wx<span class="token punctuation">.</span><span class="token function">chooseImage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ctx<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>tempFilePaths<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+    ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-</code></pre>
-<p><img src="../../image/canvas/draw-image.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+</code></pre></div><p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/draw-image.22401fa6.png" alt=""></p></div></div> <!---->    
 </body>
 </html>

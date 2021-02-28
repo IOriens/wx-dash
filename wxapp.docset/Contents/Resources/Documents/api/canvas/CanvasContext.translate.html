@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.translate</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.translate(number x, number y)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,34 +12,15 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontexttranslatenumber-x-number-y">CanvasContext.translate(number x, number y)</h3>
-<p>&#x5BF9;&#x5F53;&#x524D;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x539F;&#x70B9; (0, 0) &#x8FDB;&#x884C;&#x53D8;&#x6362;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x539F;&#x70B9;&#x4E3A;&#x9875;&#x9762;&#x5DE6;&#x4E0A;&#x89D2;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="number-x">number x</h5>
-<p>&#x6C34;&#x5E73;&#x5750;&#x6807;&#x5E73;&#x79FB;&#x91CF;</p>
-<h5 id="number-y">number y</h5>
-<p>&#x7AD6;&#x76F4;&#x5750;&#x6807;&#x5E73;&#x79FB;&#x91CF;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-translate-number-x-number-y"><a href="#CanvasContext-translate-number-x-number-y" aria-hidden="true" class="header-anchor">#</a> CanvasContext.translate(number x, number y)</h1> <p>对当前坐标系的原点 (0, 0) 进行变换。默认的坐标系原点为页面左上角。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-x"><a href="#number-x" aria-hidden="true" class="header-anchor">#</a> number x</h3> <p>水平坐标平移量</p> <h3 id="number-y"><a href="#number-y" aria-hidden="true" class="header-anchor">#</a> number y</h3> <p>竖直坐标平移量</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
 
-ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
-ctx.translate(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
-ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
-ctx.translate(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
-ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
 
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/translate.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p></div></div> <!---->    
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>RealtimeLogManager</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="RealtimeLogManager-wx-getRealtimeLogManager"><a href="#RealtimeLogManager-wx-getRealtimeLogManager" aria-hidden="true" class="header-anchor">#</a> <a href="RealtimeLogManager.html">RealtimeLogManager</a> wx.getRealtimeLogManager()</h1> <blockquote><p>基础库 2.7.1 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>获取实时日志管理器对象。</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="RealtimeLogManager"><a href="#RealtimeLogManager" aria-hidden="true" class="header-anchor">#</a> <a href="RealtimeLogManager.html">RealtimeLogManager</a></h3> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> logger <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getRealtimeLogManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">{</span>str<span class="token punctuation">:</span> <span class="token string">'hello world'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'info log'</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token punctuation">{</span>str<span class="token punctuation">:</span> <span class="token string">'hello world'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'error log'</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token punctuation">{</span>str<span class="token punctuation">:</span> <span class="token string">'hello world'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'warn log'</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

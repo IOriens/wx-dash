@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>发起请求</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>RequestTask</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,247 +12,19 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="requesttask-wxrequestobject-object"><a href="RequestTask.html">RequestTask</a> wx.request(Object object)</h3>
-<p>&#x53D1;&#x8D77; HTTPS &#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3002;&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x6CE8;&#x610F;&#x9605;&#x8BFB;<a href="../../../framework/ability/network.html">&#x76F8;&#x5173;&#x8BF4;&#x660E;</a>&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>url</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x53E3;&#x5730;&#x5740;</td>
-<td></td>
-</tr>
-<tr>
-<td>data</td>
-<td>string/object/ArrayBuffer</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>header</td>
-<td>Object</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x7684; header&#xFF0C;header &#x4E2D;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E; Referer&#x3002;<br><code>content-type</code> &#x9ED8;&#x8BA4;&#x4E3A; <code>application/json</code></td>
-<td></td>
-</tr>
-<tr>
-<td>method</td>
-<td>string</td>
-<td>GET</td>
-<td>&#x5426;</td>
-<td>HTTP &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</td>
-<td></td>
-</tr>
-<tr>
-<td>dataType</td>
-<td>string</td>
-<td>json</td>
-<td>&#x5426;</td>
-<td>&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;</td>
-<td></td>
-</tr>
-<tr>
-<td>responseType</td>
-<td>string</td>
-<td>text</td>
-<td>&#x5426;</td>
-<td>&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</td>
-<td><a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.0</a></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>object.method &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>OPTIONS</td>
-<td>HTTP &#x8BF7;&#x6C42; OPTIONS</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>HTTP &#x8BF7;&#x6C42; GET</td>
-</tr>
-<tr>
-<td>HEAD</td>
-<td>HTTP &#x8BF7;&#x6C42; HEAD</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>HTTP &#x8BF7;&#x6C42; POST</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>HTTP &#x8BF7;&#x6C42; PUT</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>HTTP &#x8BF7;&#x6C42; DELETE</td>
-</tr>
-<tr>
-<td>TRACE</td>
-<td>HTTP &#x8BF7;&#x6C42; TRACE</td>
-</tr>
-<tr>
-<td>CONNECT</td>
-<td>HTTP &#x8BF7;&#x6C42; CONNECT</td>
-</tr>
-</tbody>
-</table>
-<p><strong>object.dataType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>json</td>
-<td>&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4E3A; JSON&#xFF0C;&#x8FD4;&#x56DE;&#x540E;&#x4F1A;&#x5BF9;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4E00;&#x6B21; JSON.parse</td>
-</tr>
-<tr>
-<td>&#x5176;&#x4ED6;</td>
-<td>&#x4E0D;&#x5BF9;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C; JSON.parse</td>
-</tr>
-</tbody>
-</table>
-<p><strong>object.responseType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>text</td>
-<td>&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x4E3A;&#x6587;&#x672C;</td>
-</tr>
-<tr>
-<td>arraybuffer</td>
-<td>&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x4E3A; ArrayBuffer</td>
-</tr>
-</tbody>
-</table>
-<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
-<p><strong>&#x53C2;&#x6570;</strong></p>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data</td>
-<td>string/Object/Arraybuffer</td>
-<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;</td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode</td>
-<td>number</td>
-<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684; HTTP &#x72B6;&#x6001;&#x7801;</td>
-<td></td>
-</tr>
-<tr>
-<td>header</td>
-<td>Object</td>
-<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684; HTTP Response Header</td>
-<td><a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="requesttask"><a href="RequestTask.html">RequestTask</a></h5>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;&#x5BF9;&#x8C61;</p>
-<h4 id="data-&#x53C2;&#x6570;&#x8BF4;&#x660E;">data &#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
-<p>&#x6700;&#x7EC8;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6570;&#x636E;&#x662F; String &#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165;&#x7684; data &#x4E0D;&#x662F; String &#x7C7B;&#x578B;&#xFF0C;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6210; String &#x3002;&#x8F6C;&#x6362;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>&#x5BF9;&#x4E8E; <code>GET</code> &#x65B9;&#x6CD5;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210; query string&#xFF08;<code>encodeURIComponent(k)=encodeURIComponent(v)&amp;encodeURIComponent(k)=encodeURIComponent(v)...</code>&#xFF09;</li>
-<li>&#x5BF9;&#x4E8E; <code>POST</code> &#x65B9;&#x6CD5;&#x4E14; <code>header[&apos;content-type&apos;]</code> &#x4E3A; <code>application/json</code> &#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C; JSON &#x5E8F;&#x5217;&#x5316;</li>
-<li>&#x5BF9;&#x4E8E; <code>POST</code> &#x65B9;&#x6CD5;&#x4E14; <code>header[&apos;content-type&apos;]</code> &#x4E3A; <code>application/x-www-form-urlencoded</code> &#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210; query string <code>&#xFF08;encodeURIComponent(k)=encodeURIComponent(v)&amp;encodeURIComponent(k)=encodeURIComponent(v)...&#xFF09;</code></li>
-</ul>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.request({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
-  data: {
-    <span class="hljs-attr">x</span>: <span class="hljs-string">&apos;&apos;</span>,
-    <span class="hljs-attr">y</span>: <span class="hljs-string">&apos;&apos;</span>
-  },
-  <span class="hljs-attr">header</span>: {
-    <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span> <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x503C;</span>
-  },
-  success (res) {
-    <span class="hljs-built_in">console</span>.log(res.data)
-  }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="RequestTask-wx-request-Object-object"><a href="#RequestTask-wx-request-Object-object" aria-hidden="true" class="header-anchor">#</a> <a href="RequestTask.html">RequestTask</a> wx.request(Object object)</h1> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">1.9.6</a> 起支持在小程序插件中使用</p></blockquote> <p>发起 HTTPS 网络请求。使用前请注意阅读<a href="../../../framework/ability/network.html">相关说明</a>。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>url</td> <td>string</td> <td></td> <td>是</td> <td>开发者服务器接口地址</td> <td></td></tr> <tr><td>data</td> <td>string/object/ArrayBuffer</td> <td></td> <td>否</td> <td>请求的参数</td> <td></td></tr> <tr><td>header</td> <td>Object</td> <td></td> <td>否</td> <td>设置请求的 header，header 中不能设置 Referer。<br><code>content-type</code> 默认为 <code>application/json</code></td> <td></td></tr> <tr><td>timeout</td> <td>number</td> <td></td> <td>否</td> <td>超时时间，单位为毫秒</td> <td><a href="../../../framework/compatibility.html">2.10.0</a></td></tr> <tr><td>method</td> <td>string</td> <td>GET</td> <td>否</td> <td>HTTP 请求方法</td> <td></td></tr> <tr><td>dataType</td> <td>string</td> <td>json</td> <td>否</td> <td>返回的数据格式</td> <td></td></tr> <tr><td>responseType</td> <td>string</td> <td>text</td> <td>否</td> <td>响应的数据类型</td> <td><a href="../../../framework/compatibility.html">1.7.0</a></td></tr> <tr><td>enableHttp2</td> <td>boolean</td> <td>false</td> <td>否</td> <td>开启 http2</td> <td><a href="../../../framework/compatibility.html">2.10.4</a></td></tr> <tr><td>enableQuic</td> <td>boolean</td> <td>false</td> <td>否</td> <td>开启 quic</td> <td><a href="../../../framework/compatibility.html">2.10.4</a></td></tr> <tr><td>enableCache</td> <td>boolean</td> <td>false</td> <td>否</td> <td>开启 cache</td> <td><a href="../../../framework/compatibility.html">2.10.4</a></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><p><strong>object.method 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>OPTIONS</td> <td>HTTP 请求 OPTIONS</td> <td></td></tr> <tr><td>GET</td> <td>HTTP 请求 GET</td> <td></td></tr> <tr><td>HEAD</td> <td>HTTP 请求 HEAD</td> <td></td></tr> <tr><td>POST</td> <td>HTTP 请求 POST</td> <td></td></tr> <tr><td>PUT</td> <td>HTTP 请求 PUT</td> <td></td></tr> <tr><td>DELETE</td> <td>HTTP 请求 DELETE</td> <td></td></tr> <tr><td>TRACE</td> <td>HTTP 请求 TRACE</td> <td></td></tr> <tr><td>CONNECT</td> <td>HTTP 请求 CONNECT</td> <td></td></tr></tbody></table></div><p><strong>object.dataType 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>json</td> <td>返回的数据为 JSON，返回后会对返回的数据进行一次 JSON.parse</td> <td></td></tr> <tr><td>其他</td> <td>不对返回的内容进行 JSON.parse</td> <td></td></tr></tbody></table></div><p><strong>object.responseType 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>text</td> <td>响应的数据为文本</td> <td></td></tr> <tr><td>arraybuffer</td> <td>响应的数据为 ArrayBuffer</td> <td></td></tr></tbody></table></div><h4 id="object-success-回调函数"><a href="#object-success-回调函数" aria-hidden="true" class="header-anchor">#</a> object.success 回调函数</h4> <h5 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h5> <h6 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h6> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>data</td> <td>string/Object/Arraybuffer</td> <td>开发者服务器返回的数据</td> <td></td></tr> <tr><td>statusCode</td> <td>number</td> <td>开发者服务器返回的 HTTP 状态码</td> <td></td></tr> <tr><td>header</td> <td>Object</td> <td>开发者服务器返回的 HTTP Response Header</td> <td><a href="../../../framework/compatibility.html">1.2.0</a></td></tr> <tr><td>cookies</td> <td>Array.&lt;string&gt;</td> <td>开发者服务器返回的 cookies，格式为字符串数组</td> <td><a href="../../../framework/compatibility.html">2.10.0</a></td></tr> <tr><td>profile</td> <td>Object</td> <td>网络请求过程中一些调试信息</td> <td><a href="../../../framework/compatibility.html">2.10.4</a></td></tr></tbody></table></div><p><strong>res.profile 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>redirectStart</td> <td>number</td> <td>第一个 HTTP 重定向发生时的时间。有跳转且是同域名内的重定向才算，否则值为 0</td></tr> <tr><td>redirectEnd</td> <td>number</td> <td>最后一个 HTTP 重定向完成时的时间。有跳转且是同域名内部的重定向才算，否则值为 0</td></tr> <tr><td>fetchStart</td> <td>number</td> <td>组件准备好使用 HTTP 请求抓取资源的时间，这发生在检查本地缓存之前</td></tr> <tr><td>domainLookupStart</td> <td>number</td> <td>DNS 域名查询开始的时间，如果使用了本地缓存（即无 DNS 查询）或持久连接，则与 fetchStart 值相等</td></tr> <tr><td>domainLookupEnd</td> <td>number</td> <td>DNS 域名查询完成的时间，如果使用了本地缓存（即无 DNS 查询）或持久连接，则与 fetchStart 值相等</td></tr> <tr><td>connectStart</td> <td>number</td> <td>HTTP（TCP） 开始建立连接的时间，如果是持久连接，则与 fetchStart 值相等。注意如果在传输层发生了错误且重新建立连接，则这里显示的是新建立的连接开始的时间</td></tr> <tr><td>connectEnd</td> <td>number</td> <td>HTTP（TCP） 完成建立连接的时间（完成握手），如果是持久连接，则与 fetchStart 值相等。注意如果在传输层发生了错误且重新建立连接，则这里显示的是新建立的连接完成的时间。注意这里握手结束，包括安全连接建立完成、SOCKS 授权通过</td></tr> <tr><td>SSLconnectionStart</td> <td>number</td> <td>SSL建立连接的时间,如果不是安全连接,则值为 0</td></tr> <tr><td>SSLconnectionEnd</td> <td>number</td> <td>SSL建立完成的时间,如果不是安全连接,则值为 0</td></tr> <tr><td>requestStart</td> <td>number</td> <td>HTTP请求读取真实文档开始的时间（完成建立连接），包括从本地读取缓存。连接错误重连时，这里显示的也是新建立连接的时间</td></tr> <tr><td>requestEnd</td> <td>number</td> <td>HTTP请求读取真实文档结束的时间</td></tr> <tr><td>responseStart</td> <td>number</td> <td>HTTP 开始接收响应的时间（获取到第一个字节），包括从本地读取缓存</td></tr> <tr><td>responseEnd</td> <td>number</td> <td>HTTP 响应全部接收完成的时间（获取到最后一个字节），包括从本地读取缓存</td></tr> <tr><td>rtt</td> <td>number</td> <td>当次请求连接过程中实时 rtt</td></tr> <tr><td>estimate_nettype</td> <td>string</td> <td>评估的网络状态 slow 2g/2g/3g/4g</td></tr> <tr><td>httpRttEstimate</td> <td>number</td> <td>协议层根据多个请求评估当前网络的 rtt（仅供参考）</td></tr> <tr><td>transportRttEstimate</td> <td>number</td> <td>传输层根据多个请求评估的当前网络的 rtt（仅供参考）</td></tr> <tr><td>downstreamThroughputKbpsEstimate</td> <td>number</td> <td>评估当前网络下载的kbps</td></tr> <tr><td>throughputKbps</td> <td>number</td> <td>当前网络的实际下载kbps</td></tr> <tr><td>peerIP</td> <td>string</td> <td>当前请求的IP</td></tr> <tr><td>port</td> <td>number</td> <td>当前请求的端口</td></tr> <tr><td>socketReused</td> <td>boolean</td> <td>是否复用连接</td></tr> <tr><td>sendBytesCount</td> <td>number</td> <td>发送的字节数</td></tr> <tr><td>receivedBytedCount</td> <td>number</td> <td>收到字节数</td></tr></tbody></table></div><h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="RequestTask"><a href="#RequestTask" aria-hidden="true" class="header-anchor">#</a> <a href="RequestTask.html">RequestTask</a></h3> <blockquote><p>基础库 1.4.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>请求任务对象</p> <h2 id="data-参数说明"><a href="#data-参数说明" aria-hidden="true" class="header-anchor">#</a> data 参数说明</h2> <p>最终发送给服务器的数据是 String 类型，如果传入的 data 不是 String 类型，会被转换成 String 。转换规则如下：</p> <ul><li>对于 <code>GET</code> 方法的数据，会将数据转换成 query string（<code>encodeURIComponent(k)=encodeURIComponent(v)&amp;encodeURIComponent(k)=encodeURIComponent(v)...</code>）</li> <li>对于 <code>POST</code> 方法且 <code>header['content-type']</code> 为 <code>application/json</code> 的数据，会对数据进行 JSON 序列化</li> <li>对于 <code>POST</code> 方法且 <code>header['content-type']</code> 为 <code>application/x-www-form-urlencoded</code> 的数据，会将数据转换成 query string <code>（encodeURIComponent(k)=encodeURIComponent(v)&amp;encodeURIComponent(k)=encodeURIComponent(v)...）</code></li></ul> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'test.php'</span><span class="token punctuation">,</span> <span class="token comment">//仅为示例，并非真实的接口地址</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    x<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    y<span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  header<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'content-type'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span> <span class="token comment">// 默认值</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

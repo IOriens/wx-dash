@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.getImageInfo</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.getImageInfo(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,175 +12,25 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxgetimageinfoobject-object">wx.getImageInfo(Object object)</h3>
-<p>&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x4FE1;&#x606F;&#x3002;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x9700;&#x5148;&#x914D;&#x7F6E;download&#x57DF;&#x540D;&#x624D;&#x80FD;&#x751F;&#x6548;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>src</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3001;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3001;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3001;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x8DEF;&#x5F84;</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
-<p><strong>&#x53C2;&#x6570;</strong></p>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>width</td>
-<td>number</td>
-<td>&#x56FE;&#x7247;&#x539F;&#x59CB;&#x5BBD;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;px&#x3002;&#x4E0D;&#x8003;&#x8651;&#x65CB;&#x8F6C;&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>height</td>
-<td>number</td>
-<td>&#x56FE;&#x7247;&#x539F;&#x59CB;&#x9AD8;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;px&#x3002;&#x4E0D;&#x8003;&#x8651;&#x65CB;&#x8F6C;&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>path</td>
-<td>string</td>
-<td>&#x56FE;&#x7247;&#x7684;&#x672C;&#x5730;&#x8DEF;&#x5F84;</td>
-<td></td>
-</tr>
-<tr>
-<td>orientation</td>
-<td>string</td>
-<td><a href="http://sylvana.net/jpegcrop/exif_orientation.html" target="_blank">&#x62CD;&#x7167;&#x65F6;&#x8BBE;&#x5907;&#x65B9;&#x5411;</a></td>
-<td><a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>&#x56FE;&#x7247;&#x683C;&#x5F0F;</td>
-<td><a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>res.orientation &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>up</td>
-<td>&#x9ED8;&#x8BA4;&#x65B9;&#x5411;&#xFF08;&#x624B;&#x673A;&#x6A2A;&#x6301;&#x62CD;&#x7167;&#xFF09;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 1&#x3002;&#x6216;&#x65E0; orientation &#x4FE1;&#x606F;&#x3002;</td>
-</tr>
-<tr>
-<td>up-mirrored</td>
-<td>&#x540C; up&#xFF0C;&#x4F46;&#x955C;&#x50CF;&#x7FFB;&#x8F6C;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 2</td>
-</tr>
-<tr>
-<td>down</td>
-<td>&#x65CB;&#x8F6C;180&#x5EA6;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 3</td>
-</tr>
-<tr>
-<td>down-mirrored</td>
-<td>&#x540C; down&#xFF0C;&#x4F46;&#x955C;&#x50CF;&#x7FFB;&#x8F6C;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 4</td>
-</tr>
-<tr>
-<td>left-mirrored</td>
-<td>&#x540C; left&#xFF0C;&#x4F46;&#x955C;&#x50CF;&#x7FFB;&#x8F6C;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 5</td>
-</tr>
-<tr>
-<td>right</td>
-<td>&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;90&#x5EA6;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 6</td>
-</tr>
-<tr>
-<td>right-mirrored</td>
-<td>&#x540C; right&#xFF0C;&#x4F46;&#x955C;&#x50CF;&#x7FFB;&#x8F6C;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 7</td>
-</tr>
-<tr>
-<td>left</td>
-<td>&#x9006;&#x65F6;&#x9488;&#x65CB;&#x8F6C;90&#x5EA6;&#xFF0C;&#x5BF9;&#x5E94; Exif &#x4E2D;&#x7684; 8</td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<p><a href="https://developers.weixin.qq.com/s/Kd47Sbmr6yYu" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-js">wx.getImageInfo({
-  <span class="hljs-attr">src</span>: <span class="hljs-string">&apos;images/a.jpg&apos;</span>,
-  success (res) {
-    <span class="hljs-built_in">console</span>.log(res.width)
-    <span class="hljs-built_in">console</span>.log(res.height)
-  }
-})
+   <div id="docContent"><div class="content custom"><h1 id="wx-getImageInfo-Object-object"><a href="#wx-getImageInfo-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.getImageInfo(Object object)</h1> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">1.9.6</a> 起支持在小程序插件中使用</p></blockquote> <p>获取图片信息。网络图片需先配置download域名才能生效。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>src</td> <td>string</td> <td></td> <td>是</td> <td>图片的路径，支持网络路径、本地路径、代码包路径</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h4 id="object-success-回调函数"><a href="#object-success-回调函数" aria-hidden="true" class="header-anchor">#</a> object.success 回调函数</h4> <h5 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h5> <h6 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h6> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>width</td> <td>number</td> <td>图片原始宽度，单位px。不考虑旋转。</td> <td></td></tr> <tr><td>height</td> <td>number</td> <td>图片原始高度，单位px。不考虑旋转。</td> <td></td></tr> <tr><td>path</td> <td>string</td> <td>图片的本地路径</td> <td></td></tr> <tr><td>orientation</td> <td>string</td> <td><a href="http://sylvana.net/jpegcrop/exif_orientation.html" target="_blank" rel="noopener noreferrer">拍照时设备方向<span></span></a></td> <td><a href="../../../framework/compatibility.html">1.9.90</a></td></tr> <tr><td>type</td> <td>string</td> <td>图片格式</td> <td><a href="../../../framework/compatibility.html">1.9.90</a></td></tr></tbody></table></div><p><strong>res.orientation 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>up</td> <td>默认方向（手机横持拍照），对应 Exif 中的 1。或无 orientation 信息。</td> <td></td></tr> <tr><td>up-mirrored</td> <td>同 up，但镜像翻转，对应 Exif 中的 2</td> <td></td></tr> <tr><td>down</td> <td>旋转180度，对应 Exif 中的 3</td> <td></td></tr> <tr><td>down-mirrored</td> <td>同 down，但镜像翻转，对应 Exif 中的 4</td> <td></td></tr> <tr><td>left-mirrored</td> <td>同 left，但镜像翻转，对应 Exif 中的 5</td> <td></td></tr> <tr><td>right</td> <td>顺时针旋转90度，对应 Exif 中的 6</td> <td></td></tr> <tr><td>right-mirrored</td> <td>同 right，但镜像翻转，对应 Exif 中的 7</td> <td></td></tr> <tr><td>left</td> <td>逆时针旋转90度，对应 Exif 中的 8</td> <td></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p><a href="https://developers.weixin.qq.com/s/Kd47Sbmr6yYu" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">getImageInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  src<span class="token punctuation">:</span> <span class="token string">'images/a.jpg'</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>width<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>height<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-wx.chooseImage({
-  success (res) {
-    wx.getImageInfo({
-      <span class="hljs-attr">src</span>: res.tempFilePaths[<span class="hljs-number">0</span>],
-      success (res) {
-        <span class="hljs-built_in">console</span>.log(res.width)
-        <span class="hljs-built_in">console</span>.log(res.height)
-      }
-    })
-  }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+wx<span class="token punctuation">.</span><span class="token function">chooseImage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">getImageInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      src<span class="token punctuation">:</span> res<span class="token punctuation">.</span>tempFilePaths<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>width<span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>height<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

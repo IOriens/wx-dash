@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>EditorContext.insertImage(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="EditorContext-insertImage-Object-object"><a href="#EditorContext-insertImage-Object-object" aria-hidden="true" class="header-anchor">#</a> EditorContext.insertImage(Object object)</h1> <blockquote><p>基础库 2.7.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>插入图片。</p> <p>地址为临时文件时，获取的编辑器html格式内容中 &lt;img&gt; 标签增加属性 data-local，delta 格式内容中图片 attributes 属性增加 data-local 字段，该值为传入的临时文件地址。</p> <p>开发者可选择在提交阶段上传图片到服务器，获取到网络地址后进行替换。替换时对于html内容应替换掉 &lt;img&gt; 的 src 值，对于 delta 内容应替换掉 <code>insert { image: abc }</code> 值。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>src</td> <td>string</td> <td></td> <td>是</td> <td>图片地址，仅支持 http(s)、base64、云图片(2.8.0)、临时文件(2.8.3)。</td></tr> <tr><td>alt</td> <td>string</td> <td></td> <td>否</td> <td>图像无法显示时的替代文本</td></tr> <tr><td>width</td> <td>string</td> <td></td> <td>否</td> <td>图片宽度（pixels/百分比)</td></tr> <tr><td>height</td> <td>string</td> <td></td> <td>否</td> <td>图片高度 (pixels/百分比)</td></tr> <tr><td>extClass</td> <td>string</td> <td></td> <td>否</td> <td>添加到图片 img 标签上的类名</td></tr> <tr><td>data</td> <td>Object</td> <td></td> <td>否</td> <td>data 被序列化为 name=value;name1=value2 的格式挂在属性 data-custom 上</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">this</span><span class="token punctuation">.</span>editorCtx<span class="token punctuation">.</span><span class="token function">insertImage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  src<span class="token punctuation">:</span> <span class="token string">'xx'</span><span class="token punctuation">,</span>
+  width<span class="token punctuation">:</span> <span class="token string">'100px'</span><span class="token punctuation">,</span>
+  height<span class="token punctuation">:</span> <span class="token string">'50px'</span><span class="token punctuation">,</span>
+  extClass<span class="token punctuation">:</span> className
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

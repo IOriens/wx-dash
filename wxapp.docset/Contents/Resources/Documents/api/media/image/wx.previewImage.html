@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.previewImage</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.previewImage(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,79 +12,10 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxpreviewimageobject-object">wx.previewImage(Object object)</h3>
-<p>&#x5728;&#x65B0;&#x9875;&#x9762;&#x4E2D;&#x5168;&#x5C4F;&#x9884;&#x89C8;&#x56FE;&#x7247;&#x3002;&#x9884;&#x89C8;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x3001;&#x53D1;&#x9001;&#x7ED9;&#x670B;&#x53CB;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>urls</td>
-<td>Array.&lt;string&gt;</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x9884;&#x89C8;&#x7684;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x5217;&#x8868;&#x3002;<a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.3</a> &#x8D77;&#x652F;&#x6301;&#x4E91;&#x6587;&#x4EF6;ID&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>current</td>
-<td>string</td>
-<td>urls &#x7684;&#x7B2C;&#x4E00;&#x5F20;</td>
-<td>&#x5426;</td>
-<td>&#x5F53;&#x524D;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x94FE;&#x63A5;</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.previewImage({
-  <span class="hljs-attr">current</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-comment">// &#x5F53;&#x524D;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;http&#x94FE;&#x63A5;</span>
-  urls: [] <span class="hljs-comment">// &#x9700;&#x8981;&#x9884;&#x89C8;&#x7684;&#x56FE;&#x7247;http&#x94FE;&#x63A5;&#x5217;&#x8868;</span>
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-previewImage-Object-object"><a href="#wx-previewImage-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.previewImage(Object object)</h1> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">1.9.6</a> 起支持在小程序插件中使用</p></blockquote> <p>在新页面中全屏预览图片。预览的过程中用户可以进行保存图片、发送给朋友等操作。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>urls</td> <td>Array.&lt;string&gt;</td> <td></td> <td>是</td> <td>需要预览的图片链接列表。<a href="../../../framework/compatibility.html">2.2.3</a> 起支持云文件ID。</td> <td></td></tr> <tr><td>showmenu</td> <td>boolean</td> <td>true</td> <td>否</td> <td>是否显示长按菜单</td> <td><a href="../../../framework/compatibility.html">2.13.0</a></td></tr> <tr><td>current</td> <td>string</td> <td>urls 的第一张</td> <td>否</td> <td>当前显示图片的链接</td> <td></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">previewImage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  current<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 当前显示图片的http链接</span>
+  urls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">// 需要预览的图片http链接列表</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

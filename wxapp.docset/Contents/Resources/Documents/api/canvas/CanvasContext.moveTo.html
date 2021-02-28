@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.moveTo</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.moveTo(number x, number y)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,33 +12,14 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextmovetonumber-x-number-y">CanvasContext.moveTo(number x, number y)</h3>
-<p>&#x628A;&#x8DEF;&#x5F84;&#x79FB;&#x52A8;&#x5230;&#x753B;&#x5E03;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x70B9;&#xFF0C;&#x4E0D;&#x521B;&#x5EFA;&#x7EBF;&#x6761;&#x3002;&#x7528; <code>stroke</code> &#x65B9;&#x6CD5;&#x6765;&#x753B;&#x7EBF;&#x6761;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="number-x">number x</h5>
-<p>&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x7684; x &#x5750;&#x6807;</p>
-<h5 id="number-y">number y</h5>
-<p>&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x7684; y &#x5750;&#x6807;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
-ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>)
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-moveTo-number-x-number-y"><a href="#CanvasContext-moveTo-number-x-number-y" aria-hidden="true" class="header-anchor">#</a> CanvasContext.moveTo(number x, number y)</h1> <p>把路径移动到画布中的指定点，不创建线条。用 <code>stroke</code> 方法来画线条</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-x"><a href="#number-x" aria-hidden="true" class="header-anchor">#</a> number x</h3> <p>目标位置的 x 坐标</p> <h3 id="number-y"><a href="#number-y" aria-hidden="true" class="header-anchor">#</a> number y</h3> <p>目标位置的 y 坐标</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
 
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
-ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">50</span>)
-ctx.stroke()
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/move-to.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p></div></div> <!---->    
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>SelectorQuery</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="SelectorQuery-NodesRef-context-function-callback"><a href="#SelectorQuery-NodesRef-context-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="SelectorQuery.html">SelectorQuery</a> NodesRef.context(function callback)</h1> <blockquote><p>基础库 2.4.2 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>添加节点的 Context 对象查询请求。目前支持 <a href="../media/video/VideoContext.html">VideoContext</a>、<a href="../canvas/CanvasContext.html">CanvasContext</a>、<a href="../media/live/LivePlayerContext.html">LivePlayerContext</a>、<a href="../media/editor/EditorContext.html">EditorContext</a>和 <a href="../media/map/MapContext.html">MapContext</a> 的获取。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="function-callback"><a href="#function-callback" aria-hidden="true" class="header-anchor">#</a> function callback</h3> <p>回调函数，在执行 <code>SelectorQuery.exec</code> 方法后，返回节点信息。</p> <h4 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>context</td> <td>Object</td> <td>节点对应的 Context 对象</td></tr></tbody></table></div><h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="SelectorQuery"><a href="#SelectorQuery" aria-hidden="true" class="header-anchor">#</a> <a href="SelectorQuery.html">SelectorQuery</a></h3> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">getContext</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">createSelectorQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">'.the-video-class'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>context<span class="token punctuation">)</span> <span class="token comment">// 节点对应的 Context 对象。如：选中的节点是 &lt;video&gt; 组件，那么此处即返回 VideoContext 对象</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

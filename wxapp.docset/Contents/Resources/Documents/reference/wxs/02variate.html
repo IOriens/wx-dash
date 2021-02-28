@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>变量</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="变量"><a href="#变量" aria-hidden="true" class="header-anchor">#</a> 变量</h1> <h2 id="概念"><a href="#概念" aria-hidden="true" class="header-anchor">#</a> 概念</h2> <ul><li>WXS 中的变量均为值的引用。</li> <li>没有声明的变量直接赋值使用，会被定义为全局变量。</li> <li>如果只声明变量而不赋值，则默认值为 <code>undefined</code>。</li> <li>var表现与javascript一致，会有变量提升。</li></ul> <div class="language-wxs extra-class"><pre class="language-text"><code>var foo = 1;
+var bar = "hello world";
+var i; // i === undefined
+</code></pre></div><p>上面代码，分别声明了 <code>foo</code>、 <code>bar</code>、 <code>i</code> 三个变量。然后，<code>foo</code> 赋值为数值 <code>1</code> ，<code>bar</code> 赋值为字符串 <code>"hello world"</code>。</p> <h2 id="变量名"><a href="#变量名" aria-hidden="true" class="header-anchor">#</a> 变量名</h2> <p>变量命名必须符合下面两个规则：</p> <ul><li>首字符必须是：字母（a-zA-Z），下划线（_）</li> <li>剩余字符可以是：字母（a-zA-Z），下划线（_）， 数字（0-9）</li></ul> <h2 id="保留标识符"><a href="#保留标识符" aria-hidden="true" class="header-anchor">#</a> 保留标识符</h2> <p>以下标识符不能作为变量名：</p> <div class="language- extra-class"><pre class="language-text"><code>delete
+void
+typeof
+
+null
+undefined
+NaN
+Infinity
+var
+
+if
+else
+
+true
+false
+
+require
+
+this
+function
+arguments
+return
+
+for
+while
+do
+break
+continue
+switch
+case
+default
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

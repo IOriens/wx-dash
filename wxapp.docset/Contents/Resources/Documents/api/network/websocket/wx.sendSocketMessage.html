@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.sendSocketMessage</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.sendSocketMessage(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,90 +12,29 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxsendsocketmessageobject-object">wx.sendSocketMessage(Object object)</h3>
-<p>&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x6570;&#x636E;&#x3002;&#x9700;&#x8981;&#x5148; wx.connectSocket&#xFF0C;&#x5E76;&#x5728; wx.onSocketOpen &#x56DE;&#x8C03;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x53D1;&#x9001;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data</td>
-<td>string/ArrayBuffer</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x5185;&#x5BB9;</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> socketOpen = <span class="hljs-literal">false</span>
-<span class="hljs-keyword">const</span> socketMsgQueue = []
-wx.connectSocket({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>
-})
+   <div id="docContent"><div class="content custom"><h1 id="wx-sendSocketMessage-Object-object"><a href="#wx-sendSocketMessage-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.sendSocketMessage(Object object)</h1> <p>通过 WebSocket 连接发送数据。需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>data</td> <td>string/ArrayBuffer</td> <td></td> <td>是</td> <td>需要发送的内容</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> socketOpen <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token keyword">let</span> socketMsgQueue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+wx<span class="token punctuation">.</span><span class="token function">connectSocket</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'test.php'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-  socketOpen = <span class="hljs-literal">true</span>
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; socketMsgQueue.length; i++){
-    sendSocketMessage(socketMsgQueue[i])
-  }
-  socketMsgQueue = []
-})
+wx<span class="token punctuation">.</span><span class="token function">onSocketOpen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  socketOpen <span class="token operator">=</span> <span class="token boolean">true</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> socketMsgQueue<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">sendSocketMessage</span><span class="token punctuation">(</span>socketMsgQueue<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  socketMsgQueue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sendSocketMessage</span>(<span class="hljs-params">msg</span>) </span>{
-  <span class="hljs-keyword">if</span> (socketOpen) {
-    wx.sendSocketMessage({
-      <span class="hljs-attr">data</span>:msg
-    })
-  } <span class="hljs-keyword">else</span> {
-    socketMsgQueue.push(msg)
-  }
-}
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+<span class="token keyword">function</span> <span class="token function">sendSocketMessage</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>socketOpen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">sendSocketMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      data<span class="token punctuation">:</span>msg
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    socketMsgQueue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

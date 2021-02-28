@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>NfcB.connect(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="NfcB-connect-Object-object"><a href="#NfcB-connect-Object-object" aria-hidden="true" class="header-anchor">#</a> NfcB.connect(Object object)</h1> <blockquote><p>基础库 2.11.2 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>连接 NFC 标签</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h2 id="错误"><a href="#错误" aria-hidden="true" class="header-anchor">#</a> 错误</h2> <div class="table-wrp"><table><thead><tr><th>错误码</th> <th>错误信息</th> <th>说明</th></tr></thead> <tbody><tr><td>13000</td> <td>设备不支持NFC</td> <td></td></tr> <tr><td>13001</td> <td>系统NFC开关未打开</td> <td></td></tr> <tr><td>13010</td> <td>未知错误</td> <td></td></tr> <tr><td>13019</td> <td>user is not authorized</td> <td>用户未授权</td></tr> <tr><td>13011</td> <td>invalid parameter</td> <td>参数无效</td></tr> <tr><td>13012</td> <td>parse NdefMessage failed</td> <td>将参数解析为NdefMessage失败</td></tr> <tr><td>13021</td> <td>NFC discovery already started</td> <td>已经开始NFC扫描</td></tr> <tr><td>13018</td> <td>NFC discovery has not started</td> <td>尝试在未开始NFC扫描时停止NFC扫描</td></tr> <tr><td>13022</td> <td>Tech already connected</td> <td>标签已经连接</td></tr> <tr><td>13023</td> <td>Tech has not connected</td> <td>尝试在未连接标签时断开连接</td></tr> <tr><td>13013</td> <td>NFC tag has not been discovered</td> <td>未扫描到NFC标签</td></tr> <tr><td>13014</td> <td>invalid tech</td> <td>无效的标签技术</td></tr> <tr><td>13015</td> <td>unavailable tech</td> <td>从标签上获取对应技术失败</td></tr> <tr><td>13024</td> <td>function not support</td> <td>当前标签技术不支持该功能</td></tr> <tr><td>13017</td> <td>system internal error</td> <td>相关读写操作失败</td></tr> <tr><td>13016</td> <td>connect fail</td> <td>连接失败</td></tr></tbody></table></div></div></div> <!---->    
+</body>
+</html>

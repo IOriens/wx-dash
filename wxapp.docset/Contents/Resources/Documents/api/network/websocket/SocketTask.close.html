@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>SocketTask.close</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>SocketTask.close(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,73 +12,6 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="sockettaskcloseobject-object">SocketTask.close(Object object)</h3>
-<p>&#x5173;&#x95ED; WebSocket &#x8FDE;&#x63A5;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>code</td>
-<td>number</td>
-<td>1000&#xFF08;&#x8868;&#x793A;&#x6B63;&#x5E38;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#xFF09;</td>
-<td>&#x5426;</td>
-<td>&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x503C;&#x8868;&#x793A;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x7684;&#x72B6;&#x6001;&#x53F7;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>reason</td>
-<td>string</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x4E00;&#x4E2A;&#x53EF;&#x8BFB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5FC5;&#x987B;&#x662F;&#x4E0D;&#x957F;&#x4E8E; 123 &#x5B57;&#x8282;&#x7684; UTF-8 &#x6587;&#x672C;&#xFF08;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#xFF09;&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="SocketTask-close-Object-object"><a href="#SocketTask-close-Object-object" aria-hidden="true" class="header-anchor">#</a> SocketTask.close(Object object)</h1> <p>关闭 WebSocket 连接</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>code</td> <td>number</td> <td>1000（表示正常关闭连接）</td> <td>否</td> <td>一个数字值表示关闭连接的状态号，表示连接被关闭的原因。</td></tr> <tr><td>reason</td> <td>string</td> <td></td> <td>否</td> <td>一个可读的字符串，表示连接被关闭的原因。这个字符串必须是不长于 123 字节的 UTF-8 文本（不是字符）。</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div></div></div> <!---->    
 </body>
 </html>

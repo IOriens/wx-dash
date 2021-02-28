@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>FileSystemManager.readFileSync</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>string|ArrayBuffer FileSystemManager.readFileSync(string filePath, string encoding, number position, number length)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,86 +12,6 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="stringarraybuffer-filesystemmanagerreadfilesyncstring-filepath-string-encoding">string|ArrayBuffer FileSystemManager.readFileSync(string filePath, string encoding)</h3>
-<p><a href="FileSystemManager.readFile.html">FileSystemManager.readFile</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-filepath">string filePath</h5>
-<p>&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</p>
-<h5 id="string-encoding">string encoding</h5>
-<p>&#x6307;&#x5B9A;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4F20; encoding&#xFF0C;&#x5219;&#x4EE5; ArrayBuffer &#x683C;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5185;&#x5BB9;</p>
-<p><strong>encoding &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ascii</td>
-<td></td>
-</tr>
-<tr>
-<td>base64</td>
-<td></td>
-</tr>
-<tr>
-<td>binary</td>
-<td></td>
-</tr>
-<tr>
-<td>hex</td>
-<td></td>
-</tr>
-<tr>
-<td>ucs2/ucs-2/utf16le/utf-16le</td>
-<td>&#x4EE5;&#x5C0F;&#x7AEF;&#x5E8F;&#x8BFB;&#x53D6;</td>
-</tr>
-<tr>
-<td>utf-8/utf8</td>
-<td></td>
-</tr>
-<tr>
-<td>latin1</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="stringarraybuffer-data">string|ArrayBuffer data</h5>
-<p>&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
-<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
-<table>
-<thead>
-<tr>
-<th>&#x9519;&#x8BEF;&#x7801;</th>
-<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>fail no such file or directory, open ${filePath}</td>
-<td>&#x6307;&#x5B9A;&#x7684; filePath &#x6240;&#x5728;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;</td>
-</tr>
-<tr>
-<td></td>
-<td>fail permission denied, open ${dirPath}</td>
-<td>&#x6307;&#x5B9A;&#x7684; filePath &#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x8BFB;&#x6743;&#x9650;</td>
-</tr>
-</tbody>
-</table>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="string-ArrayBuffer-FileSystemManager-readFileSync-string-filePath-string-encoding-number-position-number-length"><a href="#string-ArrayBuffer-FileSystemManager-readFileSync-string-filePath-string-encoding-number-position-number-length" aria-hidden="true" class="header-anchor">#</a> string|ArrayBuffer FileSystemManager.readFileSync(string filePath, string encoding, number position, number length)</h1> <p><a href="FileSystemManager.readFile.html">FileSystemManager.readFile</a> 的同步版本</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-filePath"><a href="#string-filePath" aria-hidden="true" class="header-anchor">#</a> string filePath</h3> <p>要读取的文件的路径 (本地路径)</p> <h3 id="string-encoding"><a href="#string-encoding" aria-hidden="true" class="header-anchor">#</a> string encoding</h3> <p>指定读取文件的字符编码，如果不传 encoding，则以 ArrayBuffer 格式读取文件的二进制内容</p> <p><strong>encoding 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>ascii</td> <td></td> <td></td></tr> <tr><td>base64</td> <td></td> <td></td></tr> <tr><td>binary</td> <td></td> <td></td></tr> <tr><td>hex</td> <td></td> <td></td></tr> <tr><td>ucs2</td> <td>以小端序读取</td> <td></td></tr> <tr><td>ucs-2</td> <td>以小端序读取</td> <td></td></tr> <tr><td>utf16le</td> <td>以小端序读取</td> <td></td></tr> <tr><td>utf-16le</td> <td>以小端序读取</td> <td></td></tr> <tr><td>utf-8</td> <td></td> <td></td></tr> <tr><td>utf8</td> <td></td> <td></td></tr> <tr><td>latin1</td> <td></td> <td></td></tr></tbody></table></div><h3 id="number-position"><a href="#number-position" aria-hidden="true" class="header-anchor">#</a> number position</h3> <blockquote><p>基础库 2.10.0 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>从文件指定位置开始读，如果不指定，则从文件头开始读。读取的范围应该是左闭右开区间 [position, position+length)。有效范围：[0, fileLength - 1]。单位：byte</p> <h3 id="number-length"><a href="#number-length" aria-hidden="true" class="header-anchor">#</a> number length</h3> <blockquote><p>基础库 2.10.0 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>指定文件的长度，如果不指定，则读到文件末尾。有效范围：[1, fileLength]。单位：byte</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="string-ArrayBuffer-data"><a href="#string-ArrayBuffer-data" aria-hidden="true" class="header-anchor">#</a> string|ArrayBuffer data</h3> <p>文件内容</p> <h2 id="错误"><a href="#错误" aria-hidden="true" class="header-anchor">#</a> 错误</h2> <div class="table-wrp"><table><thead><tr><th>错误码</th> <th>错误信息</th> <th>说明</th></tr></thead> <tbody><tr><td></td> <td>fail no such file or directory, open ${filePath}</td> <td>指定的 filePath 所在目录不存在</td></tr> <tr><td></td> <td>fail permission denied, open ${dirPath}</td> <td>指定的 filePath 路径没有读权限</td></tr> <tr><td></td> <td>fail sdcard not mounted</td> <td>Android sdcard 挂载失败</td></tr></tbody></table></div></div></div> <!---->    
 </body>
 </html>

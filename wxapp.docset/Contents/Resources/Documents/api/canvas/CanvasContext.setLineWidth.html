@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.setLineWidth</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.setLineWidth(number lineWidth)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,48 +12,31 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextsetlinewidthnumber-linewidth">CanvasContext.setLineWidth(number lineWidth)</h3>
-<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x5BBD;&#x5EA6;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="number-linewidth">number lineWidth</h5>
-<p>&#x7EBF;&#x6761;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;px</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.beginPath()
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">10</span>)
-ctx.stroke()
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-setLineWidth-number-lineWidth"><a href="#CanvasContext-setLineWidth-number-lineWidth" aria-hidden="true" class="header-anchor">#</a> CanvasContext.setLineWidth(number lineWidth)</h1> <blockquote><p>从基础库 <a href="../../framework/compatibility.html">1.9.90</a> 开始，本接口停止维护，请使用 <a href="CanvasContext.html">CanvasContext.lineWidth</a> 代替</p></blockquote> <p>设置线条的宽度</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-lineWidth"><a href="#number-lineWidth" aria-hidden="true" class="header-anchor">#</a> number lineWidth</h3> <p>线条的宽度，单位px</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.setLineWidth(<span class="hljs-number">5</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">30</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">30</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineWidth</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.setLineWidth(<span class="hljs-number">10</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">50</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineWidth</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.setLineWidth(<span class="hljs-number">15</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">70</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineWidth</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/line-width.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p></div></div> <!---->    
 </body>
 </html>

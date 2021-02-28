@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Worker</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,38 +12,17 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="worker">Worker</h3>
-<p>Worker &#x5B9E;&#x4F8B;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E2D;&#x53EF;&#x901A;&#x8FC7; <a href="wx.createWorker.html">wx.createWorker</a> &#x63A5;&#x53E3;&#x83B7;&#x53D6;&#xFF0C;worker &#x7EBF;&#x7A0B;&#x4E2D;&#x53EF;&#x901A;&#x8FC7;&#x5168;&#x5C40;&#x53D8;&#x91CF; <code>worker</code> &#x83B7;&#x53D6;&#x3002;</p>
-<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
-<h5 id="workerpostmessageobject-message"><a href="Worker.postMessage.html">Worker.postMessage(Object message)</a></h5>
-<p>&#x5411;&#x4E3B;&#x7EBF;&#x7A0B;/Worker &#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
-<h5 id="workerterminate"><a href="Worker.terminate.html">Worker.terminate()</a></h5>
-<p>&#x7ED3;&#x675F;&#x5F53;&#x524D; Worker &#x7EBF;&#x7A0B;&#x3002;&#x4EC5;&#x9650;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B; worker &#x5BF9;&#x8C61;&#x4E0A;&#x8C03;&#x7528;&#x3002;</p>
-<h5 id="workeronmessagefunction-callback"><a href="Worker.onMessage.html">Worker.onMessage(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x4E3B;&#x7EBF;&#x7A0B;/Worker &#x7EBF;&#x7A0B;&#x5411;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<p>&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x9700;&#x5148;&#x8FDB;&#x884C;&#x57FA;&#x7840;&#x914D;&#x7F6E;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF7;&#x67E5;&#x9605; <a href="../../framework/workers.html">&#x591A;&#x7EBF;&#x7A0B;</a> &#x6587;&#x6863;&#x4E86;&#x89E3;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x548C;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x3002;</p>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> worker = wx.createWorker(<span class="hljs-string">&apos;workers/request/index.js&apos;</span>) <span class="hljs-comment">// &#x6587;&#x4EF6;&#x540D;&#x6307;&#x5B9A; worker &#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+   <div id="docContent"><div class="content custom"><h1 id="Worker"><a href="#Worker" aria-hidden="true" class="header-anchor">#</a> Worker</h1> <p>Worker 实例，主线程中可通过 <a href="wx.createWorker.html">wx.createWorker</a> 接口获取，worker 线程中可通过全局变量 <code>worker</code> 获取。</p> <h2 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h2> <h3 id="Worker-postMessage-Object-message"><a href="#Worker-postMessage-Object-message" aria-hidden="true" class="header-anchor">#</a> <a href="Worker.postMessage.html">Worker.postMessage(Object message)</a></h3> <p>向主线程/Worker 线程发送的消息。</p> <h3 id="Worker-terminate"><a href="#Worker-terminate" aria-hidden="true" class="header-anchor">#</a> <a href="Worker.terminate.html">Worker.terminate()</a></h3> <p>结束当前 Worker 线程。仅限在主线程 worker 对象上调用。</p> <h3 id="Worker-onMessage-function-callback"><a href="#Worker-onMessage-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./Worker.onMessage.html">Worker.onMessage(function callback)</a></h3> <p>监听主线程/Worker 线程向当前线程发送的消息的事件。</p> <h3 id="Worker-onProcessKilled-function-callback"><a href="#Worker-onProcessKilled-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./Worker.onProcessKilled.html">Worker.onProcessKilled(function callback)</a></h3> <p>监听 worker进程被系统回收事件（当iOS系统资源紧张时，处于后台的小程序/小游戏的worker存在被系统回收的可能，开发者可监听此事件并重新创建一个worker）</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p>运行以下代码需先进行基础配置，详细请查阅 <a href="/miniprogram/dev/framework/workers.html">小程序多线程</a> | <a href="/minigame/dev/guide/base-ability/worker.html">小游戏多线程</a> 文档了解基础知识和配置方法。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> worker <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createWorker</span><span class="token punctuation">(</span><span class="token string">'workers/request/index.js'</span><span class="token punctuation">)</span> <span class="token comment">// 文件名指定 worker 的入口文件路径，绝对路径</span>
 
-worker.onMessage(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(res)
-})
+worker<span class="token punctuation">.</span><span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-worker.postMessage({
-  <span class="hljs-attr">msg</span>: <span class="hljs-string">&apos;hello worker&apos;</span>
-})
+worker<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  msg<span class="token punctuation">:</span> <span class="token string">'hello worker'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-worker.terminate()
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+worker<span class="token punctuation">.</span><span class="token function">terminate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

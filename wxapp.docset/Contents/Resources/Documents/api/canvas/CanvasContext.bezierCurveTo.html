@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.bezierCurveTo</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.bezierCurveTo(number cp1x, number cp1y, number cp2x, number cp2y, number x, number y)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,68 +12,48 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextbeziercurveto">CanvasContext.bezierCurveTo()</h3>
-<p>&#x521B;&#x5EFA;&#x4E09;&#x6B21;&#x65B9;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x8DEF;&#x5F84;&#x3002;&#x66F2;&#x7EBF;&#x7684;&#x8D77;&#x59CB;&#x70B9;&#x4E3A;&#x8DEF;&#x5F84;&#x4E2D;&#x524D;&#x4E00;&#x4E2A;&#x70B9;&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-bezierCurveTo-number-cp1x-number-cp1y-number-cp2x-number-cp2y-number-x-number-y"><a href="#CanvasContext-bezierCurveTo-number-cp1x-number-cp1y-number-cp2x-number-cp2y-number-x-number-y" aria-hidden="true" class="header-anchor">#</a> CanvasContext.bezierCurveTo(number cp1x, number cp1y, number cp2x, number cp2y, number x, number y)</h1> <p>创建三次方贝塞尔曲线路径。曲线的起始点为路径中前一个点。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-cp1x"><a href="#number-cp1x" aria-hidden="true" class="header-anchor">#</a> number cp1x</h3> <p>第一个贝塞尔控制点的 x 坐标</p> <h3 id="number-cp1y"><a href="#number-cp1y" aria-hidden="true" class="header-anchor">#</a> number cp1y</h3> <p>第一个贝塞尔控制点的 y 坐标</p> <h3 id="number-cp2x"><a href="#number-cp2x" aria-hidden="true" class="header-anchor">#</a> number cp2x</h3> <p>第二个贝塞尔控制点的 x 坐标</p> <h3 id="number-cp2y"><a href="#number-cp2y" aria-hidden="true" class="header-anchor">#</a> number cp2y</h3> <p>第二个贝塞尔控制点的 y 坐标</p> <h3 id="number-x"><a href="#number-x" aria-hidden="true" class="header-anchor">#</a> number x</h3> <p>结束点的 x 坐标</p> <h3 id="number-y"><a href="#number-y" aria-hidden="true" class="header-anchor">#</a> number y</h3> <p>结束点的 y 坐标</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// Draw points</span>
-ctx.beginPath()
-ctx.arc(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
-ctx.fill()
+<span class="token comment">// Draw points</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.arc(<span class="hljs-number">200</span>, <span class="hljs-number">20</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;lightgreen&apos;</span>)
-ctx.fill()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'lightgreen'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.arc(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.arc(<span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
-ctx.fill()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'blue'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.setFillStyle(<span class="hljs-string">&apos;black&apos;</span>)
-ctx.setFontSize(<span class="hljs-number">12</span>)
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'black'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFontSize</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// Draw guides</span>
-ctx.beginPath()
-ctx.moveTo(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
-ctx.lineTo(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
+<span class="token comment">// Draw guides</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
 
-ctx.moveTo(<span class="hljs-number">200</span>, <span class="hljs-number">20</span>)
-ctx.lineTo(<span class="hljs-number">200</span>, <span class="hljs-number">100</span>)
-ctx.lineTo(<span class="hljs-number">70</span>, <span class="hljs-number">75</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;#AAAAAA&apos;</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setStrokeStyle</span><span class="token punctuation">(</span><span class="token string">'#AAAAAA'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// Draw quadratic curve</span>
-ctx.beginPath()
-ctx.moveTo(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
-ctx.bezierCurveTo(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;black&apos;</span>)
-ctx.stroke()
+<span class="token comment">// Draw quadratic curve</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">bezierCurveTo</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setStrokeStyle</span><span class="token punctuation">(</span><span class="token string">'black'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/bezier-curve.png" alt=""></p>
-<p>&#x9488;&#x5BF9; moveTo(20, 20) bezierCurveTo(20, 100, 200, 100, 200, 20) &#x7684;&#x4E09;&#x4E2A;&#x5173;&#x952E;&#x5750;&#x6807;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>&#x7EA2;&#x8272;&#xFF1A;&#x8D77;&#x59CB;&#x70B9;(20, 20)</li>
-<li>&#x84DD;&#x8272;&#xFF1A;&#x4E24;&#x4E2A;&#x63A7;&#x5236;&#x70B9;(20, 100) (200, 100)</li>
-<li>&#x7EFF;&#x8272;&#xFF1A;&#x7EC8;&#x6B62;&#x70B9;(200, 20)</li>
-</ul>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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ddmhzKjSUGEJ6HJpO+64o+jb17LckF+WNLNpq1TyU2Rr166VpqYmueaaa7IhSCvRENBH1Zqbm+WPP/7IPCbklznSmhssnfw2ELv99ttl77335mpwzVOo+A3oXt6ee+4p+qxuqA35hSKbvt3Syk+Rffvtt+5K3siRI9MTpGahCVx99dXu5eLfffdd0DiQX1C8qRovtfw2EJs4caK7gfXVV19NBZFKxSOgudac33333bkMHvnlgjlRJ8jvf7h+/vlnueCCC9z5wLfffjsRRAoXh4Dm9phjjnG51pzntSG/vEj794P8NmH11ltvuf8cp59+unzxxRf+JClpmoDK57TTTnO5rccfN+Rnb3ogvyo5mTVrlhxwwAFy8cUXy8qVK+1ljhF5Efjll1/koosukgMPPFBefPFFrzohCiG/EFRraxP5tcNv6tSpcsIJJ8iFF14oH3zwQW20qZ0bgYULF8r555/vcvfYY4/l1m+1jpBf3VOw2QCQn2dOHn/8cTn88MPdlcGnnnrKsxbF8ibw5JNPypFHHin9+/eX6dOn59191f6Qn5lU/DsQ5JcwJ3pPmC6Zv/vuu8utt94qf/31V8IWKJ41gT///FNuueUWd/X23HPPlffeey/rLmpuD/nVjDDzBpBfSqS6vtt1113n7hMcMmSIPPvssylbolpaAs8884ycddZZcsQRR8gNN9yQ69XbpGNGfkmJhS+P/DJgrOJTAXbo0EGGDh0qs2fPzqBVmtgSgZdfftmdf91uu+3k7LPPlueee64QoJCfvTQhvwxzsm7dOnn00Udl8ODBsvPOO7vlkObPn59hD+Vsat68eXL55Ze7RSl0gVo9//r3338XCgbys5cu5BcoJ2vWrBFdCFPPQSlkfWBenydetGhRoB7jaVZXVlFWAwcOdOz0huQHH3zQLUpR1A352csc8sshJx9++KGMHz/eLYXes2dP6dKli7uJ+r777hN9DWLZN2Vw7733OibKRhkpKxWgsothQ372soj8cs6J7r189NFH7urkqaee6q4ad+rUyS23f9lll8nkyZPl66+/znlU+XWnsWmMGqvGrGvnKQNloUyUTZH38KqRRH75zTHfnpCfL6mA5fSViHp/2qhRo9xq0127dpXOnTu754yHDRsmd9xxh1t0QcsVZdOxvvLKK27sl1xyibs/Us+DamwDBgxwsWrMP/zwQ1FCqmmcyK8mfEEqI78gWGtvVJfbmjZtmowZM8YdDh588MHudZwdO3aUXr16yUknnSSjR4+WKVOmiN7y8eabb7pnkfN4Xaf2oX1pn9q3jkFlpmPSsW2//fZurL1793Zj10VC9YZjjamsG/Kzl3nkZy8nVUekVzhXrFjhnlHVc4i6V9jS0uL2pA455BAnHj1ntu2227oXt6t89PBSr5CeeeaZ7uKLPqs8YsQIt4ahrmZ90003uY9+15/p77SMltU6WlfbUPlqm9tss43rQ/vSPrVvHYO+JErHpLei6BiLdjU29DRAfqEJJ28f+SVnZqrG+vXrZdWqVbJs2TJ3cWDu3Lnu8Ts9pHziiSfcHpf+q/ci6s/0WeVJkyaJrmGoFxRuvvlm99Hv+jP9nZbRslrn/9vQnz399NOuD+1L+9S+dQxsWyeA/OzNEORnLyeZjEgvGixfvlz0thG913DGjBlur0wfz9NDVn1CRR8L27Dpd/2Z/k7LaFmto3W1DW0rxgsRmcD2aAT5eUDKuQjyyxl4PbvTF/PohQi9ojpnzhwnN927049+f+2119zvtEyIl/jUM/Z694386p2BzftHfvZykumI2tsD1IsQ+mGPL1PsmzWG/MLyTdM68ktDzWCdLZ370yuxeouMrm331VdfiS7s6XMhQstoWa2jdbUNbYtzfekTj/zSswtVE/mFIhuw3XrIKUu5BkRjtmnkZy81yM9eTjYakfULEe0dVm96YcU47mDDQ37B0KZuGPmlRpd9xQ0XJD7//HNZsGCB6HtE9KPf9WdFuRARSxxZZhj5ZUkzm7aQXzYcE7dStj0m63uwiROYsALySwgsh+LILzBkzpVVB1yPc5eB0121eeRXL/LV+0V+GeakTP+ZM8S2UVOx/rFAfqFmTPp2kV9KdmU/jEuJLXW1op8mQH6pUx+sIvLzQMsJfA9IdShSpLwgvzpMkHa6RH6bACr6Hoa9KZbviKzukSO/fOeBT2+llV+s55Z8kl62MhbOxSI/e7OuFPKzMPntpb7cI8r7jx/yszffopOf1cMee6lnRFsiEOq0B/KzN98KLb8infC2l3pG5Esgi3mG/Hxp51fOpPxmzpTKkupLKi+qXiz6XbdQf5HzQ01PMRFIcoSxpfkcE4uixmJSfj16iLS2LpHbbptTWVp9rltOKc3STEVNCuMuJoFq55YnTJjr5nJr62JpbCxmbDGO2qT8uncXaWgQGTRoqQwezDsiYpx4ZYlJL6w0Na1yc1nndN++ZYncfpwm5aeHCTpJVIIbDnvto2SEENgyAeazzZlhUn42UTEqCEAgJgLIL6ZsEgsEIOBNAPl5o6IgBCAQEwHkF1M2iQUCEPAmgPy8UVEQAhCIiQDyiymbxAIBCHgTQH7eqCgIAQjERAD5xZRNYoEABLwJID9vVBSEAARiIoD8YsomsUAAAt4EkJ83KgpCAAIxEUB+MWWTWCAAAW8CyM8bFQUhAIGYCCC/mLJJLBCAgDcB5OeNioIQgEBMBJBfTNkkFghAwJsA8vNGRUEIQCAmAsgvpmwSCwQg4E0A+XmjoiAEIBATAeQXUzaJBQIQ8CaA/LxRURACEIiJAPKLKZvEAgEIeBNAft6oKAgBCMREAPnFlE1igQAEvAkgP29UFIQABGIigPxiyiaxQAAC3gSQnzcqCkIAAjERQH4xZZNYIAABbwLIzxsVBSEAgZgIIL+YskksEICANwHk542KghCAQEwEkF9M2SQWCEDAmwDy80ZFQQhAICYCyC+mbBILBCDgTQD5eaOiIAQgEBMB5BdTNokFAhDwJoD8vFFREAIQiIkA8ospm8QCAQh4E0B+3qgoCAEIxEQA+cWUTWKBAAS8CSA/b1QUhAAEYiKA/GLKJrFAAALeBJCfNyoKQgACMRFAfjFlk1ggAAFvAsjPGxUFIQCBmAggv5iySSwQgIA3AeTnjYqCEIBATASQX0zZJBYIQMCbQKby08b4wIA5wBwoyhzwNmWlYEOSwpSFAAQgEAsB5BdLJokDAhBIRAD5JcJFYQhAIBYCyC+WTBIHBCCQiADyS4SLwhCAQCwEkF8smSQOCEAgEQHklwgXhSEAgVgIIL9YMkkcEIBAIgLILxEuCkMAArEQQH6xZJI4IACBRAT+Cw0ze+G8h7qbAAAAAElFTkSuQmCC" alt=""></p> <p>针对 moveTo(20, 20) bezierCurveTo(20, 100, 200, 100, 200, 20) 的三个关键坐标如下：</p> <ul><li>红色：起始点(20, 20)</li> <li>蓝色：两个控制点(20, 100) (200, 100)</li> <li>绿色：终止点(200, 20)</li></ul></div></div> <!---->    
 </body>
 </html>

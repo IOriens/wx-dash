@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.authPrivateMessage(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="wx-authPrivateMessage-Object-object"><a href="#wx-authPrivateMessage-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.authPrivateMessage(Object object)</h1> <blockquote><p>基础库 2.13.0 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>验证私密消息。用法详情见 <a href="../../framework/open-ability/share/private-message.html">小程序私密消息使用指南</a></p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>shareTicket</td> <td>string</td> <td></td> <td>是</td> <td>shareTicket。可以从 wx.onShow 中获取。详情 <a href="../../framework/open-ability/share.html">shareTicket</a></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h4 id="object-success-回调函数"><a href="#object-success-回调函数" aria-hidden="true" class="header-anchor">#</a> object.success 回调函数</h4> <h5 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h5> <h6 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h6> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>errMsg</td> <td>string</td> <td>错误信息</td></tr> <tr><td>valid</td> <td>boolean</td> <td>验证是否通过</td></tr> <tr><td>encryptedData</td> <td>string</td> <td>经过加密的activityId，解密后可得到原始的activityId。若解密后得到的activityId可以与开发者后台的活动id对应上则验证通过，否则表明valid字段不可靠（被篡改） 详细见<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/signature.html" target="_blank" rel="noopener noreferrer">加密数据解密算法<span></span></a></td></tr> <tr><td>iv</td> <td>string</td> <td>加密算法的初始向量，详细见<a href="../../framework/open-ability/signature.html">加密数据解密算法</a></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">authPrivateMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  shareTicket<span class="token punctuation">:</span> <span class="token string">'xxxxxx'</span><span class="token punctuation">,</span>
+  <span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'authPrivateMessage success'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+    <span class="token comment">// res</span>
+    <span class="token comment">// {</span>
+    <span class="token comment">//   errMsg: 'authPrivateMessage:ok'</span>
+    <span class="token comment">//   valid: true</span>
+    <span class="token comment">//   iv: 'xxxx',</span>
+    <span class="token comment">//   encryptedData: 'xxxxxx'</span>
+    <span class="token comment">// }</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">fail</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'authPrivateMessage fail'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

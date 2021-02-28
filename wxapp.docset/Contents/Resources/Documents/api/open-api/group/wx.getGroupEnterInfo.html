@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.getGroupEnterInfo(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="wx-getGroupEnterInfo-Object-object"><a href="#wx-getGroupEnterInfo-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.getGroupEnterInfo(Object object)</h1> <blockquote><p>基础库 2.10.4 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>获取群工具小程序启动信息</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h4 id="object-success-回调函数"><a href="#object-success-回调函数" aria-hidden="true" class="header-anchor">#</a> object.success 回调函数</h4> <h5 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h5> <h6 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h6> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>errMsg</td> <td>string</td> <td>错误信息</td> <td></td></tr> <tr><td>encryptedData</td> <td>string</td> <td>包括敏感数据在内的完整转发信息的加密数据，详细见<a href="../../../framework/open-ability/signature.html">加密数据解密算法</a></td> <td></td></tr> <tr><td>iv</td> <td>string</td> <td>加密算法的初始向量，详细见<a href="../../../framework/open-ability/signature.html">加密数据解密算法</a></td> <td></td></tr> <tr><td>cloudID</td> <td>string</td> <td>敏感数据对应的云 ID，开通<a href="../../../wxcloud/basis/getting-started.html">云开发</a>的小程序才会返回，可通过云调用直接获取开放数据，详细见<a href="../../../framework/open-ability/signature.html#method-cloud">云调用直接获取开放数据</a></td> <td><a href="../../../framework/compatibility.html">2.7.0</a></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">getGroupEnterInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// res</span>
+    <span class="token punctuation">{</span>
+      errMsg<span class="token punctuation">:</span> <span class="token string">'getGroupEnterInfo:ok'</span><span class="token punctuation">,</span>
+      encryptedData<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      iv<span class="token punctuation">:</span> <span class="token string">''</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">fail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>敏感数据有两种获取方式，一是使用 <a href="../../../framework/open-ability/signature.html#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95">加密数据解密算法</a> 。
+获取得到的开放数据为以下 json 结构（其中 opengid 为当前群的唯一标识）：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+ <span class="token property">"opengid"</span><span class="token operator">:</span> <span class="token string">"OPENGID"</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="Tips"><a href="#Tips" aria-hidden="true" class="header-anchor">#</a> Tips</h2> <ul><li>如需要展示群名称，小程序可以使用<a href="../../../component/open-data.html">开放数据组件</a></li> <li>小游戏可以通过 <code>wx.getGroupInfo</code> 接口获取群名称</li></ul></div></div> <!---->    
+</body>
+</html>

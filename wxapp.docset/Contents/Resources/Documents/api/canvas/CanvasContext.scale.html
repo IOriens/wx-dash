@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.scale</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.scale(number scaleWidth, number scaleHeight)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,34 +12,15 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextscalenumber-scalewidth-number-scaleheight">CanvasContext.scale(number scaleWidth, number scaleHeight)</h3>
-<p>&#x5728;&#x8C03;&#x7528;&#x540E;&#xFF0C;&#x4E4B;&#x540E;&#x521B;&#x5EFA;&#x7684;&#x8DEF;&#x5F84;&#x5176;&#x6A2A;&#x7EB5;&#x5750;&#x6807;&#x4F1A;&#x88AB;&#x7F29;&#x653E;&#x3002;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x500D;&#x6570;&#x4F1A;&#x76F8;&#x4E58;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="number-scalewidth">number scaleWidth</h5>
-<p>&#x6A2A;&#x5750;&#x6807;&#x7F29;&#x653E;&#x7684;&#x500D;&#x6570; (1 = 100%&#xFF0C;0.5 = 50%&#xFF0C;2 = 200%)</p>
-<h5 id="number-scaleheight">number scaleHeight</h5>
-<p>&#x7EB5;&#x5750;&#x6807;&#x8F74;&#x7F29;&#x653E;&#x7684;&#x500D;&#x6570; (1 = 100%&#xFF0C;0.5 = 50%&#xFF0C;2 = 200%)</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-scale-number-scaleWidth-number-scaleHeight"><a href="#CanvasContext-scale-number-scaleWidth-number-scaleHeight" aria-hidden="true" class="header-anchor">#</a> CanvasContext.scale(number scaleWidth, number scaleHeight)</h1> <p>在调用后，之后创建的路径其横纵坐标会被缩放。多次调用倍数会相乘。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-scaleWidth"><a href="#number-scaleWidth" aria-hidden="true" class="header-anchor">#</a> number scaleWidth</h3> <p>横坐标缩放的倍数 (1 = 100%，0.5 = 50%，2 = 200%)</p> <h3 id="number-scaleHeight"><a href="#number-scaleHeight" aria-hidden="true" class="header-anchor">#</a> number scaleHeight</h3> <p>纵坐标轴缩放的倍数 (1 = 100%，0.5 = 50%，2 = 200%)</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
 
-ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">25</span>, <span class="hljs-number">15</span>)
-ctx.scale(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
-ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">25</span>, <span class="hljs-number">15</span>)
-ctx.scale(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
-ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">25</span>, <span class="hljs-number">15</span>)
+ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span>
 
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/scale.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p></div></div> <!---->    
 </body>
 </html>

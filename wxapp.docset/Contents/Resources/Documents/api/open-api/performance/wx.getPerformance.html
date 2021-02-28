@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Performance</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="Performance-wx-getPerformance"><a href="#Performance-wx-getPerformance" aria-hidden="true" class="header-anchor">#</a> <a href="Performance.html">Performance</a> wx.getPerformance()</h1> <blockquote><p>基础库 2.11.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <blockquote><p>本接口支持在小程序插件中使用</p></blockquote> <p>获取当前小程序性能相关的信息。</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="Performance"><a href="#Performance" aria-hidden="true" class="header-anchor">#</a> <a href="Performance.html">Performance</a></h3> <p>目前支持获取以下几类性能指标：</p> <div class="table-wrp"><table><thead><tr><th>指标类型（entryType）</th> <th>指标名称</th></tr></thead> <tbody><tr><td>路由（navigation）</td> <td>route: 路由性能；appLaunch: 小程序启动耗时</td></tr> <tr><td>渲染（render）</td> <td>firstRender: 页面首次渲染耗时</td></tr> <tr><td>脚本（script）</td> <td>evaluateScript: 注入脚本耗时</td></tr></tbody></table></div><p>性能数据详情：</p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>说明</th></tr></thead> <tbody><tr><td>entryType</td> <td>指标类型</td></tr> <tr><td>name</td> <td>指标名称</td></tr> <tr><td>startTime</td> <td>指标调用开始时间</td></tr> <tr><td>duration</td> <td>耗时</td></tr> <tr><td>path</td> <td>路径</td></tr> <tr><td>navigationStart</td> <td>路由真正响应开始时间</td></tr> <tr><td>navigationType</td> <td>路由详细类型</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> performance <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getPerformance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> observer <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">createObserver</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">entryList</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>entryList<span class="token punctuation">.</span><span class="token function">getEntries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+observer<span class="token punctuation">.</span><span class="token function">observe</span><span class="token punctuation">(</span><span class="token punctuation">{</span> entryTypes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'render'</span><span class="token punctuation">,</span> <span class="token string">'script'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

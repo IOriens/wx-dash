@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.setFillStyle</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.setFillStyle(string|CanvasGradient</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,27 +12,10 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextsetfillstylecolor-color">CanvasContext.setFillStyle(<a href="Color.html">Color</a> color)</h3>
-<p>&#x8BBE;&#x7F6E;&#x586B;&#x5145;&#x8272;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="color-color"><a href="Color.html">Color</a> color</h5>
-<p>&#x586B;&#x5145;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x9ED8;&#x8BA4;&#x989C;&#x8272;&#x4E3A; black&#x3002;</p>
-<h4 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
-ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/fill-rect.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-setFillStyle-string-CanvasGradient-color"><a href="#CanvasContext-setFillStyle-string-CanvasGradient-color" aria-hidden="true" class="header-anchor">#</a> CanvasContext.setFillStyle(string|<a href="CanvasGradient.html">CanvasGradient</a> color)</h1> <blockquote><p>从基础库 <a href="../../framework/compatibility.html">1.9.90</a> 开始，本接口停止维护，请使用 <a href="CanvasContext.html">CanvasContext.fillStyle</a> 代替</p></blockquote> <p>设置填充色。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-CanvasGradient-color"><a href="#string-CanvasGradient-color" aria-hidden="true" class="header-anchor">#</a> string|<a href="CanvasGradient.html">CanvasGradient</a> color</h3> <p>填充的颜色，默认颜色为 black。</p> <h2 id="代码示例"><a href="#代码示例" aria-hidden="true" class="header-anchor">#</a> 代码示例</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p></div></div> <!---->    
 </body>
 </html>

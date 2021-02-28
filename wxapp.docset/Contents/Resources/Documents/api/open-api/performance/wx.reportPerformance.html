@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.reportPerformance(Number id, Number value, String|Array dimensions)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="wx-reportPerformance-Number-id-Number-value-String-Array-dimensions"><a href="#wx-reportPerformance-Number-id-Number-value-String-Array-dimensions" aria-hidden="true" class="header-anchor">#</a> wx.reportPerformance(Number id, Number value, String|Array dimensions)</h1> <blockquote><p>基础库 2.9.2 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">2.9.3</a> 起支持在小程序插件中使用</p></blockquote> <p>小程序测速上报。使用前，需要在小程序管理后台配置。 详情参见<a href="../../../framework/performanceReport/index.html">小程序测速</a>指南。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Number-id"><a href="#Number-id" aria-hidden="true" class="header-anchor">#</a> Number id</h3> <p>指标 id</p> <h3 id="Number-value"><a href="#Number-value" aria-hidden="true" class="header-anchor">#</a> Number value</h3> <p>需要上报的数值</p> <h3 id="String-Array-dimensions"><a href="#String-Array-dimensions" aria-hidden="true" class="header-anchor">#</a> String|Array dimensions</h3> <p>自定义维度 (选填)</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">reportPerformance</span><span class="token punctuation">(</span><span class="token number">1101</span><span class="token punctuation">,</span> <span class="token number">680</span><span class="token punctuation">)</span>
+wx<span class="token punctuation">.</span><span class="token function">reportPerformance</span><span class="token punctuation">(</span><span class="token number">1101</span><span class="token punctuation">,</span> <span class="token number">680</span><span class="token punctuation">,</span> <span class="token string">'custom'</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

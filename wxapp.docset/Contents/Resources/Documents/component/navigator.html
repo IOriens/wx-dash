@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>navigator</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../website.css">
+  <link rel="stylesheet" href="../../../../../style.css">
+  <link rel="stylesheet" href="../../../../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -10,260 +10,35 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h4 id="navigator">navigator</h4>
-<p>&#x9875;&#x9762;&#x94FE;&#x63A5;&#x3002;</p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id="navigator-target">target</td>
-<td>String</td>
-<td>self</td>
-<td>&#x5728;&#x54EA;&#x4E2A;&#x76EE;&#x6807;&#x4E0A;&#x53D1;&#x751F;&#x8DF3;&#x8F6C;&#xFF0C;&#x9ED8;&#x8BA4;&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x9009;&#x503C;self/miniProgram</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-url">url</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x7684;&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;</td>
-<td></td>
-</tr>
-<tr>
-<td id="navigator-open-type">open-type</td>
-<td>String</td>
-<td>navigate</td>
-<td>&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;</td>
-<td></td>
-</tr>
-<tr>
-<td id="navigator-delta">delta</td>
-<td>Number</td>
-<td></td>
-<td>&#x5F53; open-type &#x4E3A; &apos;navigateBack&apos; &#x65F6;&#x6709;&#x6548;&#xFF0C;&#x8868;&#x793A;&#x56DE;&#x9000;&#x7684;&#x5C42;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td id="navigator-app-id">app-id</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53;target=&quot;miniProgram&quot;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x8981;&#x6253;&#x5F00;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F; appId</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-path">path</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53;target=&quot;miniProgram&quot;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x6253;&#x5F00;&#x7684;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x7A7A;&#x5219;&#x6253;&#x5F00;&#x9996;&#x9875;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-extra-data">extra-data</td>
-<td>Object</td>
-<td></td>
-<td>&#x5F53;target=&quot;miniProgram&quot;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9;&#x76EE;&#x6807;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x76EE;&#x6807;&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x5728; <code>App.onLaunch()</code>&#xFF0C;<code>App.onShow()</code> &#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x8FD9;&#x4EFD;&#x6570;&#x636E;&#x3002;<a href="../framework/app-service/app.html">&#x8BE6;&#x60C5;</a></td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-version">version</td>
-<td>version</td>
-<td>release</td>
-<td>&#x5F53;target=&quot;miniProgram&quot;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x8981;&#x6253;&#x5F00;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7248;&#x672C;&#xFF0C;&#x6709;&#x6548;&#x503C; develop&#xFF08;&#x5F00;&#x53D1;&#x7248;&#xFF09;&#xFF0C;trial&#xFF08;&#x4F53;&#x9A8C;&#x7248;&#xFF09;&#xFF0C;release&#xFF08;&#x6B63;&#x5F0F;&#x7248;&#xFF09;&#xFF0C;&#x4EC5;&#x5728;&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E3A;&#x5F00;&#x53D1;&#x7248;&#x6216;&#x4F53;&#x9A8C;&#x7248;&#x65F6;&#x6B64;&#x53C2;&#x6570;&#x6709;&#x6548;&#xFF1B;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x662F;&#x6B63;&#x5F0F;&#x7248;&#xFF0C;&#x5219;&#x6253;&#x5F00;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x5FC5;&#x5B9A;&#x662F;&#x6B63;&#x5F0F;&#x7248;&#x3002;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-hover-class">hover-class</td>
-<td>String</td>
-<td>navigator-hover</td>
-<td>&#x6307;&#x5B9A;&#x70B9;&#x51FB;&#x65F6;&#x7684;&#x6837;&#x5F0F;&#x7C7B;&#xFF0C;&#x5F53;<code>hover-class=&quot;none&quot;</code>&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x70B9;&#x51FB;&#x6001;&#x6548;&#x679C;</td>
-<td></td>
-</tr>
-<tr>
-<td id="navigator-hover-stop-propagation">hover-stop-propagation</td>
-<td>Boolean</td>
-<td>false</td>
-<td>&#x6307;&#x5B9A;&#x662F;&#x5426;&#x963B;&#x6B62;&#x672C;&#x8282;&#x70B9;&#x7684;&#x7956;&#x5148;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x70B9;&#x51FB;&#x6001;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
-</tr>
-<tr>
-<td id="navigator-hover-start-time">hover-start-time</td>
-<td>Number</td>
-<td>50</td>
-<td>&#x6309;&#x4F4F;&#x540E;&#x591A;&#x4E45;&#x51FA;&#x73B0;&#x70B9;&#x51FB;&#x6001;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;</td>
-<td></td>
-</tr>
-<tr>
-<td id="navigator-hover-stay-time">hover-stay-time</td>
-<td>Number</td>
-<td>600</td>
-<td>&#x624B;&#x6307;&#x677E;&#x5F00;&#x540E;&#x70B9;&#x51FB;&#x6001;&#x4FDD;&#x7559;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;</td>
-<td></td>
-</tr>
-<tr>
-<td id="navigator-bindsuccess">bindsuccess</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53;target=&quot;miniProgram&quot;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#x6210;&#x529F;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-bindfail">bindfail</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53;target=&quot;miniProgram&quot;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5931;&#x8D25;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-bindcomplete">bindcomplete</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53;target=&quot;miniProgram&quot;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5B8C;&#x6210;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
-</tr>
-<tr>
-<td id="navigator-aria-label">aria-label</td>
-<td>String</td>
-<td></td>
-<td>&#x65E0;&#x969C;&#x788D;&#x8BBF;&#x95EE;&#xFF0C;&#xFF08;&#x5C5E;&#x6027;&#xFF09;&#x5143;&#x7D20;&#x7684;&#x989D;&#x5916;&#x63CF;&#x8FF0;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.5.0</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>open-type &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>navigate</td>
-<td>&#x5BF9;&#x5E94; <a href="../api/wx.navigateTo.html"><code>wx.navigateTo</code></a> &#x6216; <a href="../api/wx.navigateToMiniProgram.html"><code>wx.navigateToMiniProgram</code></a> &#x7684;&#x529F;&#x80FD;</td>
-<td></td>
-</tr>
-<tr>
-<td>redirect</td>
-<td>&#x5BF9;&#x5E94; <a href="../api/wx.redirectTo.html"><code>wx.redirectTo</code></a> &#x7684;&#x529F;&#x80FD;</td>
-<td></td>
-</tr>
-<tr>
-<td>switchTab</td>
-<td>&#x5BF9;&#x5E94; <a href="../api/wx.switchTab.html"><code>wx.switchTab</code></a> &#x7684;&#x529F;&#x80FD;</td>
-<td></td>
-</tr>
-<tr>
-<td>reLaunch</td>
-<td>&#x5BF9;&#x5E94; <a href="../api/wx.reLaunch.html"><code>wx.reLaunch</code></a> &#x7684;&#x529F;&#x80FD;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
-</tr>
-<tr>
-<td>navigateBack</td>
-<td>&#x5BF9;&#x5E94; <a href="../api/wx.navigateBack.html"><code>wx.navigateBack</code></a> &#x7684;&#x529F;&#x80FD;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
-</tr>
-<tr>
-<td>exit</td>
-<td>&#x9000;&#x51FA;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;target=&quot;miniProgram&quot;&#x65F6;&#x751F;&#x6548;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x4F7F;&#x7528;&#x9650;&#x5236;">&#x4F7F;&#x7528;&#x9650;&#x5236;</h4>
-<h5 id="&#x9700;&#x8981;&#x7528;&#x6237;&#x786E;&#x8BA4;&#x8DF3;&#x8F6C;">&#x9700;&#x8981;&#x7528;&#x6237;&#x786E;&#x8BA4;&#x8DF3;&#x8F6C;</h5>
-<p>&#x4ECE; 2.3.0 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x5728;&#x8DF3;&#x8F6C;&#x81F3;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x524D;&#xFF0C;&#x5C06;&#x7EDF;&#x4E00;&#x589E;&#x52A0;&#x5F39;&#x7A97;&#xFF0C;&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x8DF3;&#x8F6C;&#xFF0C;&#x7528;&#x6237;&#x786E;&#x8BA4;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x8DF3;&#x8F6C;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#xFF0C;&#x5219;&#x56DE;&#x8C03; <code>fail cancel</code>&#x3002;</p>
-<h5 id="&#x6BCF;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x8DF3;&#x8F6C;&#x7684;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x6570;&#x91CF;&#x9650;&#x5236;&#x4E3A;&#x4E0D;&#x8D85;&#x8FC7;-10-&#x4E2A;">&#x6BCF;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x8DF3;&#x8F6C;&#x7684;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x6570;&#x91CF;&#x9650;&#x5236;&#x4E3A;&#x4E0D;&#x8D85;&#x8FC7; 10 &#x4E2A;</h5>
-<p>&#x4ECE; 2.4.0 &#x7248;&#x672C;&#x4EE5;&#x53CA;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#xFF08;&#x5177;&#x4F53;&#x5F85;&#x5B9A;&#xFF09;&#x5F00;&#x59CB;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4EA4;&#x65B0;&#x7248;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x5982;&#x4F7F;&#x7528;&#x4E86;&#x8DF3;&#x8F6C;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x529F;&#x80FD;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x914D;&#x7F6E;&#x4E2D;&#x58F0;&#x660E;&#x5C06;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x540D;&#x5355;&#xFF0C;&#x9650;&#x5B9A;&#x4E0D;&#x8D85;&#x8FC7; 10 &#x4E2A;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x5BA1;&#x6838;&#x3002;&#x8BE5;&#x540D;&#x5355;&#x53EF;&#x5728;&#x53D1;&#x5E03;&#x65B0;&#x7248;&#x65F6;&#x66F4;&#x65B0;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x52A8;&#x6001;&#x4FEE;&#x6539;&#x3002;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x8BE6;&#x89C1; <a href="../framework/config.html">&#x914D;&#x7F6E;</a>&#x3002;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x6240;&#x8DF3;&#x8F6C;&#x7684; appId &#x5FC5;&#x987B;&#x5728;&#x914D;&#x7F6E;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x56DE;&#x8C03; <code>fail appId &quot;${appId}&quot; is not in navigateToMiniProgramAppIdList</code>&#x3002;</p>
-<h4 id="&#x5173;&#x4E8E;&#x8C03;&#x8BD5;">&#x5173;&#x4E8E;&#x8C03;&#x8BD5;</h4>
-<ul>
-<li>&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0A;&#x8C03;&#x7528;&#x6B64; API &#x5E76;&#x4E0D;&#x4F1A;&#x771F;&#x5B9E;&#x7684;&#x8DF3;&#x8F6C;&#x5230;&#x53E6;&#x5916;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x662F;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4F1A;&#x6821;&#x9A8C;&#x672C;&#x6B21;&#x8C03;&#x7528;&#x8DF3;&#x8F6C;&#x662F;&#x5426;&#x6210;&#x529F;&#x3002;<a href="../devtools/different.html#&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;&#x652F;&#x6301;">&#x8BE6;&#x60C5;</a></li>
-<li>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0A;&#x652F;&#x6301;&#x88AB;&#x8DF3;&#x8F6C;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x5904;&#x7406;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x7684;&#x8C03;&#x8BD5;&#x3002;<a href="../devtools/different.html#&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;&#x652F;&#x6301;">&#x8BE6;&#x60C5;</a></li>
-</ul>
-<br>
-<p><strong>&#x6CE8;&#xFF1A;<code>navigator-hover</code> &#x9ED8;&#x8BA4;&#x4E3A; <code>{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}</code>, <a href="navigator.html"><code>&lt;navigator&gt;</code></a> &#x7684;&#x5B50;&#x8282;&#x70B9;&#x80CC;&#x666F;&#x8272;&#x5E94;&#x4E3A;&#x900F;&#x660E;&#x8272;</strong></p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="https://developers.weixin.qq.com/s/2Ec11cmI6BY1" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-css"><span class="hljs-comment">/** wxss **/</span>
-<span class="hljs-comment">/** &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7684;navigator&#x70B9;&#x51FB;&#x6001; **/</span>
-<span class="hljs-selector-class">.navigator-hover</span> {
-  <span class="hljs-attribute">color</span>: blue;
-}
-<span class="hljs-comment">/** &#x81EA;&#x5B9A;&#x4E49;&#x5176;&#x4ED6;&#x70B9;&#x51FB;&#x6001;&#x6837;&#x5F0F;&#x7C7B; **/</span>
-<span class="hljs-selector-class">.other-navigator-hover</span> {
-  <span class="hljs-attribute">color</span>: red;
-}
-</code></pre>
-<pre><code class="language-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
-    <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/navigate/navigate?title=navigate&quot;</span>
-    <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;navigator-hover&quot;</span>
-  &gt;</span>
-    &#x8DF3;&#x8F6C;&#x5230;&#x65B0;&#x9875;&#x9762;
-  <span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
-    <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;../../redirect/redirect/redirect?title=redirect&quot;</span>
-    <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;redirect&quot;</span>
-    <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>
-  &gt;</span>
-    &#x5728;&#x5F53;&#x524D;&#x9875;&#x6253;&#x5F00;
-  <span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
-    <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/index/index&quot;</span>
-    <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;switchTab&quot;</span>
-    <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>
-  &gt;</span>
-    &#x5207;&#x6362; Tab
-  <span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
-    <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;miniProgram&quot;</span>
-    <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;navigate&quot;</span>
-    <span class="hljs-attr">app-id</span>=<span class="hljs-string">&quot;&quot;</span>
-    <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;&quot;</span>
-    <span class="hljs-attr">extra-data</span>=<span class="hljs-string">&quot;&quot;</span>
-    <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;release&quot;</span>
-  &gt;</span>
-    &#x6253;&#x5F00;&#x7ED1;&#x5B9A;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;
-  <span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-</code></pre>
-<pre><code class="language-html"><span class="hljs-comment">&lt;!-- navigator.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x8FD4;&#x56DE;&#x56DE;&#x5230;&#x4E4B;&#x524D;&#x9875;&#x9762;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-</code></pre>
-<pre><code class="language-html"><span class="hljs-comment">&lt;!-- redirect.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x8FD4;&#x56DE;&#x56DE;&#x5230;&#x4E0A;&#x7EA7;&#x9875;&#x9762;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-</code></pre>
-<pre><code class="language-js"><span class="hljs-comment">// redirect.js navigator.js</span>
-Page({
-  onLoad(options) {
-    <span class="hljs-keyword">this</span>.setData({
-      <span class="hljs-attr">title</span>: options.title
-    })
-  }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="navigator"><a href="#navigator" aria-hidden="true" class="header-anchor">#</a> navigator</h1> <blockquote><p>基础库 1.0.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>页面链接。</p> <blockquote><p>在小程序插件中使用需要基础库版本 <a href="../framework/compatibility.html">2.1.0</a> 起。</p></blockquote> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>target</td> <td>string</td> <td>self</td> <td>否</td> <td>在哪个目标上发生跳转，默认当前小程序</td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr> <tr><td>url</td> <td>string</td> <td></td> <td>否</td> <td>当前小程序内的跳转链接</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>open-type</td> <td>string</td> <td>navigate</td> <td>否</td> <td>跳转方式</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>delta</td> <td>number</td> <td>1</td> <td>否</td> <td>当 open-type 为 'navigateBack' 时有效，表示回退的层数</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>app-id</td> <td>string</td> <td></td> <td>否</td> <td>当<code>target="miniProgram"</code>时有效，要打开的小程序 appId</td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr> <tr><td>path</td> <td>string</td> <td></td> <td>否</td> <td>当<code>target="miniProgram"</code>时有效，打开的页面路径，如果为空则打开首页</td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr> <tr><td>extra-data</td> <td>object</td> <td></td> <td>否</td> <td>当<code>target="miniProgram"</code>时有效，需要传递给目标小程序的数据，目标小程序可在 <code>App.onLaunch()</code>，<code>App.onShow()</code> 中获取到这份数据。<a href="./../framework/app-service/app.html">详情</a></td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr> <tr><td>version</td> <td>string</td> <td>release</td> <td>否</td> <td>当<code>target="miniProgram"</code>时有效，要打开的小程序版本</td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr> <tr><td>hover-class</td> <td>string</td> <td>navigator-hover</td> <td>否</td> <td>指定点击时的样式类，当<code>hover-class="none"</code>时，没有点击态效果</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>hover-stop-propagation</td> <td>boolean</td> <td>false</td> <td>否</td> <td>指定是否阻止本节点的祖先节点出现点击态</td> <td><a href="../framework/compatibility.html">1.5.0</a></td></tr> <tr><td>hover-start-time</td> <td>number</td> <td>50</td> <td>否</td> <td>按住后多久出现点击态，单位毫秒</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>hover-stay-time</td> <td>number</td> <td>600</td> <td>否</td> <td>手指松开后点击态保留时间，单位毫秒</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>bindsuccess</td> <td>string</td> <td></td> <td>否</td> <td>当<code>target="miniProgram"</code>时有效，跳转小程序成功</td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr> <tr><td>bindfail</td> <td>string</td> <td></td> <td>否</td> <td>当<code>target="miniProgram"</code>时有效，跳转小程序失败</td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr> <tr><td>bindcomplete</td> <td>string</td> <td></td> <td>否</td> <td>当<code>target="miniProgram"</code>时有效，跳转小程序完成</td> <td><a href="../framework/compatibility.html">2.0.7</a></td></tr></tbody></table></div><p><strong>target 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>self</td> <td>当前小程序</td> <td></td></tr> <tr><td>miniProgram</td> <td>其它小程序</td> <td></td></tr></tbody></table></div><p><strong>open-type 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>navigate</td> <td>对应 <a href="../api/route/wx.navigateTo.html">wx.navigateTo</a> 或 <a href="../api/open-api/miniprogram-navigate/wx.navigateToMiniProgram.html">wx.navigateToMiniProgram</a> 的功能</td> <td></td></tr> <tr><td>redirect</td> <td>对应 <a href="../api/route/wx.redirectTo.html">wx.redirectTo</a> 的功能</td> <td></td></tr> <tr><td>switchTab</td> <td>对应 <a href="../api/route/wx.switchTab.html">wx.switchTab</a> 的功能</td> <td></td></tr> <tr><td>reLaunch</td> <td>对应 <a href="../api/route/wx.reLaunch.html">wx.reLaunch</a> 的功能</td> <td><a href="../framework/compatibility.html">1.1.0</a></td></tr> <tr><td>navigateBack</td> <td>对应 <a href="../api/route/wx.navigateBack.html">wx.navigateBack</a> 的功能</td> <td><a href="../framework/compatibility.html">1.1.0</a></td></tr> <tr><td>exit</td> <td>退出小程序，<code>target="miniProgram"</code>时生效</td> <td><a href="../framework/compatibility.html">2.1.0</a></td></tr></tbody></table></div><p><strong>version 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>develop</td> <td>开发版</td> <td></td></tr> <tr><td>trial</td> <td>体验版</td> <td></td></tr> <tr><td>release</td> <td>正式版，仅在当前小程序为开发版或体验版时此参数有效；如果当前小程序是正式版，则打开的小程序必定是正式版。</td> <td></td></tr></tbody></table></div><h4 id="使用限制"><a href="#使用限制" aria-hidden="true" class="header-anchor">#</a> 使用限制</h4> <ol><li>需要用户确认跳转
+从 <code>2.3.0</code> 版本开始，在跳转至其他小程序前，将统一增加弹窗，询问是否跳转，用户确认后才可以跳转其他小程序。如果用户点击取消，则回调 <code>fail cancel</code>。</li> <li>每个小程序可跳转的其他小程序数量限制为不超过 10 个
+从 2.4.0 版本以及指定日期（具体待定）开始，开发者提交新版小程序代码时，如使用了跳转其他小程序功能，则需要在代码配置中声明将要跳转的小程序名单，限定不超过 10 个，否则将无法通过审核。该名单可在发布新版时更新，不支持动态修改。配置方法详见 <a href="../framework/config.html">配置</a>。调用此接口时，所跳转的 appId 必须在配置列表中，否则回调 <code>fail appId "${appId}" is not in navigateToMiniProgramAppIdList</code>。</li></ol> <h4 id="关于调试"><a href="#关于调试" aria-hidden="true" class="header-anchor">#</a> 关于调试</h4> <ul><li>在开发者工具上调用此 API 并不会真实的跳转到另外的小程序，但是开发者工具会校验本次调用跳转是否成功。<a href="../devtools/different.html#%E8%B7%B3%E8%BD%AC%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B0%83%E8%AF%95%E6%94%AF%E6%8C%81">详情</a></li> <li>开发者工具上支持被跳转的小程序处理接收参数的调试。<a href="../devtools/different.html#%E8%B7%B3%E8%BD%AC%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B0%83%E8%AF%95%E6%94%AF%E6%8C%81">详情</a></li></ul> <h2 id="Bug-Tip"><a href="#Bug-Tip" aria-hidden="true" class="header-anchor">#</a> Bug &amp; Tip</h2> <ol><li><code>tip</code>：<code>navigator-hover</code> 默认为 <code>{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}</code>, <a href="navigator.html">navigator</a> 的子节点背景色应为透明色</li></ol> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p><a href="https://developers.weixin.qq.com/s/2Ec11cmI6BY1" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.navigator-hover</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.other-navigator-hover</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- sample.wxml --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn-area<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>navigator</span> <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/page/navigate/navigate?title=navigate<span class="token punctuation">"</span></span> <span class="token attr-name">hover-class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navigator-hover<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>跳转到新页面<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>navigator</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>navigator</span> <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../../redirect/redirect/redirect?title=redirect<span class="token punctuation">"</span></span> <span class="token attr-name">open-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>redirect<span class="token punctuation">"</span></span> <span class="token attr-name">hover-class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>other-navigator-hover<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>在当前页打开<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>navigator</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>navigator</span> <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/page/index/index<span class="token punctuation">"</span></span> <span class="token attr-name">open-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>switchTab<span class="token punctuation">"</span></span> <span class="token attr-name">hover-class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>other-navigator-hover<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>切换 Tab<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>navigator</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>navigator</span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>miniProgram<span class="token punctuation">"</span></span> <span class="token attr-name">open-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navigate<span class="token punctuation">"</span></span> <span class="token attr-name">app-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">extra-data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>release<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>打开绑定的小程序<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>navigator</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- navigator.wxml --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">text-align</span><span class="token punctuation">:</span>center</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> {{title}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> 点击左上角返回回到之前页面 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- redirect.wxml --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">text-align</span><span class="token punctuation">:</span>center</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> {{title}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> 点击左上角返回回到上级页面 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">onLoad</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      title<span class="token punctuation">:</span> options<span class="token punctuation">.</span>title
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 
 
 </body></html>

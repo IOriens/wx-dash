@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>语句</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="语句"><a href="#语句" aria-hidden="true" class="header-anchor">#</a> 语句</h1> <h2 id="if-语句"><a href="#if-语句" aria-hidden="true" class="header-anchor">#</a> if 语句</h2> <p>在 WXS 中，可以使用以下格式的 <code>if</code> 语句 ：</p> <ul><li><p><code>if (expression) statement</code> ：
+当 <code>expression</code> 为 truthy 时，执行 <code>statement</code>。</p></li> <li><p><code>if (expression) statement1 else statement2</code> :
+当 <code>expression</code> 为 truthy 时，执行 <code>statement1</code>。
+否则，执行 <code>statement2</code></p></li> <li><p><code>if ... else if ... else statementN</code>
+通过该句型，可以在 <code>statement1</code> ~ <code>statementN</code> 之间选其中一个执行。</p></li></ul> <p><strong>示例语法：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>// if ...
+
+if (表达式) 语句;
+
+if (表达式)
+  语句;
+
+if (表达式) {
+  代码块;
+}
+
+
+// if ... else
+
+if (表达式) 语句;
+else 语句;
+
+if (表达式)
+  语句;
+else
+  语句;
+
+if (表达式) {
+  代码块;
+} else {
+  代码块;
+}
+
+// if ... else if ... else ...
+
+if (表达式) {
+  代码块;
+} else if (表达式) {
+  代码块;
+} else if (表达式) {
+  代码块;
+} else {
+  代码块;
+}
+
+</code></pre></div><h2 id="switch-语句"><a href="#switch-语句" aria-hidden="true" class="header-anchor">#</a> switch 语句</h2> <p><strong>示例语法：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>switch (表达式) {
+  case 变量:
+    语句;
+  case 数字:
+    语句;
+    break;
+  case 字符串:
+    语句;
+  default:
+    语句;
+}
+</code></pre></div><ul><li><code>default</code> 分支可以省略不写。</li> <li><code>case</code> 关键词后面只能使用：<code>变量</code>，<code>数字</code>，<code>字符串</code>。</li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var exp = 10;
+
+switch ( exp ) {
+case "10":
+  console.log("string 10");
+  break;
+case 10:
+  console.log("number 10");
+  break;
+case exp:
+  console.log("var exp");
+  break;
+default:
+  console.log("default");
+}
+</code></pre></div><p><strong>输出：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>number 10
+</code></pre></div><h2 id="for-语句"><a href="#for-语句" aria-hidden="true" class="header-anchor">#</a> for 语句</h2> <p><strong>示例语法：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>for (语句; 语句; 语句)
+  语句;
+
+for (语句; 语句; 语句) {
+  代码块;
+}
+</code></pre></div><ul><li>支持使用 <code>break</code>，<code>continue</code> 关键词。</li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>for (var i = 0; i &lt; 3; ++i) {
+  console.log(i);
+  if( i &gt;= 1) break;
+}
+</code></pre></div><p><strong>输出：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>0
+1
+</code></pre></div><h2 id="while-语句"><a href="#while-语句" aria-hidden="true" class="header-anchor">#</a> while 语句</h2> <p><strong>示例语法：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>while (表达式)
+  语句;
+
+while (表达式){
+  代码块;
+}
+
+do {
+  代码块;
+} while (表达式)
+</code></pre></div><ul><li>当<code>表达式</code>为 true 时，循环执行<code>语句</code>或<code>代码块</code>。</li> <li>支持使用 <code>break</code>，<code>continue</code> 关键词。</li></ul></div></div> <!---->    
+</body>
+</html>

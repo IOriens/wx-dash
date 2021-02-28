@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>FileSystemManager.statSync</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>Stats</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,78 +12,27 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="statsobject-filesystemmanagerstatsyncstring-path-boolean-recursive"><a href="Stats.html">Stats</a>|Object FileSystemManager.statSync(string path, boolean recursive)</h3>
-<p><a href="FileSystemManager.stat.html">FileSystemManager.stat</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-path">string path</h5>
-<p>&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x8DEF;&#x5F84;</p>
-<h5 id="boolean-recursive">boolean recursive</h5>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 2.3.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x662F;&#x5426;&#x9012;&#x5F52;&#x83B7;&#x53D6;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x7684; Stats &#x4FE1;&#x606F;</p>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="statsobject-stats"><a href="Stats.html">Stats</a>|Object stats</h5>
-<p>&#x5F53; recursive &#x4E3A; false &#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Stats &#x5BF9;&#x8C61;&#x3002;&#x5F53; recursive &#x4E3A; true &#x4E14; path &#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Object&#xFF0C;key &#x4EE5; path &#x4E3A;&#x6839;&#x8DEF;&#x5F84;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;value &#x662F;&#x8BE5;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;&#x7684; Stats &#x5BF9;&#x8C61;&#x3002;</p>
-<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
-<table>
-<thead>
-<tr>
-<th>&#x9519;&#x8BEF;&#x7801;</th>
-<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>fail permission denied, open ${path}</td>
-<td>&#x6307;&#x5B9A;&#x7684; path &#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x8BFB;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td></td>
-<td>fail no such file or directory ${path}</td>
-<td>&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<p>recursive &#x4E3A; false &#x65F6;</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">let</span> fs = wx.getFileSystemManager()
-fs.stat({
-    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
-        wx.env.USER_DATA_PATH
-    }
-    /testDir`</span>,
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
-    <span class="hljs-built_in">console</span>.log(res.stats.isDirectory())
-  }
-})
-</code></pre>
-<p>recursive &#x4E3A; true &#x65F6;</p>
-<pre><code class="language-javascript">fs.stat({
-    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
-        wx.env.USER_DATA_PATH
-    }
-    /testDir`</span>,
-  <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
-    <span class="hljs-built_in">Object</span>.keys(res.stats).forEach(<span class="hljs-function"><span class="hljs-params">path</span> =&gt;</span> {
-      <span class="hljs-keyword">let</span> stats = res.stats[path]
-      <span class="hljs-built_in">console</span>.log(path, stats.isDirectory())
-    })
-  }
-})
-</code></pre>
+   <div id="docContent"><div class="content custom"><h1 id="Stats-Object-FileSystemManager-statSync-string-path-boolean-recursive"><a href="#Stats-Object-FileSystemManager-statSync-string-path-boolean-recursive" aria-hidden="true" class="header-anchor">#</a> <a href="Stats.html">Stats</a>|Object FileSystemManager.statSync(string path, boolean recursive)</h1> <p><a href="FileSystemManager.stat.html">FileSystemManager.stat</a> 的同步版本</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-path"><a href="#string-path" aria-hidden="true" class="header-anchor">#</a> string path</h3> <p>文件/目录路径 (本地路径)</p> <h3 id="boolean-recursive"><a href="#boolean-recursive" aria-hidden="true" class="header-anchor">#</a> boolean recursive</h3> <blockquote><p>基础库 2.3.0 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>是否递归获取目录下的每个文件的 Stats 信息</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="Stats-Object-stats"><a href="#Stats-Object-stats" aria-hidden="true" class="header-anchor">#</a> <a href="Stats.html">Stats</a>|Object stats</h3> <p>当 recursive 为 false 时，res.stats 是一个 Stats 对象。当 recursive 为 true 且 path 是一个目录的路径时，res.stats 是一个 Object，key 以 path 为根路径的相对路径，value 是该路径对应的 Stats 对象。</p> <h2 id="错误"><a href="#错误" aria-hidden="true" class="header-anchor">#</a> 错误</h2> <div class="table-wrp"><table><thead><tr><th>错误码</th> <th>错误信息</th> <th>说明</th></tr></thead> <tbody><tr><td></td> <td>fail permission denied, open ${path}</td> <td>指定的 path 路径没有读权限</td></tr> <tr><td></td> <td>fail no such file or directory ${path}</td> <td>文件不存在</td></tr> <tr><td></td> <td>fail sdcard not mounted</td> <td>Android sdcard 挂载失败</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p>recursive 为 false 时</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">let</span> fs <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getFileSystemManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+fs<span class="token punctuation">.</span><span class="token function">stat</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  path<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wx<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">USER_DATA_PATH</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/testDir`</span></span><span class="token punctuation">,</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>stats<span class="token punctuation">.</span><span class="token function">isDirectory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+</code></pre></div><p>recursive 为 true 时</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+fs<span class="token punctuation">.</span><span class="token function">stat</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  path<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wx<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">USER_DATA_PATH</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/testDir`</span></span><span class="token punctuation">,</span>
+  recursive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>stats<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">path</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> stats <span class="token operator">=</span> res<span class="token punctuation">.</span>stats<span class="token punctuation">[</span>path<span class="token punctuation">]</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> stats<span class="token punctuation">.</span><span class="token function">isDirectory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

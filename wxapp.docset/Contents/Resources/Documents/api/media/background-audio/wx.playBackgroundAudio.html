@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.playBackgroundAudio</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.playBackgroundAudio(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,91 +12,11 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxplaybackgroundaudioobject-object">wx.playBackgroundAudio(Object object)</h3>
-<blockquote>
-<p>&#x4ECE;&#x57FA;&#x7840;&#x5E93; <a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a> &#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x63A5;&#x53E3;&#x4E0D;&#x518D;&#x7EF4;&#x62A4;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; <a href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a> &#x4EE3;&#x66FF;</p>
-</blockquote>
-<p>&#x4F7F;&#x7528;&#x540E;&#x53F0;&#x64AD;&#x653E;&#x5668;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x3002;&#x5BF9;&#x4E8E;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x80FD;&#x540C;&#x65F6;&#x6709;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x97F3;&#x4E50;&#x5728;&#x64AD;&#x653E;&#x3002;&#x5F53;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x97F3;&#x4E50;&#x5C06;&#x6682;&#x505C;&#x64AD;&#x653E;&#xFF1B;&#x5F53;&#x7528;&#x6237;&#x5728;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x5360;&#x7528;&#x4E86;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x5668;&#xFF0C;&#x539F;&#x6709;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x7684;&#x97F3;&#x4E50;&#x5C06;&#x505C;&#x6B62;&#x64AD;&#x653E;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dataUrl</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x97F3;&#x4E50;&#x94FE;&#x63A5;&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;&#x6709; m4a, aac, mp3, wav</td>
-<td></td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x97F3;&#x4E50;&#x6807;&#x9898;</td>
-<td></td>
-</tr>
-<tr>
-<td>coverImgUrl</td>
-<td>string</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x5C01;&#x9762;URL</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.playBackgroundAudio({
-  <span class="hljs-attr">dataUrl</span>: <span class="hljs-string">&apos;&apos;</span>,
-  <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&apos;</span>,
-  <span class="hljs-attr">coverImgUrl</span>: <span class="hljs-string">&apos;&apos;</span>
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-playBackgroundAudio-Object-object"><a href="#wx-playBackgroundAudio-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.playBackgroundAudio(Object object)</h1> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">1.9.6</a> 起支持在小程序插件中使用</p></blockquote> <blockquote><p>从基础库 <a href="../../../framework/compatibility.html">1.2.0</a> 开始，本接口停止维护，请使用 <a href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a> 代替</p></blockquote> <p>使用后台播放器播放音乐。对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>dataUrl</td> <td>string</td> <td></td> <td>是</td> <td>音乐链接，目前支持的格式有 m4a, aac, mp3, wav</td></tr> <tr><td>title</td> <td>string</td> <td></td> <td>否</td> <td>音乐标题</td></tr> <tr><td>coverImgUrl</td> <td>string</td> <td></td> <td>否</td> <td>封面URL</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">playBackgroundAudio</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  dataUrl<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  title<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  coverImgUrl<span class="token punctuation">:</span> <span class="token string">''</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

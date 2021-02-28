@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.createSelectorQuery</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>SelectorQuery</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,31 +12,13 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="selectorquery-wxcreateselectorquery"><a href="SelectorQuery.html">SelectorQuery</a> wx.createSelectorQuery()</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; SelectorQuery &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;</p>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="selectorquery"><a href="SelectorQuery.html">SelectorQuery</a></h5>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> query = wx.createSelectorQuery()
-query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect()
-query.selectViewport().scrollOffset()
-query.exec(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-  res[<span class="hljs-number">0</span>].top       <span class="hljs-comment">// #the-id&#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-  res[<span class="hljs-number">1</span>].scrollTop <span class="hljs-comment">// &#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="SelectorQuery-wx-createSelectorQuery"><a href="#SelectorQuery-wx-createSelectorQuery" aria-hidden="true" class="header-anchor">#</a> <a href="SelectorQuery.html">SelectorQuery</a> wx.createSelectorQuery()</h1> <blockquote><p>基础库 1.4.0 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <blockquote><p>本接口从基础库版本 <a href="../../framework/compatibility.html">1.9.6</a> 起支持在小程序插件中使用</p></blockquote> <p>返回一个 SelectorQuery 对象实例。在自定义组件或包含自定义组件的页面中，应使用 <code>this.createSelectorQuery()</code> 来代替。</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="SelectorQuery"><a href="#SelectorQuery" aria-hidden="true" class="header-anchor">#</a> <a href="SelectorQuery.html">SelectorQuery</a></h3> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> query <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createSelectorQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+query<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">'#the-id'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">boundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+query<span class="token punctuation">.</span><span class="token function">selectViewport</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">scrollOffset</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+query<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>top       <span class="token comment">// #the-id节点的上边界坐标</span>
+  res<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>scrollTop <span class="token comment">// 显示区域的竖直滚动位置</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

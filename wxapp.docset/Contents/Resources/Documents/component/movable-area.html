@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <title>movable-area</title>
+  <link rel="stylesheet" href="../../../../../style.css">
+  <link rel="stylesheet" href="../../../../../website.css">
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="movable-area"><a href="#movable-area" aria-hidden="true" class="header-anchor">#</a> movable-area</h1> <blockquote><p>基础库 1.2.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p><a href="movable-view.html">movable-view</a>的可移动区域。</p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>scale-area</td> <td>Boolean</td> <td>false</td> <td>否</td> <td>当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area</td> <td><a href="../framework/compatibility.html">1.9.90</a></td></tr></tbody></table></div><h2 id="Bug-Tip"><a href="#Bug-Tip" aria-hidden="true" class="header-anchor">#</a> Bug &amp; Tip</h2> <ol><li><code>tip</code>: movable-area 必须设置width和height属性，不设置默认为10px**</li> <li><code>tip</code>: 当movable-view小于movable-area时，movable-view的移动范围是在movable-area内；</li> <li><code>tip</code>: 当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x轴方向和y轴方向分开考虑）</li></ol> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p><a href="https://developers.weixin.qq.com/s/1g3lR6mv73lm" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="wrap-mp-code"><iframe src="https://developers.weixin.qq.com/xcode/source/mp_movable_area?tabs=index/index.js,index/index.wxml" type="text/html" height="669" width="100%" frameborder="0" class="wrap-mp-code-iframe"></iframe></div></div></div> <!---->    
+
+
+</body></html>

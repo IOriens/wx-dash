@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>支付</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.requestPayment(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,127 +12,55 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxrequestpaymentobject-object">wx.requestPayment(Object object)</h3>
-<p>&#x53D1;&#x8D77;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x3002;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;<a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&amp;index=1" target="_blank">&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x63A5;&#x53E3;&#x6587;&#x6863;</a></p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>timeStamp</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x4ECE; 1970 &#x5E74; 1 &#x6708; 1 &#x65E5; 00:00:00 &#x81F3;&#x4ECA;&#x7684;&#x79D2;&#x6570;&#xFF0C;&#x5373;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;</td>
-<td></td>
-</tr>
-<tr>
-<td>nonceStr</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x968F;&#x673A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x957F;&#x5EA6;&#x4E3A;32&#x4E2A;&#x5B57;&#x7B26;&#x4EE5;&#x4E0B;</td>
-<td></td>
-</tr>
-<tr>
-<td>package</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x7EDF;&#x4E00;&#x4E0B;&#x5355;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684; prepay_id &#x53C2;&#x6570;&#x503C;&#xFF0C;&#x63D0;&#x4EA4;&#x683C;&#x5F0F;&#x5982;&#xFF1A;prepay_id=***</td>
-<td></td>
-</tr>
-<tr>
-<td>signType</td>
-<td>string</td>
-<td>MD5</td>
-<td>&#x5426;</td>
-<td>&#x7B7E;&#x540D;&#x7B97;&#x6CD5;</td>
-<td></td>
-</tr>
-<tr>
-<td>paySign</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x7B7E;&#x540D;&#xFF0C;&#x5177;&#x4F53;&#x7B7E;&#x540D;&#x65B9;&#x6848;&#x53C2;&#x89C1; <a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&amp;index=3" target="_blank">&#x5C0F;&#x7A0B;&#x5E8F;&#x652F;&#x4ED8;&#x63A5;&#x53E3;&#x6587;&#x6863;</a></td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>object.signType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MD5</td>
-<td>MD5</td>
-</tr>
-<tr>
-<td>HMAC-SHA256</td>
-<td>HMAC-SHA256</td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.requestPayment({
-  <span class="hljs-attr">timeStamp</span>: <span class="hljs-string">&apos;&apos;</span>,
-  <span class="hljs-attr">nonceStr</span>: <span class="hljs-string">&apos;&apos;</span>,
-  <span class="hljs-attr">package</span>: <span class="hljs-string">&apos;&apos;</span>,
-  <span class="hljs-attr">signType</span>: <span class="hljs-string">&apos;MD5&apos;</span>,
-  <span class="hljs-attr">paySign</span>: <span class="hljs-string">&apos;&apos;</span>,
-  success (res) { },
-  fail (res) { }
-})
-</code></pre>
+   <div id="docContent"><div class="content custom"><h1 id="wx-requestPayment-Object-object"><a href="#wx-requestPayment-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.requestPayment(Object object)</h1> <p>发起微信支付。调用前需在<a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer">小程序微信公众平台<span></span></a> -功能-微信支付入口申请接入微信支付。了解更多信息，可以参考 <a href="https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pages/api.shtml" target="_blank" rel="noopener noreferrer">微信支付开发文档<span></span></a>：</p> <ul><li><a href="https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter2_3.shtml" target="_blank" rel="noopener noreferrer">开发指引<span></span></a></li> <li><a href="https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_2.shtml" target="_blank" rel="noopener noreferrer">下单接口<span></span></a></li> <li><a href="https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_12.shtml" target="_blank" rel="noopener noreferrer">支付接口<span></span></a></li> <li>旧版本 (v2)
+<ul><li><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&amp;index=1" target="_blank" rel="noopener noreferrer">开发指引<span></span></a></li> <li><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&amp;index=3" target="_blank" rel="noopener noreferrer">支付接口<span></span></a></li></ul></li></ul> <p>如果使用<a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html" target="_blank" rel="noopener noreferrer">云开发<span></span></a>，则 <code>wx.requestPayment</code> 所需参数可以通过云开发微信支付统一下单接口免鉴权获取、并可免证书、免签名的安全调用微信支付服务端接口、及接收异步支付结果回调，详见<a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/wechatpay.html" target="_blank" rel="noopener noreferrer">云开发微信支付<span></span></a>。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>timeStamp</td> <td>string</td> <td></td> <td>是</td> <td>时间戳，从 1970 年 1 月 1 日 00:00:00 至今的秒数，即当前的时间</td></tr> <tr><td>nonceStr</td> <td>string</td> <td></td> <td>是</td> <td>随机字符串，长度为32个字符以下</td></tr> <tr><td>package</td> <td>string</td> <td></td> <td>是</td> <td>统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***</td></tr> <tr><td>signType</td> <td>string</td> <td>MD5</td> <td>否</td> <td>签名算法，应与后台下单时的值一致</td></tr> <tr><td>paySign</td> <td>string</td> <td></td> <td>是</td> <td>签名，具体见微信支付文档</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><p><strong>object.signType 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>MD5</td> <td>仅在 v2 版本接口适用</td> <td></td></tr> <tr><td>HMAC-SHA256</td> <td>仅在 v2 版本接口适用</td> <td></td></tr> <tr><td>RSA</td> <td>仅在 v3 版本接口适用</td> <td></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">requestPayment</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  timeStamp<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  nonceStr<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  signType<span class="token punctuation">:</span> <span class="token string">'MD5'</span><span class="token punctuation">,</span>
+  paySign<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">fail</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>注：如果服务端有使用云开发，可以通过云开发微信支付<a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/open/pay/CloudPay.unifiedOrder.html" target="_blank" rel="noopener noreferrer">统一下单<span></span></a>接口免鉴权获取以上所需所有参数，示例：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 云函数代码</span>
+<span class="token keyword">const</span> cloud <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'wx-server-sdk'</span><span class="token punctuation">)</span>
+cloud<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  env<span class="token punctuation">:</span> cloud<span class="token punctuation">.</span><span class="token constant">DYNAMIC_CURRENT_ENV</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+exports<span class="token punctuation">.</span><span class="token function-variable function">main</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> cloud<span class="token punctuation">.</span>cloudPay<span class="token punctuation">.</span><span class="token function">unifiedOrder</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token string">"body"</span> <span class="token punctuation">:</span> <span class="token string">"小秋TIT店-超市"</span><span class="token punctuation">,</span>
+    <span class="token string">"outTradeNo"</span> <span class="token punctuation">:</span> <span class="token string">"1217752501201407033233368018"</span><span class="token punctuation">,</span>
+    <span class="token string">"spbillCreateIp"</span> <span class="token punctuation">:</span> <span class="token string">"127.0.0.1"</span><span class="token punctuation">,</span>
+    <span class="token string">"subMchId"</span> <span class="token punctuation">:</span> <span class="token string">"1900009231"</span><span class="token punctuation">,</span>
+    <span class="token string">"totalFee"</span> <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">"envId"</span><span class="token punctuation">:</span> <span class="token string">"test-f0b102"</span><span class="token punctuation">,</span>
+    <span class="token string">"functionName"</span><span class="token punctuation">:</span> <span class="token string">"pay_cb"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> res
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 小程序代码</span>
+wx<span class="token punctuation">.</span>cloud<span class="token punctuation">.</span><span class="token function">callFunction</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">'函数名'</span><span class="token punctuation">,</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> payment <span class="token operator">=</span> res<span class="token punctuation">.</span>result<span class="token punctuation">.</span>payment
+    wx<span class="token punctuation">.</span><span class="token function">requestPayment</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token operator">...</span>payment<span class="token punctuation">,</span>
+      <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pay success'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">fail</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'pay fail'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  fail<span class="token punctuation">:</span> console<span class="token punctuation">.</span>error<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

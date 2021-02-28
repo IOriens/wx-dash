@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.arc</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.arc(number x, number y, number r, number sAngle, number eAngle, boolean counterclockwise)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,88 +12,51 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextarcnumber-x-number-y-number-r-number-sangle-number-eangle-number-counterclockwise">CanvasContext.arc(number x, number y, number r, number sAngle, number eAngle, number counterclockwise)</h3>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x6761;&#x5F27;&#x7EBF;&#x3002;</p>
-<ul>
-<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5706;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8D77;&#x59CB;&#x5F27;&#x5EA6;&#x4E3A; 0&#xFF0C;&#x7EC8;&#x6B62;&#x5F27;&#x5EA6;&#x4E3A; 2 * Math.PI&#x3002;</li>
-<li>&#x7528; <code>stroke</code> &#x6216;&#x8005; <code>fill</code> &#x65B9;&#x6CD5;&#x6765;&#x5728; <code>canvas</code> &#x4E2D;&#x753B;&#x5F27;&#x7EBF;&#x3002;</li>
-</ul>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="number-x">number x</h5>
-<p>&#x5706;&#x5FC3;&#x7684; x &#x5750;&#x6807;</p>
-<h5 id="number-y">number y</h5>
-<p>&#x5706;&#x5FC3;&#x7684; y &#x5750;&#x6807;</p>
-<h5 id="number-r">number r</h5>
-<p>&#x5706;&#x7684;&#x534A;&#x5F84;</p>
-<h5 id="number-sangle">number sAngle</h5>
-<p>&#x8D77;&#x59CB;&#x5F27;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x5F27;&#x5EA6;&#xFF08;&#x5728;3&#x70B9;&#x949F;&#x65B9;&#x5411;&#xFF09;</p>
-<h5 id="number-eangle">number eAngle</h5>
-<p>&#x7EC8;&#x6B62;&#x5F27;&#x5EA6;</p>
-<h5 id="number-counterclockwise">number counterclockwise</h5>
-<p>&#x5F27;&#x5EA6;&#x7684;&#x65B9;&#x5411;&#x662F;&#x5426;&#x662F;&#x9006;&#x65F6;&#x9488;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-arc-number-x-number-y-number-r-number-sAngle-number-eAngle-boolean-counterclockwise"><a href="#CanvasContext-arc-number-x-number-y-number-r-number-sAngle-number-eAngle-boolean-counterclockwise" aria-hidden="true" class="header-anchor">#</a> CanvasContext.arc(number x, number y, number r, number sAngle, number eAngle, boolean counterclockwise)</h1> <p>创建一条弧线。</p> <ul><li>创建一个圆可以指定起始弧度为 0，终止弧度为 2 * Math.PI。</li> <li>用 <code>stroke</code> 或者 <code>fill</code> 方法来在 <code>canvas</code> 中画弧线。</li></ul> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-x"><a href="#number-x" aria-hidden="true" class="header-anchor">#</a> number x</h3> <p>圆心的 x 坐标</p> <h3 id="number-y"><a href="#number-y" aria-hidden="true" class="header-anchor">#</a> number y</h3> <p>圆心的 y 坐标</p> <h3 id="number-r"><a href="#number-r" aria-hidden="true" class="header-anchor">#</a> number r</h3> <p>圆的半径</p> <h3 id="number-sAngle"><a href="#number-sAngle" aria-hidden="true" class="header-anchor">#</a> number sAngle</h3> <p>起始弧度，单位弧度（在3点钟方向）</p> <h3 id="number-eAngle"><a href="#number-eAngle" aria-hidden="true" class="header-anchor">#</a> number eAngle</h3> <p>终止弧度</p> <h3 id="boolean-counterclockwise"><a href="#boolean-counterclockwise" aria-hidden="true" class="header-anchor">#</a> boolean counterclockwise</h3> <p>弧度的方向是否是逆时针</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// Draw coordinates</span>
-ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;#EEEEEE&apos;</span>)
-ctx.fill()
+<span class="token comment">// Draw coordinates</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'#EEEEEE'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.moveTo(<span class="hljs-number">40</span>, <span class="hljs-number">75</span>)
-ctx.lineTo(<span class="hljs-number">160</span>, <span class="hljs-number">75</span>)
-ctx.moveTo(<span class="hljs-number">100</span>, <span class="hljs-number">15</span>)
-ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">135</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;#AAAAAA&apos;</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">160</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">135</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setStrokeStyle</span><span class="token punctuation">(</span><span class="token string">'#AAAAAA'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.setFontSize(<span class="hljs-number">12</span>)
-ctx.setFillStyle(<span class="hljs-string">&apos;black&apos;</span>)
-ctx.fillText(<span class="hljs-string">&apos;0&apos;</span>, <span class="hljs-number">165</span>, <span class="hljs-number">78</span>)
-ctx.fillText(<span class="hljs-string">&apos;0.5*PI&apos;</span>, <span class="hljs-number">83</span>, <span class="hljs-number">145</span>)
-ctx.fillText(<span class="hljs-string">&apos;1*PI&apos;</span>, <span class="hljs-number">15</span>, <span class="hljs-number">78</span>)
-ctx.fillText(<span class="hljs-string">&apos;1.5*PI&apos;</span>, <span class="hljs-number">83</span>, <span class="hljs-number">10</span>)
+ctx<span class="token punctuation">.</span><span class="token function">setFontSize</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'black'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span><span class="token string">'0'</span><span class="token punctuation">,</span> <span class="token number">165</span><span class="token punctuation">,</span> <span class="token number">78</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span><span class="token string">'0.5*PI'</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">145</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span><span class="token string">'1*PI'</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">78</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span><span class="token string">'1.5*PI'</span><span class="token punctuation">,</span> <span class="token number">83</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// Draw points</span>
-ctx.beginPath()
-ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;lightgreen&apos;</span>)
-ctx.fill()
+<span class="token comment">// Draw points</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'lightgreen'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">25</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
-ctx.fill()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'blue'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.arc(<span class="hljs-number">150</span>, <span class="hljs-number">75</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
-ctx.fill()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// Draw arc</span>
-ctx.beginPath()
-ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1.5</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;#333333&apos;</span>)
-ctx.stroke()
+<span class="token comment">// Draw arc</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1.5</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setStrokeStyle</span><span class="token punctuation">(</span><span class="token string">'#333333'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/arc.png" alt=""></p>
-<p>&#x9488;&#x5BF9; arc(100, 75, 50, 0, 1.5 * Math.PI)&#x7684;&#x4E09;&#x4E2A;&#x5173;&#x952E;&#x5750;&#x6807;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>&#x7EFF;&#x8272;: &#x5706;&#x5FC3; (100, 75)</li>
-<li>&#x7EA2;&#x8272;: &#x8D77;&#x59CB;&#x5F27;&#x5EA6; (0)</li>
-<li>&#x84DD;&#x8272;: &#x7EC8;&#x6B62;&#x5F27;&#x5EA6; (1.5 * Math.PI)</li>
-</ul>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p> <p>针对 arc(100, 75, 50, 0, 1.5 * Math.PI)的三个关键坐标如下：</p> <ul><li>绿色: 圆心 (100, 75)</li> <li>红色: 起始弧度 (0)</li> <li>蓝色: 终止弧度 (1.5 * Math.PI)</li></ul></div></div> <!---->    
 </body>
 </html>

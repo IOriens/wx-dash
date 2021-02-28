@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>MapContext.translateMarker(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="MapContext-translateMarker-Object-object"><a href="#MapContext-translateMarker-Object-object" aria-hidden="true" class="header-anchor">#</a> MapContext.translateMarker(Object object)</h1> <blockquote><p>基础库 1.2.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>平移marker，带动画。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>markerId</td> <td>number</td> <td></td> <td>是</td> <td>指定 marker</td> <td></td></tr> <tr><td>destination</td> <td>Object</td> <td></td> <td>是</td> <td>指定 marker 移动到的目标点</td> <td></td></tr> <tr><td>autoRotate</td> <td>boolean</td> <td></td> <td>是</td> <td>移动过程中是否自动旋转 marker</td> <td></td></tr> <tr><td>rotate</td> <td>number</td> <td></td> <td>是</td> <td>marker 的旋转角度</td> <td></td></tr> <tr><td>moveWithRotate</td> <td>boolean</td> <td>false</td> <td>否</td> <td>平移和旋转同时进行</td> <td><a href="../../../framework/compatibility.html">2.13.0</a></td></tr> <tr><td>duration</td> <td>number</td> <td>1000</td> <td>否</td> <td>动画持续时长，平移与旋转分别计算</td> <td></td></tr> <tr><td>animationEnd</td> <td>function</td> <td></td> <td>否</td> <td>动画结束回调函数</td> <td></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><p><strong>object.destination 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>longitude</td> <td>number</td> <td></td> <td>是</td> <td>经度</td></tr> <tr><td>latitude</td> <td>number</td> <td></td> <td>是</td> <td>纬度</td></tr></tbody></table></div></div></div> <!---->    
+</body>
+</html>

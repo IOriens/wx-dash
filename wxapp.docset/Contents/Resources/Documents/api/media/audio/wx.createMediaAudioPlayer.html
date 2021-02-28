@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>MediaAudioPlayer</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="MediaAudioPlayer-wx-createMediaAudioPlayer"><a href="#MediaAudioPlayer-wx-createMediaAudioPlayer" aria-hidden="true" class="header-anchor">#</a> <a href="MediaAudioPlayer.html">MediaAudioPlayer</a> wx.createMediaAudioPlayer()</h1> <blockquote><p>基础库 2.13.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>创建媒体音频播放器对象 <a href="MediaAudioPlayer.html">MediaAudioPlayer</a> 对象，可用于播放视频解码器 <a href="../video-decoder/VideoDecoder.html">VideoDecoder</a> 输出的音频。</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="MediaAudioPlayer"><a href="#MediaAudioPlayer" aria-hidden="true" class="header-anchor">#</a> <a href="MediaAudioPlayer.html">MediaAudioPlayer</a></h3> <h2 id="注意事项"><a href="#注意事项" aria-hidden="true" class="header-anchor">#</a> 注意事项</h2> <ul><li>iOS 7.0.15 mediaAudioPlayer 播放网络视频资源会出现音频卡顿，本地视频没有这个问题，将下一个客户端版本修复。</li></ul> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token comment">// 创建视频解码器，具体参数见 createVideoDecoder 文档</span>
+  <span class="token keyword">const</span> videoDecoder <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createVideoDecoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// 创建媒体音频播放器</span>
+  <span class="token keyword">const</span> mediaAudioPlayer <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createMediaAudioPlayer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// 启动视频解码器</span>
+  videoDecoder<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// 启动播放器</span>
+  mediaAudioPlayer<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 添加播放器音频来源</span>
+    mediaAudioPlayer<span class="token punctuation">.</span><span class="token function">addAudioSource</span><span class="token punctuation">(</span>videoDecoder<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      videoDecoder<span class="token punctuation">.</span><span class="token function">getFrameData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 建议在 requestAnimationFrame 里获取每一帧视频数据</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 移除播放器音频来源</span>
+    mediaAudioPlaye<span class="token punctuation">.</span><span class="token function">removeAudioSource</span><span class="token punctuation">(</span>videoDecoder<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 停止播放器</span>
+    mediaAudioPlaye<span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 销毁播放器</span>
+    mediaAudioPlaye<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 设置播放器音量</span>
+    mediaAudioPlayer<span class="token punctuation">.</span>volume <span class="token operator">=</span> <span class="token number">0.5</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="完整demo（小游戏）"><a href="#完整demo（小游戏）" aria-hidden="true" class="header-anchor">#</a> 完整demo（小游戏）</h2> <ul><li>https://developers.weixin.qq.com/s/SF2duHmb7MjI</li></ul></div></div> <!---->    
+</body>
+</html>

@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>NodesRef.scrollOffset</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>SelectorQuery</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,72 +12,16 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="selectorquery-nodesrefscrolloffsetfunction-callback"><a href="SelectorQuery.html">SelectorQuery</a> NodesRef.scrollOffset(function callback)</h3>
-<p>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#x3002;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F; <code>scroll-view</code> &#x6216;&#x8005; <code>viewport</code>&#xFF0C;&#x8FD4;&#x56DE; <a href="NodesRef.html"><code>NodesRef</code></a> &#x5BF9;&#x5E94;&#x7684; <a href="SelectorQuery.html"><code>SelectorQuery</code></a>&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="function-callback">function callback</h5>
-<p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x6267;&#x884C; <a href="SelectorQuery.exec.html"><code>SelectorQuery.exec</code></a> &#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4F1A;&#x5728; <code>callback</code> &#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
-<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>string</td>
-<td>&#x8282;&#x70B9;&#x7684; ID</td>
-<td></td>
-</tr>
-<tr>
-<td>dataset</td>
-<td>Object</td>
-<td>&#x8282;&#x70B9;&#x7684; dataset</td>
-<td></td>
-</tr>
-<tr>
-<td>scrollLeft</td>
-<td>number</td>
-<td>&#x8282;&#x70B9;&#x7684;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</td>
-<td></td>
-</tr>
-<tr>
-<td>scrollTop</td>
-<td>number</td>
-<td>&#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="selectorquery"><a href="SelectorQuery.html">SelectorQuery</a></h5>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">Page({
-  getScrollOffset () {
-    wx.createSelectorQuery().selectViewport().scrollOffset(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-      res.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
-      res.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
-      res.scrollLeft <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
-      res.scrollTop  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
-    }).exec()
-  }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="SelectorQuery-NodesRef-scrollOffset-function-callback"><a href="#SelectorQuery-NodesRef-scrollOffset-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="SelectorQuery.html">SelectorQuery</a> NodesRef.scrollOffset(function callback)</h1> <p>添加节点的滚动位置查询请求。以像素为单位。节点必须是 <code>scroll-view</code> 或者 <code>viewport</code>，返回 <code>NodesRef</code> 对应的 <code>SelectorQuery</code>。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="function-callback"><a href="#function-callback" aria-hidden="true" class="header-anchor">#</a> function callback</h3> <p>回调函数，在执行 <code>SelectorQuery.exec</code> 方法后，节点信息会在 <code>callback</code> 中返回。</p> <h4 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>id</td> <td>string</td> <td>节点的 ID</td></tr> <tr><td>dataset</td> <td>Object</td> <td>节点的 dataset</td></tr> <tr><td>scrollLeft</td> <td>number</td> <td>节点的水平滚动位置</td></tr> <tr><td>scrollTop</td> <td>number</td> <td>节点的竖直滚动位置</td></tr></tbody></table></div><h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="SelectorQuery"><a href="#SelectorQuery" aria-hidden="true" class="header-anchor">#</a> <a href="SelectorQuery.html">SelectorQuery</a></h3> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">getScrollOffset</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">createSelectorQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">selectViewport</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">scrollOffset</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span>id      <span class="token comment">// 节点的ID</span>
+      res<span class="token punctuation">.</span>dataset <span class="token comment">// 节点的dataset</span>
+      res<span class="token punctuation">.</span>scrollLeft <span class="token comment">// 节点的水平滚动位置</span>
+      res<span class="token punctuation">.</span>scrollTop  <span class="token comment">// 节点的竖直滚动位置</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

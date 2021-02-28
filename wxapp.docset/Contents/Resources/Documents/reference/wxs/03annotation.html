@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>注释</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="注释"><a href="#注释" aria-hidden="true" class="header-anchor">#</a> 注释</h1> <p>WXS 主要有 3 种注释的方法。</p> <p><strong>示例代码：</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- wxml --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wxs</span> <span class="token attr-name">module</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+// 方法一：单行注释
+
+/*
+方法二：多行注释
+*/
+
+/*
+方法三：结尾注释。即从 /* 开始往后的所有 WXS 代码均被注释
+
+var a = 1;
+var b = 2;
+var c = "fake";
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>wxs</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>上述例子中，所有 WXS 代码均被注释掉了。</p> <blockquote><p>方法三 和 方法二 的唯一区别是，没有 <code>*/</code> 结束符。</p></blockquote></div></div> <!---->    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>WXS 模块</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="WXS-模块"><a href="#WXS-模块" aria-hidden="true" class="header-anchor">#</a> WXS 模块</h1> <p>WXS 代码可以编写在 wxml 文件中的 <code>&lt;wxs&gt;</code> 标签内，或以 <code>.wxs</code> 为后缀名的文件内。</p> <h2 id="模块"><a href="#模块" aria-hidden="true" class="header-anchor">#</a> 模块</h2> <p>每一个 <code>.wxs</code> 文件和 <code>&lt;wxs&gt;</code> 标签都是一个单独的模块。</p> <p>每个模块都有自己独立的作用域。即在一个模块里面定义的变量与函数，默认为私有的，对其他模块不可见。</p> <p>一个模块要想对外暴露其内部的私有变量与函数，只能通过 <code>module.exports</code> 实现。</p> <h2 id="wxs-文件"><a href="#wxs-文件" aria-hidden="true" class="header-anchor">#</a> .wxs 文件</h2> <p>在<strong>微信开发者工具</strong>里面，右键可以直接创建 <code>.wxs</code> 文件，在其中直接编写 WXS 脚本。</p> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>// /pages/comm.wxs
+
+var foo = "'hello world' from comm.wxs";
+var bar = function(d) {
+  return d;
+}
+module.exports = {
+  foo: foo,
+  bar: bar
+};
+</code></pre></div><p>上述例子在 <code>/pages/comm.wxs</code> 的文件里面编写了 WXS 代码。该 <code>.wxs</code> 文件可以被其他的 <code>.wxs</code> 文件 或 WXML 中的 <code>&lt;wxs&gt;</code> 标签引用。</p> <h3 id="module-对象"><a href="#module-对象" aria-hidden="true" class="header-anchor">#</a> module 对象</h3> <p>每个 <code>wxs</code> 模块均有一个内置的 <code>module</code> 对象。</p> <h4 id="属性"><a href="#属性" aria-hidden="true" class="header-anchor">#</a> 属性</h4> <ul><li><code>exports</code>:  通过该属性，可以对外共享本模块的私有变量与函数。</li></ul> <p><strong>示例代码：</strong></p> <p><a href="https://developers.weixin.qq.com/s/KYgu1Km36pZP" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-wxs extra-class"><pre class="language-text"><code>// /pages/tools.wxs
+
+var foo = "'hello world' from tools.wxs";
+var bar = function (d) {
+  return d;
+}
+module.exports = {
+  FOO: foo,
+  bar: bar,
+};
+module.exports.msg = "some msg";
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- page/index/index.wxml --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wxs</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./../tools.wxs<span class="token punctuation">"</span></span> <span class="token attr-name">module</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tools<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> {{tools.msg}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> {{tools.bar(tools.FOO)}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>页面输出：</p> <div class="language- extra-class"><pre class="language-text"><code>some msg
+'hello world' from tools.wxs
+</code></pre></div><h3 id="require函数"><a href="#require函数" aria-hidden="true" class="header-anchor">#</a> require函数</h3> <p>在<code>.wxs</code>模块中引用其他 <code>wxs</code> 文件模块，可以使用 <code>require</code> 函数。</p> <p>引用的时候，要注意如下几点：</p> <ul><li>只能引用 <code>.wxs</code> 文件模块，且必须使用相对路径。</li> <li><code>wxs</code> 模块均为单例，<code>wxs</code> 模块在第一次被引用时，会自动初始化为单例对象。多个页面，多个地方，多次引用，使用的都是同一个 <code>wxs</code> 模块对象。</li> <li>如果一个 <code>wxs</code> 模块在定义之后，一直没有被引用，则该模块不会被解析与运行。</li></ul> <p><strong>示例代码：</strong></p> <p><a href="https://developers.weixin.qq.com/s/E4g94Kme6rZ6" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-wxs extra-class"><pre class="language-text"><code>// /pages/tools.wxs
+
+var foo = "'hello world' from tools.wxs";
+var bar = function (d) {
+  return d;
+}
+module.exports = {
+  FOO: foo,
+  bar: bar,
+};
+module.exports.msg = "some msg";
+</code></pre></div><div class="language-wxs extra-class"><pre class="language-text"><code>// /pages/logic.wxs
+
+var tools = require("./tools.wxs");
+
+console.log(tools.FOO);
+console.log(tools.bar("logic.wxs"));
+console.log(tools.msg);
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- /page/index/index.wxml --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wxs</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./../logic.wxs<span class="token punctuation">"</span></span> <span class="token attr-name">module</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logic<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>控制台输出：</p> <div class="language- extra-class"><pre class="language-text"><code>'hello world' from tools.wxs
+logic.wxs
+some msg
+</code></pre></div><h2 id="wxs-标签"><a href="#wxs-标签" aria-hidden="true" class="header-anchor">#</a> <code>&lt;wxs&gt;</code> 标签</h2> <div class="table-wrp"><table><thead><tr><th>属性名</th> <th>类型</th> <th>默认值</th> <th>说明</th></tr></thead> <tbody><tr><td>module</td> <td>String</td> <td></td> <td>当前 <code>&lt;wxs&gt;</code> 标签的模块名。必填字段。</td></tr> <tr><td>src</td> <td>String</td> <td></td> <td>引用 .wxs 文件的相对路径。仅当本标签为<strong>单闭合标签</strong>或<strong>标签的内容为空</strong>时有效。</td></tr></tbody></table></div><h3 id="module-属性"><a href="#module-属性" aria-hidden="true" class="header-anchor">#</a> module 属性</h3> <p>module 属性是当前 <code>&lt;wxs&gt;</code> 标签的模块名。在单个 wxml 文件内，建议其值唯一。有重复模块名则按照先后顺序覆盖（后者覆盖前者）。不同文件之间的 wxs 模块名不会相互覆盖。</p> <p>module 属性值的命名必须符合下面两个规则：</p> <ul><li>首字符必须是：字母（a-zA-Z），下划线（_）</li> <li>剩余字符可以是：字母（a-zA-Z），下划线（_）， 数字（0-9）</li></ul> <p><strong>示例代码：</strong></p> <p><a href="https://developers.weixin.qq.com/s/IzgmKKmn6tZ6" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!--wxml--&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wxs</span> <span class="token attr-name">module</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>foo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+var some_msg = "hello world";
+module.exports = {
+  msg : some_msg,
+}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>wxs</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> {{foo.msg}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>页面输出：</p> <div class="language- extra-class"><pre class="language-text"><code>hello world
+</code></pre></div><p>上面例子声明了一个名字为 <code>foo</code> 的模块，将 <code>some_msg</code> 变量暴露出来，供当前页面使用。</p> <h3 id="src-属性"><a href="#src-属性" aria-hidden="true" class="header-anchor">#</a> src 属性</h3> <p>src 属性可以用来引用其他的 <code>wxs</code> 文件模块。</p> <p>引用的时候，要注意如下几点：</p> <ul><li>只能引用 <code>.wxs</code> 文件模块，且必须使用相对路径。</li> <li><code>wxs</code> 模块均为单例，<code>wxs</code> 模块在第一次被引用时，会自动初始化为单例对象。多个页面，多个地方，多次引用，使用的都是同一个 <code>wxs</code> 模块对象。</li> <li>如果一个 <code>wxs</code> 模块在定义之后，一直没有被引用，则该模块不会被解析与运行。</li></ul> <p><strong>示例代码：</strong></p> <p><a href="https://developers.weixin.qq.com/s/C7gYFKmh6vZI" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// /pages/index/index.js</span>
+
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    msg<span class="token punctuation">:</span> <span class="token string">"'hello wrold' from js"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- /pages/index/index.wxml --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wxs</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./../comm.wxs<span class="token punctuation">"</span></span> <span class="token attr-name">module</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>some_comms<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>wxs</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- 也可以直接使用单标签闭合的写法
+&lt;wxs src="./../comm.wxs" module="some_comms" /&gt;
+--&gt;</span>
+
+<span class="token comment">&lt;!-- 调用 some_comms 模块里面的 bar 函数，且参数为 some_comms 模块里面的 foo --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> {{some_comms.bar(some_comms.foo)}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- 调用 some_comms 模块里面的 bar 函数，且参数为 page/index/index.js 里面的 msg --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> {{some_comms.bar(msg)}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>页面输出：</p> <div class="language- extra-class"><pre class="language-text"><code>'hello world' from comm.wxs
+'hello wrold' from js
+</code></pre></div><p>上述例子在文件 <code>/page/index/index.wxml</code> 中通过 <code>&lt;wxs&gt;</code> 标签引用了  <code>/page/comm.wxs</code> 模块。</p> <h3 id="注意"><a href="#注意" aria-hidden="true" class="header-anchor">#</a> 注意</h3> <ul><li><code>&lt;wxs&gt;</code> 模块只能在定义模块的 WXML 文件中被访问到。使用 <code>&lt;include&gt;</code> 或 <code>&lt;import&gt;</code> 时，<code>&lt;wxs&gt;</code> 模块不会被引入到对应的 WXML 文件中。</li> <li><code>&lt;template&gt;</code> 标签中，只能使用定义该 <code>&lt;template&gt;</code> 的 WXML 文件中定义的 <code>&lt;wxs&gt;</code> 模块。</li></ul></div></div> <!---->    
+</body>
+</html>

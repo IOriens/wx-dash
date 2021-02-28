@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.setStorageSync</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>wx.setStorageSync(string key, any data)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,32 +12,13 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxsetstoragesyncstring-key-object-data">wx.setStorageSync(string key, Object data)</h3>
-<p><a href="wx.setStorage.html">wx.setStorage</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-key">string key</h5>
-<p>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x6307;&#x5B9A;&#x7684; key</p>
-<h5 id="object-data">Object data</h5>
-<p>&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x53EA;&#x652F;&#x6301;&#x539F;&#x751F;&#x7C7B;&#x578B;&#x3001;Date&#x3001;&#x53CA;&#x80FD;&#x591F;&#x901A;&#x8FC7;<code>JSON.stringify</code>&#x5E8F;&#x5217;&#x5316;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.setStorage({
-  <span class="hljs-attr">key</span>:<span class="hljs-string">&quot;key&quot;</span>,
-  <span class="hljs-attr">data</span>:<span class="hljs-string">&quot;value&quot;</span>
-})
-</code></pre>
-<pre><code class="language-js"><span class="hljs-keyword">try</span> {
-  wx.setStorageSync(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-string">&apos;value&apos;</span>)
-} <span class="hljs-keyword">catch</span> (e) { }
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-setStorageSync-string-key-any-data"><a href="#wx-setStorageSync-string-key-any-data" aria-hidden="true" class="header-anchor">#</a> wx.setStorageSync(string key, any data)</h1> <blockquote><p>本接口从基础库版本 <a href="../../framework/compatibility.html">1.9.6</a> 起支持在小程序插件中使用</p></blockquote> <p><a href="wx.setStorage.html">wx.setStorage</a> 的同步版本</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-key"><a href="#string-key" aria-hidden="true" class="header-anchor">#</a> string key</h3> <p>本地缓存中指定的 key</p> <h3 id="any-data"><a href="#any-data" aria-hidden="true" class="header-anchor">#</a> any data</h3> <p>需要存储的内容。只支持原生类型、Date、及能够通过<code>JSON.stringify</code>序列化的对象。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">setStorage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  key<span class="token punctuation">:</span><span class="token string">"key"</span><span class="token punctuation">,</span>
+  data<span class="token punctuation">:</span><span class="token string">"value"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">try</span> <span class="token punctuation">{</span>
+  wx<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token string">'key'</span><span class="token punctuation">,</span> <span class="token string">'value'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

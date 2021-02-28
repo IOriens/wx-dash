@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>sitemap 配置</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><p>微信现已开放小程序内搜索，开发者可以通过 <code>sitemap.json</code> 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。
+爬虫访问小程序内页面时，会携带特定的 user-agent：<code>mpcrawler</code> 及<a href="./../scene-list.html">场景值</a>：<code>1129</code>。需要注意的是，若小程序爬虫发现的页面数据和真实用户的呈现不一致，那么该页面将不会进入索引中。</p> <h1 id="sitemap-配置"><a href="#sitemap-配置" aria-hidden="true" class="header-anchor">#</a> sitemap 配置</h1> <p>小程序根目录下的 <code>sitemap.json</code> 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象，如果没有 <code>sitemap.json</code> ，则默认为所有页面都允许被索引；<code>sitemap.json</code> 有以下属性：</p> <h2 id="配置项"><a href="#配置项" aria-hidden="true" class="header-anchor">#</a> 配置项</h2> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>必填</th> <th>描述</th></tr></thead> <tbody><tr><td><a href="#rules">rules</a></td> <td>Object[]</td> <td>是</td> <td>索引规则列表</td></tr></tbody></table></div><h3 id="rules"><a href="#rules" aria-hidden="true" class="header-anchor">#</a> rules</h3> <p>rules 配置项指定了索引规则，每项规则为一个JSON对象，属性如下所示：</p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>必填</th> <th>默认值</th> <th>取值</th> <th>取值说明</th></tr></thead> <tbody><tr><td>action</td> <td>string</td> <td>否</td> <td>"allow"</td> <td>"allow"、"disallow"</td> <td>命中该规则的页面是否能被索引</td></tr> <tr><td>page</td> <td>string</td> <td>是</td> <td></td> <td>"*"、页面的路径</td> <td><code>*</code> 表示所有页面，不能作为通配符使用</td></tr> <tr><td>params</td> <td>string[]</td> <td>否</td> <td>[]</td> <td></td> <td>当 page 字段指定的页面在被本规则匹配时可能使用的页面参数名称的列表（不含参数值）</td></tr> <tr><td>matching</td> <td>string</td> <td>否</td> <td>"inclusive"</td> <td>参考 <strong>matching 取值说明</strong></td> <td>当 page 字段指定的页面在被本规则匹配时，此参数说明 params 匹配方式</td></tr> <tr><td>priority</td> <td>Number</td> <td>否</td> <td></td> <td></td> <td>优先级，值越大则规则越早被匹配，否则默认从上到下匹配</td></tr></tbody></table></div><p><strong>matching 取值说明</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th></tr></thead> <tbody><tr><td>exact</td> <td>当小程序页面的参数列表等于 params 时，规则命中</td></tr> <tr><td>inclusive</td> <td>当小程序页面的参数列表包含 params 时，规则命中</td></tr> <tr><td>exclusive</td> <td>当小程序页面的参数列表与 params 交集为空时，规则命中</td></tr> <tr><td>partial</td> <td>当小程序页面的参数列表与 params 交集不为空时，规则命中</td></tr></tbody></table></div><h2 id="配置示例"><a href="#配置示例" aria-hidden="true" class="header-anchor">#</a> 配置示例</h2> <p><strong>示例1</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">"rules"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"allow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span><span class="token punctuation">,</span>
+    <span class="token property">"params"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"matching"</span><span class="token operator">:</span> <span class="token string">"exact"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"disallow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>path/to/page?a=1&amp;b=2</code> =&gt; 优先索引</li> <li><code>path/to/page</code> =&gt; 不被索引</li> <li><code>path/to/page?a=1</code> =&gt; 不被索引</li> <li><code>path/to/page?a=1&amp;b=2&amp;c=3</code> =&gt; 不被索引</li> <li>其他页面都会被索引</li></ul> <p><strong>示例2</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">"rules"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"allow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span><span class="token punctuation">,</span>
+    <span class="token property">"params"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"matching"</span><span class="token operator">:</span> <span class="token string">"inclusive"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"disallow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>path/to/page?a=1&amp;b=2</code> =&gt; 优先索引</li> <li><code>path/to/page?a=1&amp;b=2&amp;c=3</code> =&gt; 优先索引</li> <li><code>path/to/page</code> =&gt; 不被索引</li> <li><code>path/to/page?a=1</code> =&gt; 不被索引</li> <li>其他页面都会被索引</li></ul> <p><strong>示例3</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">"rules"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"allow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span><span class="token punctuation">,</span>
+    <span class="token property">"params"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"matching"</span><span class="token operator">:</span> <span class="token string">"exclusive"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"disallow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>path/to/page</code> =&gt; 优先索引</li> <li><code>path/to/page?c=3</code> =&gt; 优先索引</li> <li><code>path/to/page?a=1</code> =&gt; 不被索引</li> <li><code>path/to/page?a=1&amp;b=2</code> =&gt; 不被索引</li> <li>其他页面都会被索引</li></ul> <p><strong>示例4</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">"rules"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"allow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span><span class="token punctuation">,</span>
+    <span class="token property">"params"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"matching"</span><span class="token operator">:</span> <span class="token string">"partial"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"disallow"</span><span class="token punctuation">,</span>
+    <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"path/to/page"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>path/to/page?a=1</code> =&gt; 优先索引</li> <li><code>path/to/page?a=1&amp;b=2</code> =&gt; 优先索引</li> <li><code>path/to/page</code> =&gt; 不被索引</li> <li><code>path/to/page?c=3</code> =&gt; 不被索引</li> <li>其他页面都会被索引</li></ul> <p><strong>注：没有 sitemap.json 则默认所有页面都能被索引</strong></p> <p><strong>注：<code>{"action": "allow", "page": "*"}</code> 是优先级最低的默认规则，未显式指明 "disallow" 的都默认被索引</strong></p></div></div> <!---->    
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Object VideoDecoder.getFrameData()</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="Object-VideoDecoder-getFrameData"><a href="#Object-VideoDecoder-getFrameData" aria-hidden="true" class="header-anchor">#</a> Object VideoDecoder.getFrameData()</h1> <blockquote><p>基础库 2.11.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>获取下一帧的解码数据</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="Object"><a href="#Object" aria-hidden="true" class="header-anchor">#</a> Object</h3> <p>视频帧数据，若取不到则返回 null。当缓冲区为空的时候可能暂停取不到数据。</p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>width</td> <td>number</td> <td>帧数据宽度</td></tr> <tr><td>height</td> <td>number</td> <td>帧数据高度</td></tr> <tr><td>data</td> <td>ArrayBuffer</td> <td>帧数据</td></tr> <tr><td>pkPts</td> <td>number</td> <td>帧原始 pts</td></tr> <tr><td>pkDts</td> <td>number</td> <td>帧原始 dts</td></tr></tbody></table></div></div></div> <!---->    
+</body>
+</html>

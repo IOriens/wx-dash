@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>FileSystemManager.stat</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>FileSystemManager.stat(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,162 +12,27 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="filesystemmanagerstatobject-object">FileSystemManager.stat(Object object)</h3>
-<p>&#x83B7;&#x53D6;&#x6587;&#x4EF6; Stats &#x5BF9;&#x8C61;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>path</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x8DEF;&#x5F84;</td>
-<td></td>
-</tr>
-<tr>
-<td>recursive</td>
-<td>boolean</td>
-<td>false</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x9012;&#x5F52;&#x83B7;&#x53D6;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x7684; Stats &#x4FE1;&#x606F;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.3.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.3.0</a></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
-<p><strong>&#x53C2;&#x6570;</strong></p>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>stats</td>
-<td><a href="Stats.html">Stats</a>/Object</td>
-<td>&#x5F53; recursive &#x4E3A; false &#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Stats &#x5BF9;&#x8C61;&#x3002;&#x5F53; recursive &#x4E3A; true &#x4E14; path &#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Object&#xFF0C;key &#x4EE5; path &#x4E3A;&#x6839;&#x8DEF;&#x5F84;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;value &#x662F;&#x8BE5;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;&#x7684; Stats &#x5BF9;&#x8C61;&#x3002;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h6 id="objectfail-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.fail &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
-<p><strong>&#x53C2;&#x6570;</strong></p>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>errMsg</td>
-<td>string</td>
-<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>res.errMsg &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fail permission denied, open ${path}</td>
-<td>&#x6307;&#x5B9A;&#x7684; path &#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x8BFB;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td>fail no such file or directory ${path}</td>
-<td>&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<p>recursive &#x4E3A; false &#x65F6;</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">let</span> fs = wx.getFileSystemManager()
-fs.stat({
-    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
-        wx.env.USER_DATA_PATH
-    }
-    /testDir`</span>,
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
-    <span class="hljs-built_in">console</span>.log(res.stats.isDirectory())
-  }
-})
-</code></pre>
-<p>recursive &#x4E3A; true &#x65F6;</p>
-<pre><code class="language-javascript">fs.stat({
-    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
-        wx.env.USER_DATA_PATH
-    }
-    /testDir`</span>,
-  <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
-    <span class="hljs-built_in">Object</span>.keys(res.stats).forEach(<span class="hljs-function"><span class="hljs-params">path</span> =&gt;</span> {
-      <span class="hljs-keyword">let</span> stats = res.stats[path]
-      <span class="hljs-built_in">console</span>.log(path, stats.isDirectory())
-    })
-  }
-})
-</code></pre>
+   <div id="docContent"><div class="content custom"><h1 id="FileSystemManager-stat-Object-object"><a href="#FileSystemManager-stat-Object-object" aria-hidden="true" class="header-anchor">#</a> FileSystemManager.stat(Object object)</h1> <p>获取文件 Stats 对象</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>path</td> <td>string</td> <td></td> <td>是</td> <td>文件/目录路径 (本地路径)</td> <td></td></tr> <tr><td>recursive</td> <td>boolean</td> <td>false</td> <td>否</td> <td>是否递归获取目录下的每个文件的 Stats 信息</td> <td><a href="../../framework/compatibility.html">2.3.0</a></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><h4 id="object-success-回调函数"><a href="#object-success-回调函数" aria-hidden="true" class="header-anchor">#</a> object.success 回调函数</h4> <h5 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h5> <h6 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h6> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>stats</td> <td><a href="Stats.html">Stats</a>/Object</td> <td>当 recursive 为 false 时，res.stats 是一个 Stats 对象。当 recursive 为 true 且 path 是一个目录的路径时，res.stats 是一个 Object，key 以 path 为根路径的相对路径，value 是该路径对应的 Stats 对象。</td></tr></tbody></table></div><h4 id="object-fail-回调函数"><a href="#object-fail-回调函数" aria-hidden="true" class="header-anchor">#</a> object.fail 回调函数</h4> <h5 id="参数-3"><a href="#参数-3" aria-hidden="true" class="header-anchor">#</a> 参数</h5> <h6 id="Object-res-2"><a href="#Object-res-2" aria-hidden="true" class="header-anchor">#</a> Object res</h6> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>errMsg</td> <td>string</td> <td>错误信息</td></tr></tbody></table></div><p><strong>res.errMsg 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>fail permission denied, open ${path}</td> <td>指定的 path 路径没有读权限</td> <td></td></tr> <tr><td>fail no such file or directory ${path}</td> <td>文件不存在</td> <td></td></tr> <tr><td>fail sdcard not mounted</td> <td>Android sdcard 挂载失败</td> <td></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p>recursive 为 false 时</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">let</span> fs <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getFileSystemManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+fs<span class="token punctuation">.</span><span class="token function">stat</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  path<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wx<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">USER_DATA_PATH</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/testDir`</span></span><span class="token punctuation">,</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>stats<span class="token punctuation">.</span><span class="token function">isDirectory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+</code></pre></div><p>recursive 为 true 时</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+fs<span class="token punctuation">.</span><span class="token function">stat</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  path<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wx<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">USER_DATA_PATH</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/testDir`</span></span><span class="token punctuation">,</span>
+  recursive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>stats<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">path</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> stats <span class="token operator">=</span> res<span class="token punctuation">.</span>stats<span class="token punctuation">[</span>path<span class="token punctuation">]</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> stats<span class="token punctuation">.</span><span class="token function">isDirectory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

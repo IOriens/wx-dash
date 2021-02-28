@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.setLineCap</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.setLineCap(string lineCap)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,74 +12,34 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextsetlinecapstring-linecap">CanvasContext.setLineCap(string lineCap)</h3>
-<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x7AEF;&#x70B9;&#x6837;&#x5F0F;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-linecap">string lineCap</h5>
-<p>&#x7EBF;&#x6761;&#x7684;&#x7ED3;&#x675F;&#x7AEF;&#x70B9;&#x6837;&#x5F0F;</p>
-<p><strong>lineCap &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>butt</td>
-<td>&#x5411;&#x7EBF;&#x6761;&#x7684;&#x6BCF;&#x4E2A;&#x672B;&#x7AEF;&#x6DFB;&#x52A0;&#x5E73;&#x76F4;&#x7684;&#x8FB9;&#x7F18;&#x3002;</td>
-</tr>
-<tr>
-<td>round</td>
-<td>&#x5411;&#x7EBF;&#x6761;&#x7684;&#x6BCF;&#x4E2A;&#x672B;&#x7AEF;&#x6DFB;&#x52A0;&#x5706;&#x5F62;&#x7EBF;&#x5E3D;&#x3002;</td>
-</tr>
-<tr>
-<td>square</td>
-<td>&#x5411;&#x7EBF;&#x6761;&#x7684;&#x6BCF;&#x4E2A;&#x672B;&#x7AEF;&#x6DFB;&#x52A0;&#x6B63;&#x65B9;&#x5F62;&#x7EBF;&#x5E3D;&#x3002;</td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.beginPath()
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">10</span>)
-ctx.stroke()
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-setLineCap-string-lineCap"><a href="#CanvasContext-setLineCap-string-lineCap" aria-hidden="true" class="header-anchor">#</a> CanvasContext.setLineCap(string lineCap)</h1> <blockquote><p>从基础库 <a href="../../framework/compatibility.html">1.9.90</a> 开始，本接口停止维护，请使用 <a href="CanvasContext.html">CanvasContext.lineCap</a> 代替</p></blockquote> <p>设置线条的端点样式</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-lineCap"><a href="#string-lineCap" aria-hidden="true" class="header-anchor">#</a> string lineCap</h3> <p>线条的结束端点样式</p> <p><strong>lineCap 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>butt</td> <td>向线条的每个末端添加平直的边缘。</td> <td></td></tr> <tr><td>round</td> <td>向线条的每个末端添加圆形线帽。</td> <td></td></tr> <tr><td>square</td> <td>向线条的每个末端添加正方形线帽。</td> <td></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.setLineCap(<span class="hljs-string">&apos;butt&apos;</span>)
-ctx.setLineWidth(<span class="hljs-number">10</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">30</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">30</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineCap</span><span class="token punctuation">(</span><span class="token string">'butt'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineWidth</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.setLineCap(<span class="hljs-string">&apos;round&apos;</span>)
-ctx.setLineWidth(<span class="hljs-number">10</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">50</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineCap</span><span class="token punctuation">(</span><span class="token string">'round'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineWidth</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.beginPath()
-ctx.setLineCap(<span class="hljs-string">&apos;square&apos;</span>)
-ctx.setLineWidth(<span class="hljs-number">10</span>)
-ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>)
-ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">70</span>)
-ctx.stroke()
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineCap</span><span class="token punctuation">(</span><span class="token string">'square'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setLineWidth</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/line-cap.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p></div></div> <!---->    
 </body>
 </html>

@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>登录</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.checkSession(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,70 +12,15 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxchecksessionobject-object">wx.checkSession(Object object)</h3>
-<p>&#x68C0;&#x67E5;&#x767B;&#x5F55;&#x6001;&#x662F;&#x5426;&#x8FC7;&#x671F;&#x3002;</p>
-<p>&#x901A;&#x8FC7; wx.login &#x63A5;&#x53E3;&#x83B7;&#x5F97;&#x7684;&#x7528;&#x6237;&#x767B;&#x5F55;&#x6001;&#x62E5;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x65F6;&#x6548;&#x6027;&#x3002;&#x7528;&#x6237;&#x8D8A;&#x4E45;&#x672A;&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x7528;&#x6237;&#x767B;&#x5F55;&#x6001;&#x8D8A;&#x6709;&#x53EF;&#x80FD;&#x5931;&#x6548;&#x3002;&#x53CD;&#x4E4B;&#x5982;&#x679C;&#x7528;&#x6237;&#x4E00;&#x76F4;&#x5728;&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x5219;&#x7528;&#x6237;&#x767B;&#x5F55;&#x6001;&#x4E00;&#x76F4;&#x4FDD;&#x6301;&#x6709;&#x6548;&#x3002;&#x5177;&#x4F53;&#x65F6;&#x6548;&#x903B;&#x8F91;&#x7531;&#x5FAE;&#x4FE1;&#x7EF4;&#x62A4;&#xFF0C;&#x5BF9;&#x5F00;&#x53D1;&#x8005;&#x900F;&#x660E;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528; wx.checkSession &#x63A5;&#x53E3;&#x68C0;&#x6D4B;&#x5F53;&#x524D;&#x7528;&#x6237;&#x767B;&#x5F55;&#x6001;&#x662F;&#x5426;&#x6709;&#x6548;&#x3002;</p>
-<p>&#x767B;&#x5F55;&#x6001;&#x8FC7;&#x671F;&#x540E;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x518D;&#x8C03;&#x7528; wx.login &#x83B7;&#x53D6;&#x65B0;&#x7684;&#x7528;&#x6237;&#x767B;&#x5F55;&#x6001;&#x3002;&#x8C03;&#x7528;&#x6210;&#x529F;&#x8BF4;&#x660E;&#x5F53;&#x524D; session_key &#x672A;&#x8FC7;&#x671F;&#xFF0C;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x8BF4;&#x660E; session_key &#x5DF2;&#x8FC7;&#x671F;&#x3002;&#x66F4;&#x591A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BE6;&#x89C1; <a href="../../../framework/open-ability/login.html">&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;</a>&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.checkSession({
-  success () {
-    <span class="hljs-comment">//session_key &#x672A;&#x8FC7;&#x671F;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x672C;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E00;&#x76F4;&#x6709;&#x6548;</span>
-  },
-  fail () {
-    <span class="hljs-comment">// session_key &#x5DF2;&#x7ECF;&#x5931;&#x6548;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x767B;&#x5F55;&#x6D41;&#x7A0B;</span>
-    wx.login() <span class="hljs-comment">//&#x91CD;&#x65B0;&#x767B;&#x5F55;</span>
-  }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-checkSession-Object-object"><a href="#wx-checkSession-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.checkSession(Object object)</h1> <p>检查登录态是否过期。</p> <p>通过 wx.login 接口获得的用户登录态拥有一定的时效性。用户越久未使用小程序，用户登录态越有可能失效。反之如果用户一直在使用小程序，则用户登录态一直保持有效。具体时效逻辑由微信维护，对开发者透明。开发者只需要调用 wx.checkSession 接口检测当前用户登录态是否有效。</p> <p>登录态过期后开发者可以再调用 wx.login 获取新的用户登录态。调用成功说明当前 session_key 未过期，调用失败说明 session_key 已过期。更多使用方法详见 <a href="../../../framework/open-ability/login.html">小程序登录</a>。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">checkSession</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//session_key 未过期，并且在本生命周期一直有效</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">fail</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// session_key 已经失效，需要重新执行登录流程</span>
+    wx<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//重新登录</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

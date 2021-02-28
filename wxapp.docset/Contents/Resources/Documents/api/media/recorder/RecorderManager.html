@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>RecorderManager</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,71 +12,33 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="recordermanager">RecorderManager</h3>
-<p>&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7684;&#x5F55;&#x97F3;&#x7BA1;&#x7406;&#x5668;</p>
-<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
-<h5 id="recordermanagerstartobject-object"><a href="RecorderManager.start.html">RecorderManager.start(Object object)</a></h5>
-<p>&#x5F00;&#x59CB;&#x5F55;&#x97F3;</p>
-<h5 id="recordermanagerpause"><a href="RecorderManager.pause.html">RecorderManager.pause()</a></h5>
-<p>&#x6682;&#x505C;&#x5F55;&#x97F3;</p>
-<h5 id="recordermanagerresume"><a href="RecorderManager.resume.html">RecorderManager.resume()</a></h5>
-<p>&#x7EE7;&#x7EED;&#x5F55;&#x97F3;</p>
-<h5 id="recordermanagerstop"><a href="RecorderManager.stop.html">RecorderManager.stop()</a></h5>
-<p>&#x505C;&#x6B62;&#x5F55;&#x97F3;</p>
-<h5 id="recordermanageronstartfunction-callback"><a href="RecorderManager.onStart.html">RecorderManager.onStart(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;</p>
-<h5 id="recordermanageronresumefunction-callback"><a href="RecorderManager.onResume.html">RecorderManager.onResume(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x7EE7;&#x7EED;&#x4E8B;&#x4EF6;</p>
-<h5 id="recordermanageronpausefunction-callback"><a href="RecorderManager.onPause.html">RecorderManager.onPause(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</p>
-<h5 id="recordermanageronstopfunction-callback"><a href="RecorderManager.onStop.html">RecorderManager.onStop(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</p>
-<h5 id="recordermanageronframerecordedfunction-callback"><a href="RecorderManager.onFrameRecorded.html">RecorderManager.onFrameRecorded(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5DF2;&#x5F55;&#x5236;&#x5B8C;&#x6307;&#x5B9A;&#x5E27;&#x5927;&#x5C0F;&#x7684;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; frameSize&#xFF0C;&#x5219;&#x4F1A;&#x56DE;&#x8C03;&#x6B64;&#x4E8B;&#x4EF6;&#x3002;</p>
-<h5 id="recordermanageronerrorfunction-callback"><a href="RecorderManager.onError.html">RecorderManager.onError(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</p>
-<h5 id="recordermanageroninterruptionbeginfunction-callback"><a href="RecorderManager.onInterruptionBegin.html">RecorderManager.onInterruptionBegin(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x56E0;&#x4E3A;&#x53D7;&#x5230;&#x7CFB;&#x7EDF;&#x5360;&#x7528;&#x800C;&#x88AB;&#x4E2D;&#x65AD;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;&#x3002;&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#x4F1A;&#x89E6;&#x53D1;&#x6B64;&#x4E8B;&#x4EF6;&#xFF1A;&#x5FAE;&#x4FE1;&#x8BED;&#x97F3;&#x804A;&#x5929;&#x3001;&#x5FAE;&#x4FE1;&#x89C6;&#x9891;&#x804A;&#x5929;&#x3002;&#x6B64;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x5F55;&#x97F3;&#x4F1A;&#x88AB;&#x6682;&#x505C;&#x3002;pause &#x4E8B;&#x4EF6;&#x5728;&#x6B64;&#x4E8B;&#x4EF6;&#x540E;&#x89E6;&#x53D1;</p>
-<h5 id="recordermanageroninterruptionendfunction-callback"><a href="RecorderManager.onInterruptionEnd.html">RecorderManager.onInterruptionEnd(function callback)</a></h5>
-<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x4E2D;&#x65AD;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;&#x3002;&#x5728;&#x6536;&#x5230; interruptionBegin &#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x6240;&#x6709;&#x5F55;&#x97F3;&#x4F1A;&#x6682;&#x505C;&#xFF0C;&#x6536;&#x5230;&#x6B64;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#x624D;&#x53EF;&#x518D;&#x6B21;&#x5F55;&#x97F3;&#x6210;&#x529F;&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> recorderManager = wx.getRecorderManager()
+   <div id="docContent"><div class="content custom"><h1 id="RecorderManager"><a href="#RecorderManager" aria-hidden="true" class="header-anchor">#</a> RecorderManager</h1> <p>全局唯一的录音管理器</p> <h2 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h2> <h3 id="RecorderManager-start-Object-object"><a href="#RecorderManager-start-Object-object" aria-hidden="true" class="header-anchor">#</a> <a href="RecorderManager.start.html">RecorderManager.start(Object object)</a></h3> <p>开始录音</p> <h3 id="RecorderManager-pause"><a href="#RecorderManager-pause" aria-hidden="true" class="header-anchor">#</a> <a href="RecorderManager.pause.html">RecorderManager.pause()</a></h3> <p>暂停录音</p> <h3 id="RecorderManager-resume"><a href="#RecorderManager-resume" aria-hidden="true" class="header-anchor">#</a> <a href="RecorderManager.resume.html">RecorderManager.resume()</a></h3> <p>继续录音</p> <h3 id="RecorderManager-stop"><a href="#RecorderManager-stop" aria-hidden="true" class="header-anchor">#</a> <a href="RecorderManager.stop.html">RecorderManager.stop()</a></h3> <p>停止录音</p> <h3 id="RecorderManager-onStart-function-callback"><a href="#RecorderManager-onStart-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onStart.html">RecorderManager.onStart(function callback)</a></h3> <p>监听录音开始事件</p> <h3 id="RecorderManager-onResume-function-callback"><a href="#RecorderManager-onResume-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onResume.html">RecorderManager.onResume(function callback)</a></h3> <p>监听录音继续事件</p> <h3 id="RecorderManager-onPause-function-callback"><a href="#RecorderManager-onPause-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onPause.html">RecorderManager.onPause(function callback)</a></h3> <p>监听录音暂停事件</p> <h3 id="RecorderManager-onStop-function-callback"><a href="#RecorderManager-onStop-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onStop.html">RecorderManager.onStop(function callback)</a></h3> <p>监听录音结束事件</p> <h3 id="RecorderManager-onFrameRecorded-function-callback"><a href="#RecorderManager-onFrameRecorded-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onFrameRecorded.html">RecorderManager.onFrameRecorded(function callback)</a></h3> <p>监听已录制完指定帧大小的文件事件。如果设置了 frameSize，则会回调此事件。</p> <h3 id="RecorderManager-onError-function-callback"><a href="#RecorderManager-onError-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onError.html">RecorderManager.onError(function callback)</a></h3> <p>监听录音错误事件</p> <h3 id="RecorderManager-onInterruptionBegin-function-callback"><a href="#RecorderManager-onInterruptionBegin-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onInterruptionBegin.html">RecorderManager.onInterruptionBegin(function callback)</a></h3> <p>监听录音因为受到系统占用而被中断开始事件。以下场景会触发此事件：微信语音聊天、微信视频聊天。此事件触发后，录音会被暂停。pause 事件在此事件后触发</p> <h3 id="RecorderManager-onInterruptionEnd-function-callback"><a href="#RecorderManager-onInterruptionEnd-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RecorderManager.onInterruptionEnd.html">RecorderManager.onInterruptionEnd(function callback)</a></h3> <p>监听录音中断结束事件。在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> recorderManager <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getRecorderManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-recorderManager.onStart(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder start&apos;</span>)
-})
-recorderManager.onPause(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder pause&apos;</span>)
-})
-recorderManager.onStop(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder stop&apos;</span>, res)
-  <span class="hljs-keyword">const</span> { tempFilePath } = res
-})
-recorderManager.onFrameRecorded(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
-  <span class="hljs-keyword">const</span> { frameBuffer } = res
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;frameBuffer.byteLength&apos;</span>, frameBuffer.byteLength)
-})
+recorderManager<span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'recorder start'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+recorderManager<span class="token punctuation">.</span><span class="token function">onPause</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'recorder pause'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+recorderManager<span class="token punctuation">.</span><span class="token function">onStop</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'recorder stop'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> tempFilePath <span class="token punctuation">}</span> <span class="token operator">=</span> res
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+recorderManager<span class="token punctuation">.</span><span class="token function">onFrameRecorded</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> frameBuffer <span class="token punctuation">}</span> <span class="token operator">=</span> res
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'frameBuffer.byteLength'</span><span class="token punctuation">,</span> frameBuffer<span class="token punctuation">.</span>byteLength<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="hljs-keyword">const</span> options = {
-  <span class="hljs-attr">duration</span>: <span class="hljs-number">10000</span>,
-  <span class="hljs-attr">sampleRate</span>: <span class="hljs-number">44100</span>,
-  <span class="hljs-attr">numberOfChannels</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">encodeBitRate</span>: <span class="hljs-number">192000</span>,
-  <span class="hljs-attr">format</span>: <span class="hljs-string">&apos;aac&apos;</span>,
-  <span class="hljs-attr">frameSize</span>: <span class="hljs-number">50</span>
-}
+<span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+  duration<span class="token punctuation">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+  sampleRate<span class="token punctuation">:</span> <span class="token number">44100</span><span class="token punctuation">,</span>
+  numberOfChannels<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  encodeBitRate<span class="token punctuation">:</span> <span class="token number">192000</span><span class="token punctuation">,</span>
+  format<span class="token punctuation">:</span> <span class="token string">'aac'</span><span class="token punctuation">,</span>
+  frameSize<span class="token punctuation">:</span> <span class="token number">50</span>
+<span class="token punctuation">}</span>
 
-recorderManager.start(options)
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+recorderManager<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

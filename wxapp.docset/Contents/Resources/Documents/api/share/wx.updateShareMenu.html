@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.updateShareMenu</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>wx.updateShareMenu(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,152 +12,18 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxupdatesharemenuobject-object">wx.updateShareMenu(Object object)</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x66F4;&#x65B0;&#x8F6C;&#x53D1;&#x5C5E;&#x6027;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>withShareTicket</td>
-<td>boolean</td>
-<td>false</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x4F7F;&#x7528;&#x5E26; shareTicket &#x7684;&#x8F6C;&#x53D1;<a href="../../framework/open-ability/share.html#&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x8F6C;&#x53D1;&#x4FE1;&#x606F;">&#x8BE6;&#x60C5;</a></td>
-<td></td>
-</tr>
-<tr>
-<td>isUpdatableMessage</td>
-<td>boolean</td>
-<td>false</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x662F;&#x52A8;&#x6001;&#x6D88;&#x606F;&#xFF0C;&#x8BE6;&#x89C1;<a href="../../framework/open-ability/share/updatable-message.html">&#x52A8;&#x6001;&#x6D88;&#x606F;</a></td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
-</tr>
-<tr>
-<td>activityId</td>
-<td>string</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x7684; activityId&#x3002;&#x901A;&#x8FC7; <a href="../open-api/updatable-message/createActivityId.html">createActivityId</a> &#x63A5;&#x53E3;&#x83B7;&#x53D6;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
-</tr>
-<tr>
-<td>templateInfo</td>
-<td>Object</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x7684;&#x6A21;&#x677F;&#x4FE1;&#x606F;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>object.templateInfo &#x7684;&#x7ED3;&#x6784;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>parameterList</td>
-<td>Array.&lt;Object&gt;</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x53C2;&#x6570;&#x5217;&#x8868;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>parameterList &#x7684;&#x7ED3;&#x6784;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x53C2;&#x6570;&#x540D;</td>
-<td></td>
-</tr>
-<tr>
-<td>value</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x53C2;&#x6570;&#x503C;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.updateShareMenu({
-  <span class="hljs-attr">withShareTicket</span>: <span class="hljs-literal">true</span>,
-  success () { }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-updateShareMenu-Object-object"><a href="#wx-updateShareMenu-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.updateShareMenu(Object object)</h1> <blockquote><p>基础库 1.2.0 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <blockquote><p>本接口从基础库版本 <a href="../../framework/compatibility.html">2.1.0</a> 起支持在小程序插件中使用</p></blockquote> <p>更新转发属性</p> <p>在小程序插件中使用时，只能在当前插件的页面中调用</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>withShareTicket</td> <td>boolean</td> <td>false</td> <td>否</td> <td>是否使用带 shareTicket 的转发<a href="../../framework/open-ability/share.html">详情</a></td> <td></td></tr> <tr><td>isUpdatableMessage</td> <td>boolean</td> <td>false</td> <td>否</td> <td>是否是动态消息，详见<a href="../../framework/open-ability/share/updatable-message.html">动态消息</a></td> <td><a href="../../framework/compatibility.html">2.4.0</a></td></tr> <tr><td>activityId</td> <td>string</td> <td></td> <td>否</td> <td>动态消息的 activityId。通过 <a href="../../api-backend/open-api/updatable-message/updatableMessage.createActivityId.html">updatableMessage.createActivityId</a> 接口获取</td> <td><a href="../../framework/compatibility.html">2.4.0</a></td></tr> <tr><td>toDoActivityId</td> <td>string</td> <td></td> <td>否</td> <td>群待办消息的id，通过toDoActivityId可以把多个群待办消息聚合为同一个。通过 <a href="../../api-backend/open-api/updatable-message/updatableMessage.createActivityId.html">updatableMessage.createActivityId</a> 接口获取。详见<a href="../../framework/open-ability/share.html">群待办消息</a></td> <td><a href="../../framework/compatibility.html">2.11.0</a></td></tr> <tr><td>templateInfo</td> <td>Object</td> <td></td> <td>否</td> <td>动态消息的模板信息</td> <td><a href="../../framework/compatibility.html">2.4.0</a></td></tr> <tr><td>isPrivateMessage</td> <td>boolean</td> <td></td> <td>否</td> <td>是否是私密消息。详见 <a href="../../framework/open-ability/share/private-message.html">小程序私密消息</a></td> <td><a href="../../framework/compatibility.html">2.13.0</a></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><p><strong>object.templateInfo 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>parameterList</td> <td>Array.&lt;Object&gt;</td> <td></td> <td>是</td> <td>参数列表</td></tr></tbody></table></div><p><strong>parameterList 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>name</td> <td>string</td> <td></td> <td>是</td> <td>参数名</td></tr> <tr><td>value</td> <td>string</td> <td></td> <td>是</td> <td>参数值</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">updateShareMenu</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  withShareTicket<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 转发私密消息</span>
+wx<span class="token punctuation">.</span><span class="token function">updateShareMenu</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  isPrivateMessage<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  activityId<span class="token punctuation">:</span> <span class="token string">'xxx'</span><span class="token punctuation">,</span>
+  templateInfo<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">fail</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>数据类型</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="数据类型"><a href="#数据类型" aria-hidden="true" class="header-anchor">#</a> 数据类型</h1> <p>WXS 语言目前共有以下几种数据类型：</p> <ul><li><code>number</code> ： 数值</li> <li><code>string</code> ：字符串</li> <li><code>boolean</code>：布尔值</li> <li><code>object</code>：对象</li> <li><code>function</code>：函数</li> <li><code>array</code> : 数组</li> <li><code>date</code>：日期</li> <li><code>regexp</code>：正则</li></ul> <h2 id="number"><a href="#number" aria-hidden="true" class="header-anchor">#</a> number</h2> <h3 id="语法"><a href="#语法" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>number 包括两种数值：整数，小数。</p> <div class="language-wxs extra-class"><pre class="language-text"><code>var a = 10;
+var PI = 3.141592653589793;
+</code></pre></div><h3 id="属性"><a href="#属性" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>"Number"</code>。</li></ul> <h3 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>toString</code></li> <li><code>toLocaleString</code></li> <li><code>valueOf</code></li> <li><code>toFixed</code></li> <li><code>toExponential</code></li> <li><code>toPrecision</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="string"><a href="#string" aria-hidden="true" class="header-anchor">#</a> string</h2> <h3 id="语法-2"><a href="#语法-2" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>string 有两种写法：</p> <div class="language-wxs extra-class"><pre class="language-text"><code>'hello world';
+"hello world";
+</code></pre></div><h3 id="属性-2"><a href="#属性-2" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>"String"</code>。</li> <li><code>length</code></li></ul> <blockquote><p>除constructor外属性的具体含义请参考 <code>ES5</code> 标准。</p></blockquote> <h3 id="方法-2"><a href="#方法-2" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>toString</code></li> <li><code>valueOf</code></li> <li><code>charAt</code></li> <li><code>charCodeAt</code></li> <li><code>concat</code></li> <li><code>indexOf</code></li> <li><code>lastIndexOf</code></li> <li><code>localeCompare</code></li> <li><code>match</code></li> <li><code>replace</code></li> <li><code>search</code></li> <li><code>slice</code></li> <li><code>split</code></li> <li><code>substring</code></li> <li><code>toLowerCase</code></li> <li><code>toLocaleLowerCase</code></li> <li><code>toUpperCase</code></li> <li><code>toLocaleUpperCase</code></li> <li><code>trim</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="boolean"><a href="#boolean" aria-hidden="true" class="header-anchor">#</a> boolean</h2> <h3 id="语法-3"><a href="#语法-3" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>布尔值只有两个特定的值：<code>true</code> 和 <code>false</code>。</p> <h3 id="属性-3"><a href="#属性-3" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>"Boolean"</code>。</li></ul> <h3 id="方法-3"><a href="#方法-3" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>toString</code></li> <li><code>valueOf</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="object"><a href="#object" aria-hidden="true" class="header-anchor">#</a> object</h2> <h3 id="语法-4"><a href="#语法-4" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>object 是一种无序的键值对。使用方法如下所示：</p> <div class="language-wxs extra-class"><pre class="language-text"><code>var o = {} //生成一个新的空对象
+
+//生成一个新的非空对象
+o = {
+  'string'  : 1,  //object 的 key 可以是字符串
+  const_var : 2,  //object 的 key 也可以是符合变量定义规则的标识符
+  func      : {}, //object 的 value 可以是任何类型
+};
+
+//对象属性的读操作
+console.log(1 === o['string']);
+console.log(2 === o.const_var);
+
+//对象属性的写操作
+o['string']++;
+o['string'] += 10;
+o.const_var++;
+o.const_var += 10;
+
+//对象属性的读操作
+console.log(12 === o['string']);
+console.log(13 === o.const_var);
+</code></pre></div><h3 id="属性-4"><a href="#属性-4" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>"Object"</code>。</li></ul> <div class="language-wxs extra-class"><pre class="language-text"><code>console.log("Object" === {k:"1",v:"2"}.constructor)
+</code></pre></div><h3 id="方法-4"><a href="#方法-4" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>toString</code>：返回字符串 <code>"[object Object]"</code>。</li></ul> <h2 id="function"><a href="#function" aria-hidden="true" class="header-anchor">#</a> function</h2> <h3 id="语法-5"><a href="#语法-5" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>function 支持以下的定义方式：</p> <div class="language-wxs extra-class"><pre class="language-text"><code>//方法 1
+function a (x) {
+  return x;
+}
+
+//方法 2
+var b = function (x) {
+  return x;
+}
+</code></pre></div><p>function 同时也支持以下的语法（匿名函数，闭包等）：</p> <div class="language-wxs extra-class"><pre class="language-text"><code>var a = function (x) {
+  return function () { return x;}
+}
+
+var b = a(100);
+console.log( 100 === b() );
+</code></pre></div><h3 id="arguments"><a href="#arguments" aria-hidden="true" class="header-anchor">#</a> arguments</h3> <p>function 里面可以使用  <code>arguments</code> 关键词。该关键词目前只支持以下的属性：</p> <ul><li><code>length</code>: 传递给函数的参数个数。</li> <li><code>[index]</code>: 通过 <code>index</code> 下标可以遍历传递给函数的每个参数。</li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var a = function(){
+  console.log(3 === arguments.length);
+  console.log(100 === arguments[0]);
+  console.log(200 === arguments[1]);
+  console.log(300 === arguments[2]);
+};
+a(100,200,300);
+</code></pre></div><h3 id="属性-5"><a href="#属性-5" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>"Function"</code>。</li> <li><code>length</code>：返回函数的形参个数。</li></ul> <h3 id="方法-5"><a href="#方法-5" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>toString</code>：返回字符串 <code>"[function Function]"</code>。</li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var func = function (a,b,c) { }
+
+console.log("Function" === func.constructor);
+console.log(3 === func.length);
+console.log("[function Function]" === func.toString());
+</code></pre></div><h2 id="array"><a href="#array" aria-hidden="true" class="header-anchor">#</a> array</h2> <h3 id="语法-6"><a href="#语法-6" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>array 支持以下的定义方式：</p> <div class="language-wxs extra-class"><pre class="language-text"><code>var a = [];      //生成一个新的空数组
+
+a = [1,"2",{},function(){}];  //生成一个新的非空数组，数组元素可以是任何类型
+</code></pre></div><h3 id="属性-6"><a href="#属性-6" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>"Array"</code>。</li> <li><code>length</code></li></ul> <blockquote><p>除constructor外属性的具体含义请参考 <code>ES5</code> 标准。</p></blockquote> <h3 id="方法-6"><a href="#方法-6" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>toString</code></li> <li><code>concat</code></li> <li><code>join</code></li> <li><code>pop</code></li> <li><code>push</code></li> <li><code>reverse</code></li> <li><code>shift</code></li> <li><code>slice</code></li> <li><code>sort</code></li> <li><code>splice</code></li> <li><code>unshift</code></li> <li><code>indexOf</code></li> <li><code>lastIndexOf</code></li> <li><code>every</code></li> <li><code>some</code></li> <li><code>forEach</code></li> <li><code>map</code></li> <li><code>filter</code></li> <li><code>reduce</code></li> <li><code>reduceRight</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="date"><a href="#date" aria-hidden="true" class="header-anchor">#</a> date</h2> <h3 id="语法-7"><a href="#语法-7" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>生成 date 对象需要使用 <code>getDate</code>函数, 返回一个当前时间的对象。</p> <div class="language- extra-class"><pre class="language-text"><code>getDate()
+getDate(milliseconds)
+getDate(datestring)
+getDate(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]])
+</code></pre></div><ul><li>参数
+<ul><li><code>milliseconds</code>: 从1970年1月1日00:00:00 UTC开始计算的毫秒数</li> <li><code>datestring</code>: 日期字符串，其格式为："month day, year hours:minutes:seconds"</li></ul></li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var date = getDate(); //返回当前时间对象
+
+date = getDate(1500000000000);
+// Fri Jul 14 2017 10:40:00 GMT+0800 (中国标准时间)
+date = getDate('2017-7-14');
+// Fri Jul 14 2017 00:00:00 GMT+0800 (中国标准时间)
+date = getDate(2017, 6, 14, 10, 40, 0, 0);
+// Fri Jul 14 2017 10:40:00 GMT+0800 (中国标准时间)
+</code></pre></div><h3 id="属性-7"><a href="#属性-7" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 “Date”。</li></ul> <h3 id="方法-7"><a href="#方法-7" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>toString</code></li> <li><code>toDateString</code></li> <li><code>toTimeString</code></li> <li><code>toLocaleString</code></li> <li><code>toLocaleDateString</code></li> <li><code>toLocaleTimeString</code></li> <li><code>valueOf</code></li> <li><code>getTime</code></li> <li><code>getFullYear</code></li> <li><code>getUTCFullYear</code></li> <li><code>getMonth</code></li> <li><code>getUTCMonth</code></li> <li><code>getDate</code></li> <li><code>getUTCDate</code></li> <li><code>getDay</code></li> <li><code>getUTCDay</code></li> <li><code>getHours</code></li> <li><code>getUTCHours</code></li> <li><code>getMinutes</code></li> <li><code>getUTCMinutes</code></li> <li><code>getSeconds</code></li> <li><code>getUTCSeconds</code></li> <li><code>getMilliseconds</code></li> <li><code>getUTCMilliseconds</code></li> <li><code>getTimezoneOffset</code></li> <li><code>setTime</code></li> <li><code>setMilliseconds</code></li> <li><code>setUTCMilliseconds</code></li> <li><code>setSeconds</code></li> <li><code>setUTCSeconds</code></li> <li><code>setMinutes</code></li> <li><code>setUTCMinutes</code></li> <li><code>setHours</code></li> <li><code>setUTCHours</code></li> <li><code>setDate</code></li> <li><code>setUTCDate</code></li> <li><code>setMonth</code></li> <li><code>setUTCMonth</code></li> <li><code>setFullYear</code></li> <li><code>setUTCFullYear</code></li> <li><code>toUTCString</code></li> <li><code>toISOString</code></li> <li><code>toJSON</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="regexp"><a href="#regexp" aria-hidden="true" class="header-anchor">#</a> regexp</h2> <h3 id="语法-8"><a href="#语法-8" aria-hidden="true" class="header-anchor">#</a> 语法</h3> <p>生成 regexp 对象需要使用 <code>getRegExp</code>函数。</p> <div class="language- extra-class"><pre class="language-text"><code>getRegExp(pattern[, flags])
+</code></pre></div><ul><li>参数：
+<ul><li><code>pattern</code>: 正则表达式的内容。</li> <li><code>flags</code>：修饰符。该字段只能包含以下字符:
+<ul><li><code>g</code>: global</li> <li><code>i</code>: ignoreCase</li> <li><code>m</code>: multiline。</li></ul></li></ul></li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var a = getRegExp("x", "img");
+console.log("x" === a.source);
+console.log(true === a.global);
+console.log(true === a.ignoreCase);
+console.log(true === a.multiline);
+</code></pre></div><h3 id="属性-8"><a href="#属性-8" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>"RegExp"</code>。</li> <li><code>source</code></li> <li><code>global</code></li> <li><code>ignoreCase</code></li> <li><code>multiline</code></li> <li><code>lastIndex</code></li></ul> <blockquote><p>除constructor外属性的具体含义请参考 <code>ES5</code> 标准。</p></blockquote> <h3 id="方法-8"><a href="#方法-8" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>exec</code></li> <li><code>test</code></li> <li><code>toString</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="数据类型判断"><a href="#数据类型判断" aria-hidden="true" class="header-anchor">#</a> 数据类型判断</h2> <h3 id="constructor-属性"><a href="#constructor-属性" aria-hidden="true" class="header-anchor">#</a> <code>constructor</code> 属性</h3> <p>数据类型的判断可以使用 <code>constructor</code> 属性。</p> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var number = 10;
+console.log( "Number" === number.constructor );
+
+var string = "str";
+console.log( "String" === string.constructor );
+
+var boolean = true;
+console.log( "Boolean" === boolean.constructor );
+
+var object = {};
+console.log( "Object" === object.constructor );
+
+var func = function(){};
+console.log( "Function" === func.constructor );
+
+var array = [];
+console.log( "Array" === array.constructor );
+
+var date = getDate();
+console.log( "Date" === date.constructor );
+
+var regexp = getRegExp();
+console.log( "RegExp" === regexp.constructor );
+</code></pre></div><h3 id="typeof"><a href="#typeof" aria-hidden="true" class="header-anchor">#</a> <code>typeof</code></h3> <p>使用 <code>typeof</code> 也可以区分部分数据类型。</p> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var number = 10;
+var boolean = true;
+var object = {};
+var func = function(){};
+var array = [];
+var date = getDate();
+var regexp = getRegExp();
+
+console.log( 'number' === typeof number );
+console.log( 'boolean' === typeof boolean );
+console.log( 'object' === typeof object );
+console.log( 'function' === typeof func );
+console.log( 'object' === typeof array );
+console.log( 'object' === typeof date );
+console.log( 'object' === typeof regexp );
+
+console.log( 'undefined' === typeof undefined );
+console.log( 'object' === typeof null );
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

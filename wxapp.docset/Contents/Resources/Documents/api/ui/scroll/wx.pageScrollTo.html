@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>滚动</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.pageScrollTo(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,82 +12,10 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxpagescrolltoobject-object">wx.pageScrollTo(Object object)</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x5C06;&#x9875;&#x9762;&#x6EDA;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scrollTop</td>
-<td>number</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x6EDA;&#x52A8;&#x5230;&#x9875;&#x9762;&#x7684;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#xFF0C;&#x5355;&#x4F4D; px</td>
-<td></td>
-</tr>
-<tr>
-<td>duration</td>
-<td>number</td>
-<td>300</td>
-<td>&#x5426;</td>
-<td>&#x6EDA;&#x52A8;&#x52A8;&#x753B;&#x7684;&#x65F6;&#x957F;&#xFF0C;&#x5355;&#x4F4D; ms</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.pageScrollTo({
-  <span class="hljs-attr">scrollTop</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">duration</span>: <span class="hljs-number">300</span>
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="wx-pageScrollTo-Object-object"><a href="#wx-pageScrollTo-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.pageScrollTo(Object object)</h1> <blockquote><p>基础库 1.4.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <blockquote><p>本接口从基础库版本 <a href="../../../framework/compatibility.html">2.1.0</a> 起支持在小程序插件中使用</p></blockquote> <p>将页面滚动到目标位置，支持选择器和滚动距离两种方式定位</p> <p>在小程序插件中使用时，只能在当前插件的页面中调用</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>scrollTop</td> <td>number</td> <td></td> <td>否</td> <td>滚动到页面的目标位置，单位 px</td> <td></td></tr> <tr><td>duration</td> <td>number</td> <td>300</td> <td>否</td> <td>滚动动画的时长，单位 ms</td> <td></td></tr> <tr><td>selector</td> <td>string</td> <td></td> <td>否</td> <td>选择器</td> <td><a href="../../../framework/compatibility.html">2.7.3</a></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><h2 id="selector-语法"><a href="#selector-语法" aria-hidden="true" class="header-anchor">#</a> selector 语法</h2> <p>selector类似于 CSS 的选择器，但仅支持下列语法。</p> <ul><li>ID选择器：#the-id</li> <li>class选择器（可以连续指定多个）：.a-class.another-class</li> <li>子元素选择器：.the-parent &gt; .the-child</li> <li>后代选择器：.the-ancestor .the-descendant</li> <li>跨自定义组件的后代选择器：.the-ancestor &gt;&gt;&gt; .the-descendant</li> <li>多选择器的并集：#a-node, .some-other-nodes</li></ul> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">pageScrollTo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  scrollTop<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  duration<span class="token punctuation">:</span> <span class="token number">300</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

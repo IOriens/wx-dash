@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.openDocument</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>wx.openDocument(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,127 +12,21 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxopendocumentobject-object">wx.openDocument(Object object)</h3>
-<p>&#x65B0;&#x5F00;&#x9875;&#x9762;&#x6253;&#x5F00;&#x6587;&#x6863;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>filePath</td>
-<td>string</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; downloadFile &#x83B7;&#x5F97;</td>
-<td></td>
-</tr>
-<tr>
-<td>fileType</td>
-<td>string</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x6253;&#x5F00;&#x6587;&#x4EF6;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>object.fileType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>doc</td>
-<td>doc &#x683C;&#x5F0F;</td>
-</tr>
-<tr>
-<td>docx</td>
-<td>docx &#x683C;&#x5F0F;</td>
-</tr>
-<tr>
-<td>xls</td>
-<td>xls &#x683C;&#x5F0F;</td>
-</tr>
-<tr>
-<td>xlsx</td>
-<td>xlsx &#x683C;&#x5F0F;</td>
-</tr>
-<tr>
-<td>ppt</td>
-<td>ppt &#x683C;&#x5F0F;</td>
-</tr>
-<tr>
-<td>pptx</td>
-<td>pptx &#x683C;&#x5F0F;</td>
-</tr>
-<tr>
-<td>pdf</td>
-<td>pdf &#x683C;&#x5F0F;</td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript">wx.downloadFile({
-    <span class="hljs-comment">// &#x793A;&#x4F8B; url&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x5B58;&#x5728;</span>
-    url: <span class="hljs-string">&apos;http://example.com/somefile.pdf&apos;</span>,
-    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-keyword">const</span> filePath = res.tempFilePath
-        wx.openDocument({
-            <span class="hljs-attr">filePath</span>: filePath,
-            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6253;&#x5F00;&#x6587;&#x6863;&#x6210;&#x529F;&apos;</span>)
-            }
-        })
-    }
-})
-</code></pre>
+   <div id="docContent"><div class="content custom"><h1 id="wx-openDocument-Object-object"><a href="#wx-openDocument-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.openDocument(Object object)</h1> <blockquote><p>本接口从基础库版本 <a href="../../framework/compatibility.html">2.15.0</a> 起支持在小程序插件中使用</p></blockquote> <p>新开页面打开文档。微信客户端 <code>7.0.12</code> 版本前默认显示右上角菜单按钮，之后的版本默认不显示，需主动传入 <code>showMenu</code>。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>filePath</td> <td>string</td> <td></td> <td>是</td> <td>文件路径 (本地路径) ，可通过 downloadFile 获得</td> <td></td></tr> <tr><td>showMenu</td> <td>boolean</td> <td>false</td> <td>否</td> <td>是否显示右上角菜单</td> <td><a href="../../framework/compatibility.html">2.11.0</a></td></tr> <tr><td>fileType</td> <td>string</td> <td></td> <td>否</td> <td>文件类型，指定文件类型打开文件</td> <td><a href="../../framework/compatibility.html">1.4.0</a></td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td> <td></td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td> <td></td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td> <td></td></tr></tbody></table></div><p><strong>object.fileType 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>doc</td> <td>doc 格式</td> <td></td></tr> <tr><td>docx</td> <td>docx 格式</td> <td></td></tr> <tr><td>xls</td> <td>xls 格式</td> <td></td></tr> <tr><td>xlsx</td> <td>xlsx 格式</td> <td></td></tr> <tr><td>ppt</td> <td>ppt 格式</td> <td></td></tr> <tr><td>pptx</td> <td>pptx 格式</td> <td></td></tr> <tr><td>pdf</td> <td>pdf 格式</td> <td></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+wx<span class="token punctuation">.</span><span class="token function">downloadFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// 示例 url，并非真实存在</span>
+  url<span class="token punctuation">:</span> <span class="token string">'http://example.com/somefile.pdf'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> res<span class="token punctuation">.</span>tempFilePath
+    wx<span class="token punctuation">.</span><span class="token function">openDocument</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      filePath<span class="token punctuation">:</span> filePath<span class="token punctuation">,</span>
+      <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'打开文档成功'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

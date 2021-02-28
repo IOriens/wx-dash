@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.strokeRect</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.strokeRect(number x, number y, number width, number height)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,33 +12,10 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextstrokerectnumber-x-number-y-number-width-number-height">CanvasContext.strokeRect(number x, number y, number width, number height)</h3>
-<p>&#x753B;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;(&#x975E;&#x586B;&#x5145;)&#x3002; &#x7528; <a href="CanvasContext.setStrokeStyle.html"><code>setStrokeStyle</code></a> &#x8BBE;&#x7F6E;&#x77E9;&#x5F62;&#x7EBF;&#x6761;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x662F;&#x9ED1;&#x8272;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="number-x">number x</h5>
-<p>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x6A2A;&#x5750;&#x6807;</p>
-<h5 id="number-y">number y</h5>
-<p>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x6A2A;&#x5750;&#x6807;</p>
-<h5 id="number-width">number width</h5>
-<p>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x7684;&#x5BBD;&#x5EA6;</p>
-<h5 id="number-height">number height</h5>
-<p>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x7684;&#x9AD8;&#x5EA6;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;red&apos;</span>)
-ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/stroke-rect.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-strokeRect-number-x-number-y-number-width-number-height"><a href="#CanvasContext-strokeRect-number-x-number-y-number-width-number-height" aria-hidden="true" class="header-anchor">#</a> CanvasContext.strokeRect(number x, number y, number width, number height)</h1> <p>画一个矩形(非填充)。 用 <a href="CanvasContext.setStrokeStyle.html"><code>setStrokeStyle</code></a> 设置矩形线条的颜色，如果没设置默认是黑色。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-x"><a href="#number-x" aria-hidden="true" class="header-anchor">#</a> number x</h3> <p>矩形路径左上角的横坐标</p> <h3 id="number-y"><a href="#number-y" aria-hidden="true" class="header-anchor">#</a> number y</h3> <p>矩形路径左上角的纵坐标</p> <h3 id="number-width"><a href="#number-width" aria-hidden="true" class="header-anchor">#</a> number width</h3> <p>矩形路径的宽度</p> <h3 id="number-height"><a href="#number-height" aria-hidden="true" class="header-anchor">#</a> number height</h3> <p>矩形路径的高度</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setStrokeStyle</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,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" alt=""></p></div></div> <!---->    
 </body>
 </html>

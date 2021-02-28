@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>基础类库</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="基础类库"><a href="#基础类库" aria-hidden="true" class="header-anchor">#</a> 基础类库</h1> <h2 id="console"><a href="#console" aria-hidden="true" class="header-anchor">#</a> console</h2> <p><code>console.log</code> 方法用于在 console 窗口输出信息。它可以接受多个参数，将它们的结果连接起来输出。</p> <h2 id="Math"><a href="#Math" aria-hidden="true" class="header-anchor">#</a> Math</h2> <h3 id="属性"><a href="#属性" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>E</code></li> <li><code>LN10</code></li> <li><code>LN2</code></li> <li><code>LOG2E</code></li> <li><code>LOG10E</code></li> <li><code>PI</code></li> <li><code>SQRT1_2</code></li> <li><code>SQRT2</code></li></ul> <blockquote><p>以上属性的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h3 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>abs</code></li> <li><code>acos</code></li> <li><code>asin</code></li> <li><code>atan</code></li> <li><code>atan2</code></li> <li><code>ceil</code></li> <li><code>cos</code></li> <li><code>exp</code></li> <li><code>floor</code></li> <li><code>log</code></li> <li><code>max</code></li> <li><code>min</code></li> <li><code>pow</code></li> <li><code>random</code></li> <li><code>round</code></li> <li><code>sin</code></li> <li><code>sqrt</code></li> <li><code>tan</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="JSON"><a href="#JSON" aria-hidden="true" class="header-anchor">#</a> JSON</h2> <h3 id="方法-2"><a href="#方法-2" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>stringify(object)</code>: 将 <code>object</code> 对象转换为 <code>JSON</code> 字符串，并返回该字符串。</li> <li><code>parse(string)</code>: 将 <code>JSON</code> 字符串转化成对象，并返回该对象。</li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>
+console.log(undefined === JSON.stringify());
+console.log(undefined === JSON.stringify(undefined));
+console.log("null"===JSON.stringify(null));
+
+console.log("111"===JSON.stringify(111));
+console.log('"111"'===JSON.stringify("111"));
+console.log("true"===JSON.stringify(true));
+console.log(undefined===JSON.stringify(function(){}));
+
+
+console.log(undefined===JSON.parse(JSON.stringify()));
+console.log(undefined===JSON.parse(JSON.stringify(undefined)));
+console.log(null===JSON.parse(JSON.stringify(null)));
+
+console.log(111===JSON.parse(JSON.stringify(111)));
+console.log("111"===JSON.parse(JSON.stringify("111")));
+console.log(true===JSON.parse(JSON.stringify(true)));
+
+console.log(undefined===JSON.parse(JSON.stringify(function(){})));
+</code></pre></div><h2 id="Number"><a href="#Number" aria-hidden="true" class="header-anchor">#</a> Number</h2> <h3 id="属性-2"><a href="#属性-2" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>MAX_VALUE</code></li> <li><code>MIN_VALUE</code></li> <li><code>NEGATIVE_INFINITY</code></li> <li><code>POSITIVE_INFINITY</code></li></ul> <blockquote><p>以上属性的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="Date"><a href="#Date" aria-hidden="true" class="header-anchor">#</a> Date</h2> <h3 id="属性-3"><a href="#属性-3" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>parse</code></li> <li><code>UTC</code></li> <li><code>now</code></li></ul> <blockquote><p>以上属性的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="Global"><a href="#Global" aria-hidden="true" class="header-anchor">#</a> Global</h2> <h3 id="属性-4"><a href="#属性-4" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>NaN</code></li> <li><code>Infinity</code></li> <li><code>undefined</code></li></ul> <blockquote><p>以上属性的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h3 id="方法-3"><a href="#方法-3" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>parseInt</code></li> <li><code>parseFloat</code></li> <li><code>isNaN</code></li> <li><code>isFinite</code></li> <li><code>decodeURI</code></li> <li><code>decodeURIComponent</code></li> <li><code>encodeURI</code></li> <li><code>encodeURIComponent</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote></div></div> <!---->    
+</body>
+</html>

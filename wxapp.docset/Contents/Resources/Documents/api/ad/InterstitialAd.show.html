@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise InterstitialAd.show()</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="Promise-InterstitialAd-show"><a href="#Promise-InterstitialAd-show" aria-hidden="true" class="header-anchor">#</a> Promise InterstitialAd.show()</h1> <p>显示插屏广告。</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="Promise"><a href="#Promise" aria-hidden="true" class="header-anchor">#</a> Promise</h3> <p>插屏广告显示操作的结果</p> <h2 id="错误码信息表"><a href="#错误码信息表" aria-hidden="true" class="header-anchor">#</a> 错误码信息表</h2> <p>如果插屏广告显示失败，InterstitialAd.show() 方法会返回一个rejected Promise，开发者可以获取到错误码及对应的错误信息。</p> <div class="table-wrp"><table><thead><tr><th>代码</th> <th>异常情况</th> <th>理由</th></tr></thead> <tbody><tr><td>2001</td> <td>触发频率限制</td> <td>小程序启动一定时间内不允许展示插屏广告</td></tr> <tr><td>2002</td> <td>触发频率限制</td> <td>距离小程序插屏广告或者激励视频广告上次播放时间间隔不足，不允许展示插屏广告</td></tr> <tr><td>2003</td> <td>触发频率限制</td> <td>当前正在播放激励视频广告或者插屏广告，不允许再次展示插屏广告</td></tr> <tr><td>2004</td> <td>广告渲染失败</td> <td>该项错误不是开发者的异常情况，或因小程序页面切换导致广告渲染失败</td></tr> <tr><td>2005</td> <td>广告调用异常</td> <td>插屏广告实例不允许跨页面调用</td></tr></tbody></table></div></div></div> <!---->    
+</body>
+</html>

@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>SocketTask.onOpen</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>SocketTask.onOpen(function callback)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,40 +12,6 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="sockettaskonopenfunction-callback">SocketTask.onOpen(function callback)</h3>
-<p>&#x76D1;&#x542C; WebSocket &#x8FDE;&#x63A5;&#x6253;&#x5F00;&#x4E8B;&#x4EF6;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="function-callback">function callback</h5>
-<p>WebSocket &#x8FDE;&#x63A5;&#x6253;&#x5F00;&#x4E8B;&#x4EF6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
-<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
-<p><strong>Object res</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>header</td>
-<td>object</td>
-<td>&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x7684; HTTP &#x54CD;&#x5E94; Header</td>
-<td><a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.0</a></td>
-</tr>
-</tbody>
-</table>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="SocketTask-onOpen-function-callback"><a href="#SocketTask-onOpen-function-callback" aria-hidden="true" class="header-anchor">#</a> SocketTask.onOpen(function callback)</h1> <p>监听 WebSocket 连接打开事件</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="function-callback"><a href="#function-callback" aria-hidden="true" class="header-anchor">#</a> function callback</h3> <p>WebSocket 连接打开事件的回调函数</p> <h4 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>header</td> <td>object</td> <td>连接成功的 HTTP 响应 Header</td> <td><a href="../../../framework/compatibility.html">2.0.0</a></td></tr> <tr><td>profile</td> <td>Object</td> <td>网络请求过程中一些调试信息</td> <td><a href="../../../framework/compatibility.html">2.10.4</a></td></tr></tbody></table></div><p><strong>profile 的结构</strong></p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>fetchStart</td> <td>number</td> <td>组件准备好使用 SOCKET 建立请求的时间，这发生在检查本地缓存之前</td></tr> <tr><td>domainLookupStart</td> <td>number</td> <td>DNS 域名查询开始的时间，如果使用了本地缓存（即无 DNS 查询）或持久连接，则与 fetchStart 值相等</td></tr> <tr><td>domainLookupEnd</td> <td>number</td> <td>DNS 域名查询完成的时间，如果使用了本地缓存（即无 DNS 查询）或持久连接，则与 fetchStart 值相等</td></tr> <tr><td>connectStart</td> <td>number</td> <td>开始建立连接的时间，如果是持久连接，则与 fetchStart 值相等。注意如果在传输层发生了错误且重新建立连接，则这里显示的是新建立的连接开始的时间</td></tr> <tr><td>connectEnd</td> <td>number</td> <td>完成建立连接的时间（完成握手），如果是持久连接，则与 fetchStart 值相等。注意如果在传输层发生了错误且重新建立连接，则这里显示的是新建立的连接完成的时间。注意这里握手结束，包括安全连接建立完成、SOCKS 授权通过</td></tr> <tr><td>rtt</td> <td>number</td> <td>单次连接的耗时，包括 connect ，tls</td></tr> <tr><td>handshakeCost</td> <td>number</td> <td>握手耗时</td></tr> <tr><td>cost</td> <td>number</td> <td>上层请求到返回的耗时</td></tr></tbody></table></div></div></div> <!---->    
 </body>
 </html>

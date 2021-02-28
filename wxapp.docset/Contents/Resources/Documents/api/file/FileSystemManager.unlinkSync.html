@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>FileSystemManager.unlinkSync</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>FileSystemManager.unlinkSync(string filePath)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,47 +12,6 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="filesystemmanagerunlinksyncstring-filepath">FileSystemManager.unlinkSync(string filePath)</h3>
-<p><a href="FileSystemManager.unlink.html">FileSystemManager.unlink</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-filepath">string filePath</h5>
-<p>&#x8981;&#x5220;&#x9664;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
-<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
-<table>
-<thead>
-<tr>
-<th>&#x9519;&#x8BEF;&#x7801;</th>
-<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>fail permission denied, open ${path}</td>
-<td>&#x6307;&#x5B9A;&#x7684; path &#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x8BFB;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td></td>
-<td>fail no such file or directory ${path}</td>
-<td>&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</td>
-</tr>
-<tr>
-<td></td>
-<td>fail operation not permitted, unlink ${filePath}</td>
-<td>&#x4F20;&#x5165;&#x7684; filePath &#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;</td>
-</tr>
-</tbody>
-</table>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="FileSystemManager-unlinkSync-string-filePath"><a href="#FileSystemManager-unlinkSync-string-filePath" aria-hidden="true" class="header-anchor">#</a> FileSystemManager.unlinkSync(string filePath)</h1> <p><a href="FileSystemManager.unlink.html">FileSystemManager.unlink</a> 的同步版本</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-filePath"><a href="#string-filePath" aria-hidden="true" class="header-anchor">#</a> string filePath</h3> <p>要删除的文件路径 (本地路径)</p> <h2 id="错误"><a href="#错误" aria-hidden="true" class="header-anchor">#</a> 错误</h2> <div class="table-wrp"><table><thead><tr><th>错误码</th> <th>错误信息</th> <th>说明</th></tr></thead> <tbody><tr><td></td> <td>fail permission denied, open ${path}</td> <td>指定的 path 路径没有读权限</td></tr> <tr><td></td> <td>fail no such file or directory ${path}</td> <td>文件不存在</td></tr> <tr><td></td> <td>fail operation not permitted, unlink ${filePath}</td> <td>传入的 filePath 是一个目录</td></tr> <tr><td></td> <td>fail sdcard not mounted</td> <td>Android sdcard 挂载失败</td></tr></tbody></table></div></div></div> <!---->    
 </body>
 </html>

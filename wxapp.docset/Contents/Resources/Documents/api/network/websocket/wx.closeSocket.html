@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>WebSocket</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <title>wx.closeSocket(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,89 +12,20 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="wxclosesocketobject-object">wx.closeSocket(Object object)</h3>
-<p>&#x5173;&#x95ED; WebSocket &#x8FDE;&#x63A5;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-object">Object object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>code</td>
-<td>number</td>
-<td>1000&#xFF08;&#x8868;&#x793A;&#x6B63;&#x5E38;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#xFF09;</td>
-<td>&#x5426;</td>
-<td>&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x503C;&#x8868;&#x793A;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x7684;&#x72B6;&#x6001;&#x53F7;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>reason</td>
-<td>string</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x4E00;&#x4E2A;&#x53EF;&#x8BFB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5FC5;&#x987B;&#x662F;&#x4E0D;&#x957F;&#x4E8E; 123 &#x5B57;&#x8282;&#x7684; UTF-8 &#x6587;&#x672C;&#xFF08;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#xFF09;&#x3002;</td>
-<td></td>
-</tr>
-<tr>
-<td>success</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td></td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.connectSocket({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>
-})
+   <div id="docContent"><div class="content custom"><h1 id="wx-closeSocket-Object-object"><a href="#wx-closeSocket-Object-object" aria-hidden="true" class="header-anchor">#</a> wx.closeSocket(Object object)</h1> <p>关闭 WebSocket 连接</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th></tr></thead> <tbody><tr><td>code</td> <td>number</td> <td>1000（表示正常关闭连接）</td> <td>否</td> <td>一个数字值表示关闭连接的状态号，表示连接被关闭的原因。</td></tr> <tr><td>reason</td> <td>string</td> <td></td> <td>否</td> <td>一个可读的字符串，表示连接被关闭的原因。这个字符串必须是不长于 123 字节的 UTF-8 文本（不是字符）。</td></tr> <tr><td>success</td> <td>function</td> <td></td> <td>否</td> <td>接口调用成功的回调函数</td></tr> <tr><td>fail</td> <td>function</td> <td></td> <td>否</td> <td>接口调用失败的回调函数</td></tr> <tr><td>complete</td> <td>function</td> <td></td> <td>否</td> <td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">connectSocket</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'test.php'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6709;&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#xFF0C;</span>
-<span class="hljs-comment">//&#x5982;&#x679C; wx.connectSocket &#x8FD8;&#x6CA1;&#x56DE;&#x8C03; wx.onSocketOpen&#xFF0C;&#x800C;&#x5148;&#x8C03;&#x7528; wx.closeSocket&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x505A;&#x4E0D;&#x5230;&#x5173;&#x95ED; WebSocket &#x7684;&#x76EE;&#x7684;&#x3002;</span>
-<span class="hljs-comment">//&#x5FC5;&#x987B;&#x5728; WebSocket &#x6253;&#x5F00;&#x671F;&#x95F4;&#x8C03;&#x7528; wx.closeSocket &#x624D;&#x80FD;&#x5173;&#x95ED;&#x3002;</span>
-wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  wx.closeSocket()
-})
+<span class="token comment">//注意这里有时序问题，</span>
+<span class="token comment">//如果 wx.connectSocket 还没回调 wx.onSocketOpen，而先调用 wx.closeSocket，那么就做不到关闭 WebSocket 的目的。</span>
+<span class="token comment">//必须在 WebSocket 打开期间调用 wx.closeSocket 才能关闭。</span>
+wx<span class="token punctuation">.</span><span class="token function">onSocketOpen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  wx<span class="token punctuation">.</span><span class="token function">closeSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-wx.onSocketClose(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;WebSocket &#x5DF2;&#x5173;&#x95ED;&#xFF01;&apos;</span>)
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+wx<span class="token punctuation">.</span><span class="token function">onSocketClose</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'WebSocket 已关闭！'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

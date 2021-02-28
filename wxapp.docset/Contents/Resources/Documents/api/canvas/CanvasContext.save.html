@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.save</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.save()</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,32 +12,18 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextsave">CanvasContext.save()</h3>
-<p>&#x4FDD;&#x5B58;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-save"><a href="#CanvasContext-save" aria-hidden="true" class="header-anchor">#</a> CanvasContext.save()</h1> <p>保存绘图上下文。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// save the default fill style</span>
-ctx.save()
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
-ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+<span class="token comment">// save the default fill style</span>
+ctx<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
 
-<span class="hljs-comment">// restore to the previous saved state</span>
-ctx.restore()
-ctx.fillRect(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+<span class="token comment">// restore to the previous saved state</span>
+ctx<span class="token punctuation">.</span><span class="token function">restore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
 
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/save-restore.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATwAAACpCAYAAAC22YFCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAeHSURBVHhe7drRjhNZEAPQ+f+fZjUSr2xHYEw5OUh5mlDX7b51lpH264c/GtCABj6kga8PeU6PqQENaOAH8FwCDWjgYxoA3se8ag+qAQ0Azx3QgAY+pgHgfcyr9qAa0ADw3AENaOBjGvgleF9fXz98dOAOuANLd+BJ7v8F7+kv+7kGNKCBKw18w/z0B3hPDfm5BjQw0QDwJl6TkBrQQKIB4CVaNEMDGphoAHgTr0lIDWgg0QDwEi2aoQENTDQAvInXJKQGNJBoAHiJFs3QgAYmGgDexGsSUgMaSDQAvESLZmhAAxMN9MD7/j+cfXSQvgMTaybklQaAl15A87qoX9kkOSYaAB6gukCl+55YMyGvNAC89AKa1wX0yibJMdEA8ADVBSrd98SaCXmlAeClF9C8LqBXNkmOiQaAB6guUOm+J9ZMyCsNAC+9gOZ1Ab2ySXJMNAA8QHWBSvc9sWZCXmkAeOkFNK8L6JVNkmOiAeABqgtUuu+JNRPySgPASy+geV1Ar2ySHBMNAA9QXaDSfU+smZBXGgBeegHN6wJ6ZZPkmGgAeIDqApXue2LNhLzSAPDSC2heF9ArmyTHRAPAA1QXqHTfE2sm5JUGgJdeQPO6gF7ZJDkmGgAeoLpApfueWDMhrzQAvPQCmtcF9MomyTHRAPAA1QUq3ffEmgl5pQHgpRfQvC6gVzZJjokGgAeoLlDpvifWTMgrDQAvvYDmdQG9sklyTDQAPEB1gUr3PbFmQl5pAHjpBTSvC+iVTZJjogHgAaoLVLrviTUT8koDwEsvoHldQK9skhwTDQAPUF2g0n1PrJmQVxoAXnoBzesCemWT5JhoAHiA6gKV7ntizYS80gDw0gtoXhfQK5skx0QDwANUF6h03xNrJuSVBoCXXkDzuoBe2SQ5JhoAHqC6QKX7nlgzIa80ALz0AprXBfTKJskx0QDwANUFKt33xJoJeaUB4KUX0LwuoFc2SY6JBoAHqC5Q6b4n1kzIKw0AL72A5nUBvbJJckw0ALyfQH0X4aOD9B2YUOCDQgIPeKD/i/+x+yBLJh4VeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM4AHPOABbwKrREjgAQ94wEtYMjEDeMADHvAmsEqEBB7wgAe8hCUTM3rgHa/juwgfHaTvwPFr/3HxgPfzlacvunnwfGW5Pk6cf/zAr7yTr19lfOUv/+Pne/l4QAHqb9yBly+gL1YaeMUs4Pl116/7v3kHKlvskJcbAJ5faWH2m5i98i/ClzfRFysNAA94wANeBZsLhwAPeMAD3gWLKhmABzzgAa+CzYVDgAc84AHvgkWVDMADHvCAV8HmwiHAAx7wgHfBokoG4AEPeMCrYHPhEOABD3jAu2BRJQPwgAc84FWwuXAI8IAHPOBdsKiSAXjAAx7wKthcOAR4wAMe8C5YVMkAPOABD3gVbC4cAjzgAQ94FyyqZAAe8IAHvAo2Fw4BHvCAB7wLFlUyAA94wANeBZsLhwAPeMAD3gWLKhmABzzgAa+CzYVDgAc84AHvgkWVDMADHvCAV8HmwiHAAx7wgHfBokoG4AEPeMCrYHPhEOABD3jAu2BRJQPwgAc84FWwuXAI8IAHPOBdsKiSAXjAAx7wKthcOAR4wAMe8C5YVMkAPOABD3gVbC4cAjzgAQ94FyyqZAAe8IAHvAo2Fw4BHvCAB7wLFlUyAA94wANeBZsLhwAPeMAD3gWLKhmABzzgAa+CzYVD/hi87wE+OnAH3IGVO/AE79fTF/xcAxrQwLs0ALx3eZOeQwMaeGwAeI8V+YIGNPAuDQDvXd6k59CABh4bAN5jRb6gAQ28SwPAe5c36Tk0oIHHBoD3WJEvaEAD79IA8N7lTXoODWjgsQHgPVbkCxrQwLs0ALx3eZOeQwMaeGzgPyNAS43/TEbJAAAAAElFTkSuQmCC" alt=""></p></div></div> <!---->    
 </body>
 </html>

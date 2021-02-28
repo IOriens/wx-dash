@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>VideoContext</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,75 +12,38 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="videocontext">VideoContext</h3>
-<p>VideoContext &#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="wx.createVideoContext.html">wx.createVideoContext</a> &#x83B7;&#x53D6;&#x3002;</p>
-<p><code>videoContext</code> &#x901A;&#x8FC7; <code>id</code> &#x8DDF;&#x4E00;&#x4E2A; <a href="../../../component/video.html"><code>&lt;video&gt;</code></a> &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <a href="../../../component/video.html"><code>&lt;video&gt;</code></a> &#x7EC4;&#x4EF6;&#x3002;</p>
-<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
-<h5 id="videocontextplay"><a href="VideoContext.play.html">VideoContext.play()</a></h5>
-<p>&#x64AD;&#x653E;&#x89C6;&#x9891;</p>
-<h5 id="videocontextpause"><a href="VideoContext.pause.html">VideoContext.pause()</a></h5>
-<p>&#x6682;&#x505C;&#x89C6;&#x9891;</p>
-<h5 id="videocontextstop"><a href="VideoContext.stop.html">VideoContext.stop()</a></h5>
-<p>&#x505C;&#x6B62;&#x89C6;&#x9891;</p>
-<h5 id="videocontextseeknumber-position"><a href="VideoContext.seek.html">VideoContext.seek(number position)</a></h5>
-<p>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</p>
-<h5 id="videocontextsenddanmuobject-data"><a href="VideoContext.sendDanmu.html">VideoContext.sendDanmu(Object data)</a></h5>
-<p>&#x53D1;&#x9001;&#x5F39;&#x5E55;</p>
-<h5 id="videocontextplaybackratenumber-rate"><a href="VideoContext.playbackRate.html">VideoContext.playbackRate(number rate)</a></h5>
-<p>&#x8BBE;&#x7F6E;&#x500D;&#x901F;&#x64AD;&#x653E;</p>
-<h5 id="videocontextrequestfullscreenobject-object"><a href="VideoContext.requestFullScreen.html">VideoContext.requestFullScreen(Object object)</a></h5>
-<p>&#x8FDB;&#x5165;&#x5168;&#x5C4F;</p>
-<h5 id="videocontextexitfullscreen"><a href="VideoContext.exitFullScreen.html">VideoContext.exitFullScreen()</a></h5>
-<p>&#x9000;&#x51FA;&#x5168;&#x5C4F;</p>
-<h5 id="videocontextshowstatusbar"><a href="VideoContext.showStatusBar.html">VideoContext.showStatusBar()</a></h5>
-<p>&#x663E;&#x793A;&#x72B6;&#x6001;&#x680F;&#xFF0C;&#x4EC5;&#x5728;iOS&#x5168;&#x5C4F;&#x4E0B;&#x6709;&#x6548;</p>
-<h5 id="videocontexthidestatusbar"><a href="VideoContext.hideStatusBar.html">VideoContext.hideStatusBar()</a></h5>
-<p>&#x9690;&#x85CF;&#x72B6;&#x6001;&#x680F;&#xFF0C;&#x4EC5;&#x5728;iOS&#x5168;&#x5C4F;&#x4E0B;&#x6709;&#x6548;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<p><a href="https://developers.weixin.qq.com/s/X5V6Xmmk6xYB" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myVideo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span> <span class="hljs-attr">enable-danmu</span> <span class="hljs-attr">danmu-btn</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bindblur</span>=<span class="hljs-string">&quot;bindInputBlur&quot;</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindSendDanmu&quot;</span>&gt;</span>&#x53D1;&#x9001;&#x5F39;&#x5E55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-</code></pre>
-<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> (<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">let</span> rgb = []
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">3</span>; ++i) {
-    <span class="hljs-keyword">let</span> color = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">256</span>).toString(<span class="hljs-number">16</span>)
-    color = color.length == <span class="hljs-number">1</span> ? <span class="hljs-string">&apos;0&apos;</span> + color : color
-    rgb.push(color)
-  }
-  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;#&apos;</span> + rgb.join(<span class="hljs-string">&apos;&apos;</span>)
-}
+   <div id="docContent"><div class="content custom"><h1 id="VideoContext"><a href="#VideoContext" aria-hidden="true" class="header-anchor">#</a> VideoContext</h1> <p>VideoContext 实例，可通过 <a href="wx.createVideoContext.html">wx.createVideoContext</a> 获取。</p> <p><a href="VideoContext.html">VideoContext</a> 通过 <code>id</code> 跟一个 <a href="../../../component/video.html">video</a> 组件绑定，操作对应的 <a href="../../../component/video.html">video</a> 组件。</p> <h2 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h2> <h3 id="VideoContext-play"><a href="#VideoContext-play" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.play.html">VideoContext.play()</a></h3> <p>播放视频</p> <h3 id="VideoContext-pause"><a href="#VideoContext-pause" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.pause.html">VideoContext.pause()</a></h3> <p>暂停视频</p> <h3 id="VideoContext-stop"><a href="#VideoContext-stop" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.stop.html">VideoContext.stop()</a></h3> <p>停止视频</p> <h3 id="VideoContext-seek-number-position"><a href="#VideoContext-seek-number-position" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.seek.html">VideoContext.seek(number position)</a></h3> <p>跳转到指定位置</p> <h3 id="VideoContext-sendDanmu-Object-data"><a href="#VideoContext-sendDanmu-Object-data" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.sendDanmu.html">VideoContext.sendDanmu(Object data)</a></h3> <p>发送弹幕</p> <h3 id="VideoContext-playbackRate-number-rate"><a href="#VideoContext-playbackRate-number-rate" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.playbackRate.html">VideoContext.playbackRate(number rate)</a></h3> <p>设置倍速播放</p> <h3 id="VideoContext-requestFullScreen-Object-object"><a href="#VideoContext-requestFullScreen-Object-object" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.requestFullScreen.html">VideoContext.requestFullScreen(Object object)</a></h3> <p>进入全屏。若有自定义内容需在全屏时展示，需将内容节点放置到 video 节点内。</p> <h3 id="VideoContext-exitFullScreen"><a href="#VideoContext-exitFullScreen" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.exitFullScreen.html">VideoContext.exitFullScreen()</a></h3> <p>退出全屏</p> <h3 id="VideoContext-showStatusBar"><a href="#VideoContext-showStatusBar" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.showStatusBar.html">VideoContext.showStatusBar()</a></h3> <p>显示状态栏，仅在iOS全屏下有效</p> <h3 id="VideoContext-hideStatusBar"><a href="#VideoContext-hideStatusBar" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.hideStatusBar.html">VideoContext.hideStatusBar()</a></h3> <p>隐藏状态栏，仅在iOS全屏下有效</p> <h3 id="VideoContext-exitPictureInPicture"><a href="#VideoContext-exitPictureInPicture" aria-hidden="true" class="header-anchor">#</a> <a href="VideoContext.exitPictureInPicture.html">VideoContext.exitPictureInPicture()</a></h3> <p>退出小窗，该方法可在任意页面调用</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p><a href="https://developers.weixin.qq.com/s/X5V6Xmmk6xYB" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section tc<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myVideo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400<span class="token punctuation">"</span></span> <span class="token attr-name">enable-danmu</span> <span class="token attr-name">danmu-btn</span> <span class="token attr-name">controls</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn-area<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">bindblur</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindInputBlur<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">bindtap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindSendDanmu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>发送弹幕<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getRandomColor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> rgb <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> color <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span>
+    color <span class="token operator">=</span> color<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> color <span class="token punctuation">:</span> color
+    rgb<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token string">'#'</span> <span class="token operator">+</span> rgb<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-Page({
-  onReady (res) {
-    <span class="hljs-keyword">this</span>.videoContext = wx.createVideoContext(<span class="hljs-string">&apos;myVideo&apos;</span>)
-  },
-  <span class="hljs-attr">inputValue</span>: <span class="hljs-string">&apos;&apos;</span>,
-  bindInputBlur (e) {
-    <span class="hljs-keyword">this</span>.inputValue = e.detail.value
-  },
-  bindSendDanmu () {
-    <span class="hljs-keyword">this</span>.videoContext.sendDanmu({
-      <span class="hljs-attr">text</span>: <span class="hljs-keyword">this</span>.inputValue,
-      <span class="hljs-attr">color</span>: getRandomColor()
-    })
-  }
-})
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">onReady</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>videoContext <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createVideoContext</span><span class="token punctuation">(</span><span class="token string">'myVideo'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  inputValue<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token function">bindInputBlur</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>inputValue <span class="token operator">=</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">bindSendDanmu</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>videoContext<span class="token punctuation">.</span><span class="token function">sendDanmu</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      text<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>inputValue<span class="token punctuation">,</span>
+      color<span class="token punctuation">:</span> <span class="token function">getRandomColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Worker.postMessage</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>Worker.postMessage(Object message)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,20 +12,14 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="workerpostmessageobject-message">Worker.postMessage(Object message)</h3>
-<p>&#x5411;&#x4E3B;&#x7EBF;&#x7A0B;/Worker &#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="object-message">Object message</h5>
-<p>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684; JavaScript &#x5BF9;&#x8C61;&#x3002;</p>
+   <div id="docContent"><div class="content custom"><h1 id="Worker-postMessage-Object-message"><a href="#Worker-postMessage-Object-message" aria-hidden="true" class="header-anchor">#</a> Worker.postMessage(Object message)</h1> <p>向主线程/Worker 线程发送的消息。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="Object-message"><a href="#Object-message" aria-hidden="true" class="header-anchor">#</a> Object message</h3> <p>需要发送的消息，必须是一个可序列化的 JavaScript key-value 形式的对象。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p>worker 线程中</p> <div class="language-js extra-class"><pre class="language-js"><code>worker<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  msg<span class="token punctuation">:</span> <span class="token string">'hello from worker'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>主线程中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> worker <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createWorker</span><span class="token punctuation">(</span><span class="token string">'workers/request/index.js'</span><span class="token punctuation">)</span>
 
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+worker<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  msg<span class="token punctuation">:</span> <span class="token string">'hello from main'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

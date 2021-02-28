@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>RequestTask</title>
-  <link rel="stylesheet" href="../../../../style.css" />
-  <link rel="stylesheet" href="../../../../website.css" />
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,43 +12,20 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="requesttask">RequestTask</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;&#x5BF9;&#x8C61;</p>
-<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
-<h5 id="requesttaskabort"><a href="RequestTask.abort.html">RequestTask.abort()</a></h5>
-<p>&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;</p>
-<h5 id="requesttaskonheadersreceivedfunction-callback"><a href="RequestTask.onHeadersReceived.html">RequestTask.onHeadersReceived(function callback)</a></h5>
-<p>&#x76D1;&#x542C; HTTP Response Header &#x4E8B;&#x4EF6;&#x3002;&#x4F1A;&#x6BD4;&#x8BF7;&#x6C42;&#x5B8C;&#x6210;&#x4E8B;&#x4EF6;&#x66F4;&#x65E9;</p>
-<h5 id="requesttaskoffheadersreceivedfunction-callback"><a href="RequestTask.offHeadersReceived.html">RequestTask.offHeadersReceived(function callback)</a></h5>
-<p>&#x53D6;&#x6D88;&#x76D1;&#x542C; HTTP Response Header &#x4E8B;&#x4EF6;&#x3002;&#x4F1A;&#x6BD4;&#x8BF7;&#x6C42;&#x5B8C;&#x6210;&#x4E8B;&#x4EF6;&#x66F4;&#x65E9;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> requestTask = wx.request({
-  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
-  data: {
-    <span class="hljs-attr">x</span>: <span class="hljs-string">&apos;&apos;</span> ,
-    <span class="hljs-attr">y</span>: <span class="hljs-string">&apos;&apos;</span>
-  },
-  <span class="hljs-attr">header</span>: {
-    <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>
-  },
-  success (res) {
-    <span class="hljs-built_in">console</span>.log(res.data)
-  }
-})
-requestTask.abort() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;</span>
-</code></pre>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="RequestTask"><a href="#RequestTask" aria-hidden="true" class="header-anchor">#</a> RequestTask</h1> <blockquote><p>基础库 1.4.0 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>网络请求任务对象</p> <h2 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h2> <h3 id="RequestTask-abort"><a href="#RequestTask-abort" aria-hidden="true" class="header-anchor">#</a> <a href="RequestTask.abort.html">RequestTask.abort()</a></h3> <p>中断请求任务</p> <h3 id="RequestTask-onHeadersReceived-function-callback"><a href="#RequestTask-onHeadersReceived-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RequestTask.onHeadersReceived.html">RequestTask.onHeadersReceived(function callback)</a></h3> <p>监听 HTTP Response Header 事件。会比请求完成事件更早</p> <h3 id="RequestTask-offHeadersReceived-function-callback"><a href="#RequestTask-offHeadersReceived-function-callback" aria-hidden="true" class="header-anchor">#</a> <a href="./RequestTask.offHeadersReceived.html">RequestTask.offHeadersReceived(function callback)</a></h3> <p>取消监听 HTTP Response Header 事件</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> requestTask <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">:</span> <span class="token string">'test.php'</span><span class="token punctuation">,</span> <span class="token comment">//仅为示例，并非真实的接口地址</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    x<span class="token punctuation">:</span> <span class="token string">''</span> <span class="token punctuation">,</span>
+    y<span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  header<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'content-type'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+requestTask<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 取消请求任务</span>
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

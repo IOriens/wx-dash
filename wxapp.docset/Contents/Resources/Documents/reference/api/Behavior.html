@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Behavior(Object object)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h2 id="Behavior-Object-object"><a href="#Behavior-Object-object" aria-hidden="true" class="header-anchor">#</a> Behavior(Object object)</h2> <p>注册一个 <code>behavior</code>，接受一个 <code>Object</code> 类型的参数。</p> <h3 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h3> <h4 id="Object-object"><a href="#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h4> <div class="table-wrp"><table><thead><tr><th>定义段</th> <th>类型</th> <th>是否必填</th> <th>描述</th> <th>最低版本</th></tr></thead> <tbody><tr><td>properties</td> <td>Object Map</td> <td>否</td> <td>同组件的属性</td> <td></td></tr> <tr><td>data</td> <td>Object</td> <td>否</td> <td>同组件的数据</td> <td></td></tr> <tr><td>methods</td> <td>Object</td> <td>否</td> <td>同自定义组件的方法</td> <td></td></tr> <tr><td>behaviors</td> <td>String Array</td> <td>否</td> <td>引入其它的 <code>behavior</code></td> <td></td></tr> <tr><td>created</td> <td>Function</td> <td>否</td> <td>生命周期函数</td> <td></td></tr> <tr><td>attached</td> <td>Function</td> <td>否</td> <td>生命周期函数</td> <td></td></tr> <tr><td>ready</td> <td>Function</td> <td>否</td> <td>生命周期函数</td> <td></td></tr> <tr><td>moved</td> <td>Function</td> <td>否</td> <td>生命周期函数</td> <td></td></tr> <tr><td>detached</td> <td>Function</td> <td>否</td> <td>生命周期函数</td> <td></td></tr></tbody></table></div><p><strong>代码示例：</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// my-behavior.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">Behavior</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  behaviors<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    myBehaviorProperty<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> String
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    myBehaviorData<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">attached</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">myBehaviorMethod</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

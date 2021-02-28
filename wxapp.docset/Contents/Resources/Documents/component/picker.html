@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>picker</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../website.css">
+  <link rel="stylesheet" href="../../../../../style.css">
+  <link rel="stylesheet" href="../../../../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -10,562 +10,213 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h4 id="picker">picker</h4>
-<p>&#x4ECE;&#x5E95;&#x90E8;&#x5F39;&#x8D77;&#x7684;&#x6EDA;&#x52A8;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x73B0;&#x652F;&#x6301;&#x4E94;&#x79CD;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x901A;&#x8FC7;mode&#x6765;&#x533A;&#x5206;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x666E;&#x901A;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x591A;&#x5217;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x65F6;&#x95F4;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x65E5;&#x671F;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x7701;&#x5E02;&#x533A;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x666E;&#x901A;&#x9009;&#x62E9;&#x5668;&#x3002;</p>
-<p><strong>&#x666E;&#x901A;&#x9009;&#x62E9;&#x5668;&#xFF1A;mode = selector</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id="picker-range">range</td>
-<td>Array / Object Array</td>
-<td>[]</td>
-<td>mode&#x4E3A; selector &#x6216; multiSelector &#x65F6;&#xFF0C;range &#x6709;&#x6548;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-range-key">range-key</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53; range &#x662F;&#x4E00;&#x4E2A; Object Array &#x65F6;&#xFF0C;&#x901A;&#x8FC7; range-key &#x6765;&#x6307;&#x5B9A; Object &#x4E2D; key &#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x9009;&#x62E9;&#x5668;&#x663E;&#x793A;&#x5185;&#x5BB9;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-value">value</td>
-<td>Number</td>
-<td>0</td>
-<td>value &#x7684;&#x503C;&#x8868;&#x793A;&#x9009;&#x62E9;&#x4E86; range &#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x4E2A;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindchange">bindchange</td>
-<td>EventHandle</td>
-<td></td>
-<td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-disabled">disabled</td>
-<td>Boolean</td>
-<td>false</td>
-<td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindcancel">bindcancel</td>
-<td>EventHandle</td>
-<td></td>
-<td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x6216;&#x70B9;&#x906E;&#x7F69;&#x5C42;&#x6536;&#x8D77; picker &#x65F6;&#x89E6;&#x53D1;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x591A;&#x5217;&#x9009;&#x62E9;&#x5668;&#xFF1A;mode = multiSelector</strong>&#xFF08;&#x6700;&#x4F4E;&#x7248;&#x672C;&#xFF1A;<a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a>&#xFF09;</p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id="picker-range">range</td>
-<td>&#x4E8C;&#x7EF4;Array / &#x4E8C;&#x7EF4;Object Array</td>
-<td>[]</td>
-<td>mode&#x4E3A; selector &#x6216; multiSelector &#x65F6;&#xFF0C;range &#x6709;&#x6548;&#x3002;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x957F;&#x5EA6;&#x8868;&#x793A;&#x591A;&#x5C11;&#x5217;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x6BCF;&#x9879;&#x8868;&#x793A;&#x6BCF;&#x5217;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;<code>[[&quot;a&quot;,&quot;b&quot;], [&quot;c&quot;,&quot;d&quot;]]</code></td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-range-key">range-key</td>
-<td>String</td>
-<td></td>
-<td>&#x5F53; range &#x662F;&#x4E00;&#x4E2A; &#x4E8C;&#x7EF4;Object Array &#x65F6;&#xFF0C;&#x901A;&#x8FC7; range-key &#x6765;&#x6307;&#x5B9A; Object &#x4E2D; key &#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x9009;&#x62E9;&#x5668;&#x663E;&#x793A;&#x5185;&#x5BB9;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-value">value</td>
-<td>Array</td>
-<td>[]</td>
-<td>value &#x6BCF;&#x4E00;&#x9879;&#x7684;&#x503C;&#x8868;&#x793A;&#x9009;&#x62E9;&#x4E86; range &#x5BF9;&#x5E94;&#x9879;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x4E2A;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindchange">bindchange</td>
-<td>EventHandle</td>
-<td></td>
-<td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindcolumnchange">bindcolumnchange</td>
-<td>EventHandle</td>
-<td></td>
-<td>&#x67D0;&#x4E00;&#x5217;&#x7684;&#x503C;&#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; columnchange &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {column: column, value: value}&#xFF0C;column &#x7684;&#x503C;&#x8868;&#x793A;&#x6539;&#x53D8;&#x4E86;&#x7B2C;&#x51E0;&#x5217;&#xFF08;&#x4E0B;&#x6807;&#x4ECE;0&#x5F00;&#x59CB;&#xFF09;&#xFF0C;value &#x7684;&#x503C;&#x8868;&#x793A;&#x53D8;&#x66F4;&#x503C;&#x7684;&#x4E0B;&#x6807;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindcancel">bindcancel</td>
-<td>EventHandle</td>
-<td></td>
-<td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
-</tr>
-<tr>
-<td id="picker-disabled">disabled</td>
-<td>Boolean</td>
-<td>false</td>
-<td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x65F6;&#x95F4;&#x9009;&#x62E9;&#x5668;&#xFF1A;mode = time</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id="picker-value">value</td>
-<td>String</td>
-<td></td>
-<td>&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&quot;hh:mm&quot;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-start">start</td>
-<td>String</td>
-<td></td>
-<td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;hh:mm&quot;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-end">end</td>
-<td>String</td>
-<td></td>
-<td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x7684;&#x7ED3;&#x675F;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;hh:mm&quot;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindchange">bindchange</td>
-<td>EventHandle</td>
-<td></td>
-<td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindcancel">bindcancel</td>
-<td>EventHandle</td>
-<td></td>
-<td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
-</tr>
-<tr>
-<td id="picker-disabled">disabled</td>
-<td>Boolean</td>
-<td>false</td>
-<td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x65E5;&#x671F;&#x9009;&#x62E9;&#x5668;&#xFF1A;mode = date</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id="picker-value">value</td>
-<td>String</td>
-<td>0</td>
-<td>&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x65E5;&#x671F;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&quot;YYYY-MM-DD&quot;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-start">start</td>
-<td>String</td>
-<td></td>
-<td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;YYYY-MM-DD&quot;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-end">end</td>
-<td>String</td>
-<td></td>
-<td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x7684;&#x7ED3;&#x675F;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;YYYY-MM-DD&quot;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-fields">fields</td>
-<td>String</td>
-<td>day</td>
-<td>&#x6709;&#x6548;&#x503C; year,month,day&#xFF0C;&#x8868;&#x793A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x7C92;&#x5EA6;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindchange">bindchange</td>
-<td>EventHandle</td>
-<td></td>
-<td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindcancel">bindcancel</td>
-<td>EventHandle</td>
-<td></td>
-<td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
-</tr>
-<tr>
-<td id="picker-disabled">disabled</td>
-<td>Boolean</td>
-<td>false</td>
-<td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>fields &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>year</td>
-<td>&#x9009;&#x62E9;&#x5668;&#x7C92;&#x5EA6;&#x4E3A;&#x5E74;</td>
-</tr>
-<tr>
-<td>month</td>
-<td>&#x9009;&#x62E9;&#x5668;&#x7C92;&#x5EA6;&#x4E3A;&#x6708;&#x4EFD;</td>
-</tr>
-<tr>
-<td>day</td>
-<td>&#x9009;&#x62E9;&#x5668;&#x7C92;&#x5EA6;&#x4E3A;&#x5929;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x7701;&#x5E02;&#x533A;&#x9009;&#x62E9;&#x5668;&#xFF1A;mode = region</strong>&#xFF08;&#x6700;&#x4F4E;&#x7248;&#x672C;&#xFF1A;<a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a>&#xFF09;</p>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id="picker-value">value</td>
-<td>Array</td>
-<td>[]</td>
-<td>&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x7701;&#x5E02;&#x533A;&#xFF0C;&#x9ED8;&#x8BA4;&#x9009;&#x4E2D;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-custom-item">custom-item</td>
-<td>String</td>
-<td></td>
-<td>&#x53EF;&#x4E3A;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x9876;&#x90E8;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x9879;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
-</tr>
-<tr>
-<td id="picker-bindchange">bindchange</td>
-<td>EventHandle</td>
-<td></td>
-<td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value, code: code, postcode: postcode}&#xFF0C;&#x5176;&#x4E2D;&#x5B57;&#x6BB5;code&#x662F;&#x7EDF;&#x8BA1;&#x7528;&#x533A;&#x5212;&#x4EE3;&#x7801;&#xFF0C;postcode&#x662F;&#x90AE;&#x653F;&#x7F16;&#x7801;</td>
-<td></td>
-</tr>
-<tr>
-<td id="picker-bindcancel">bindcancel</td>
-<td>EventHandle</td>
-<td></td>
-<td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
-</tr>
-<tr>
-<td id="picker-disabled">disabled</td>
-<td>Boolean</td>
-<td>false</td>
-<td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="https://developers.weixin.qq.com/s/pZb21cmH6qYX" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x666E;&#x901A;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindPickerChange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{index}}&quot;</span> <span class="hljs-attr">range</span>=<span class="hljs-string">&quot;{{array}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;&#xFF1A;{{array[index]}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x591A;&#x5217;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
-    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;multiSelector&quot;</span>
-    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindMultiPickerChange&quot;</span>
-    <span class="hljs-attr">bindcolumnchange</span>=<span class="hljs-string">&quot;bindMultiPickerColumnChange&quot;</span>
-    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{multiIndex}}&quot;</span>
-    <span class="hljs-attr">range</span>=<span class="hljs-string">&quot;{{multiArray}}&quot;</span>
-  &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;&#xFF1A;{{multiArray[0][multiIndex[0]]}}&#xFF0C;{{multiArray[1][multiIndex[1]]}}&#xFF0C;{{multiArray[2][multiIndex[2]]}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x65F6;&#x95F4;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
-    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;time&quot;</span>
-    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{time}}&quot;</span>
-    <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;09:01&quot;</span>
-    <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;21:01&quot;</span>
-    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindTimeChange&quot;</span>
-  &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;: {{time}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+   <div id="docContent"><div class="content custom"><h1 id="picker"><a href="#picker" aria-hidden="true" class="header-anchor">#</a> picker</h1> <blockquote><p>基础库 1.0.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>从底部弹起的滚动选择器。</p> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>header-text</td> <td>string</td> <td></td> <td>否</td> <td>选择器的标题，仅安卓可用</td> <td><a href="../framework/compatibility.html">2.11.0</a></td></tr> <tr><td>mode</td> <td>string</td> <td>selector</td> <td>否</td> <td>选择器类型</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>disabled</td> <td>boolean</td> <td>false</td> <td>否</td> <td>是否禁用</td> <td><a href="../framework/compatibility.html">1.0.0</a></td></tr> <tr><td>bindcancel</td> <td>eventhandle</td> <td></td> <td>否</td> <td>取消选择时触发</td> <td><a href="../framework/compatibility.html">1.9.90</a></td></tr></tbody></table></div><p><strong>mode 的合法值</strong></p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>selector</td> <td>普通选择器</td> <td></td></tr> <tr><td>multiSelector</td> <td>多列选择器</td> <td></td></tr> <tr><td>time</td> <td>时间选择器</td> <td></td></tr> <tr><td>date</td> <td>日期选择器</td> <td></td></tr> <tr><td>region</td> <td>省市区选择器</td> <td></td></tr></tbody></table></div><p>除了上述通用的属性，对于不同的mode，<code>picker</code>拥有不同的属性。</p> <h4 id="普通选择器：mode-selector"><a href="#普通选择器：mode-selector" aria-hidden="true" class="header-anchor">#</a> 普通选择器：mode = selector</h4> <div class="table-wrp"><table><thead><tr><th>属性名</th> <th>类型</th> <th>默认值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td id="picker-range">range</td> <td>array/object array</td> <td>[]</td> <td>mode 为 selector 或 multiSelector 时，range 有效</td> <td></td></tr> <tr><td id="picker-range-key">range-key</td> <td>string</td> <td></td> <td>当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容</td> <td></td></tr> <tr><td id="picker-value">value</td> <td>number</td> <td>0</td> <td>表示选择了 range 中的第几个（下标从 0 开始）</td> <td></td></tr> <tr><td id="picker-bindchange">bindchange</td> <td>eventhandle</td> <td></td> <td>value 改变时触发 change 事件，event.detail = {value}</td> <td></td></tr></tbody></table></div><h4 id="多列选择器：mode-multiSelector"><a href="#多列选择器：mode-multiSelector" aria-hidden="true" class="header-anchor">#</a> 多列选择器：mode = multiSelector</h4> <div class="table-wrp"><table><thead><tr><th>属性名</th> <th>类型</th> <th>默认值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td id="picker-range">range</td> <td>array/object array</td> <td>[]</td> <td>mode 为 selector 或 multiSelector 时，range 有效</td> <td></td></tr> <tr><td id="picker-range-key">range-key</td> <td>string</td> <td></td> <td>当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容</td> <td></td></tr> <tr><td id="picker-value">value</td> <td>array</td> <td>[]</td> <td>表示选择了 range 中的第几个（下标从 0 开始）</td> <td></td></tr> <tr><td id="picker-bindchange">bindchange</td> <td>eventhandle</td> <td></td> <td>value 改变时触发 change 事件，event.detail = {value}</td> <td></td></tr> <tr><td id="picker-bindcolumnchange">bindcolumnchange</td> <td>eventhandle</td> <td></td> <td>列改变时触发</td> <td></td></tr></tbody></table></div><h4 id="时间选择器：mode-time"><a href="#时间选择器：mode-time" aria-hidden="true" class="header-anchor">#</a> 时间选择器：mode = time</h4> <div class="table-wrp"><table><thead><tr><th>属性名</th> <th>类型</th> <th>默认值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td id="picker-value">value</td> <td>string</td> <td></td> <td>表示选中的时间，格式为"hh:mm"</td> <td></td></tr> <tr><td id="picker-start">start</td> <td>string</td> <td></td> <td>表示有效时间范围的开始，字符串格式为"hh:mm"</td> <td></td></tr> <tr><td id="picker-end">end</td> <td>string</td> <td></td> <td>表示有效时间范围的结束，字符串格式为"hh:mm"</td> <td></td></tr> <tr><td id="picker-bindchange">bindchange</td> <td>eventhandle</td> <td></td> <td>value 改变时触发 change 事件，event.detail = {value}</td> <td></td></tr></tbody></table></div><h4 id="日期选择器：mode-date"><a href="#日期选择器：mode-date" aria-hidden="true" class="header-anchor">#</a> 日期选择器：mode = date</h4> <div class="table-wrp"><table><thead><tr><th>属性名</th> <th>类型</th> <th>默认值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td id="picker-value">value</td> <td>string</td> <td>当天</td> <td>表示选中的日期，格式为"YYYY-MM-DD"</td> <td></td></tr> <tr><td id="picker-start">start</td> <td>string</td> <td></td> <td>表示有效日期范围的开始，字符串格式为"YYYY-MM-DD"</td> <td></td></tr> <tr><td id="picker-end">end</td> <td>string</td> <td></td> <td>表示有效日期范围的结束，字符串格式为"YYYY-MM-DD"</td> <td></td></tr> <tr><td id="picker-fields">fields</td> <td>string</td> <td>day</td> <td>有效值 year,month,day，表示选择器的粒度</td> <td></td></tr> <tr><td id="picker-bindchange">bindchange</td> <td>eventhandle</td> <td></td> <td>value 改变时触发 change 事件，event.detail = {value}</td> <td></td></tr></tbody></table></div><p><em>fields 有效值：</em>*</p> <div class="table-wrp"><table><thead><tr><th>值</th> <th>说明</th></tr></thead> <tbody><tr><td>year</td> <td>选择器粒度为年</td></tr> <tr><td>month</td> <td>选择器粒度为月份</td></tr> <tr><td>day</td> <td>选择器粒度为天</td></tr></tbody></table></div><h4 id="省市区选择器：mode-region-1-4-0"><a href="#省市区选择器：mode-region-1-4-0" aria-hidden="true" class="header-anchor">#</a> 省市区选择器：mode = region <a href="../framework/compatibility.html">1.4.0</a></h4> <div class="table-wrp"><table><thead><tr><th>属性名</th> <th>类型</th> <th>默认值</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td id="picker-value">value</td> <td>array</td> <td>[]</td> <td>表示选中的省市区，默认选中每一列的第一个值</td> <td></td></tr> <tr><td id="picker-custom-item">custom-item</td> <td>string</td> <td></td> <td>可为每一列的顶部添加一个自定义的项</td> <td><a href="../framework/compatibility.html">1.5.0</a></td></tr> <tr><td id="picker-bindchange">bindchange</td> <td>eventhandle</td> <td></td> <td>value 改变时触发 change 事件，event.detail = {value, code, postcode}，其中字段 code 是统计用区划代码，postcode 是邮政编码</td> <td></td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <p><a href="https://developers.weixin.qq.com/s/pZb21cmH6qYX" title="在开发者工具中预览效果" target="_blank" rel="noopener noreferrer">在开发者工具中预览效果<span></span></a></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section__title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>普通选择器<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picker</span> <span class="token attr-name">bindchange</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindPickerChange<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{index}}<span class="token punctuation">"</span></span> <span class="token attr-name">range</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{array}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>picker<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      当前选择：{{array[index]}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picker</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section__title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>多列选择器<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picker</span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>multiSelector<span class="token punctuation">"</span></span> <span class="token attr-name">bindchange</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindMultiPickerChange<span class="token punctuation">"</span></span> <span class="token attr-name">bindcolumnchange</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindMultiPickerColumnChange<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{multiIndex}}<span class="token punctuation">"</span></span> <span class="token attr-name">range</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{multiArray}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>picker<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picker</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section__title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>时间选择器<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picker</span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>time<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{time}}<span class="token punctuation">"</span></span> <span class="token attr-name">start</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>09:01<span class="token punctuation">"</span></span> <span class="token attr-name">end</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>21:01<span class="token punctuation">"</span></span> <span class="token attr-name">bindchange</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindTimeChange<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>picker<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      当前选择: {{time}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picker</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x65E5;&#x671F;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
-    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;date&quot;</span>
-    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{date}}&quot;</span>
-    <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;2015-09-01&quot;</span>
-    <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;2017-09-01&quot;</span>
-    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindDateChange&quot;</span>
-  &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;: {{date}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x7701;&#x5E02;&#x533A;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
-    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;region&quot;</span>
-    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindRegionChange&quot;</span>
-    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{region}}&quot;</span>
-    <span class="hljs-attr">custom-item</span>=<span class="hljs-string">&quot;{{customItem}}&quot;</span>
-  &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;&#xFF1A;{{region[0]}}&#xFF0C;{{region[1]}}&#xFF0C;{{region[2]}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-</code></pre>
-<pre><code class="language-js">Page({
-  <span class="hljs-attr">data</span>: {
-    <span class="hljs-attr">array</span>: [<span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>, <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>, <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>],
-    <span class="hljs-attr">objectArray</span>: [
-      {
-        <span class="hljs-attr">id</span>: <span class="hljs-number">0</span>,
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>
-      },
-      {
-        <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>
-      },
-      {
-        <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>
-      },
-      {
-        <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>,
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>
-      }
-    ],
-    <span class="hljs-attr">index</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">multiArray</span>: [[<span class="hljs-string">&apos;&#x65E0;&#x810A;&#x67F1;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x810A;&#x67F1;&#x52A8;&#x7269;&apos;</span>], [<span class="hljs-string">&apos;&#x6241;&#x6027;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x7EBF;&#x5F62;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x73AF;&#x8282;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8F6F;&#x4F53;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8282;&#x80A2;&#x52A8;&#x7269;&apos;</span>], [<span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>]],
-    <span class="hljs-attr">objectMultiArray</span>: [
-      [
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">0</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x65E0;&#x810A;&#x67F1;&#x52A8;&#x7269;&apos;</span>
-        },
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x810A;&#x67F1;&#x52A8;&#x7269;&apos;</span>
-        }
-      ], [
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">0</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x6241;&#x6027;&#x52A8;&#x7269;&apos;</span>
-        },
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x7EBF;&#x5F62;&#x52A8;&#x7269;&apos;</span>
-        },
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x73AF;&#x8282;&#x52A8;&#x7269;&apos;</span>
-        },
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x8F6F;&#x4F53;&#x52A8;&#x7269;&apos;</span>
-        },
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x8282;&#x80A2;&#x52A8;&#x7269;&apos;</span>
-        }
-      ], [
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">0</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>
-        },
-        {
-          <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
-          <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>
-        }
-      ]
-    ],
-    <span class="hljs-attr">multiIndex</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
-    <span class="hljs-attr">date</span>: <span class="hljs-string">&apos;2016-09-01&apos;</span>,
-    <span class="hljs-attr">time</span>: <span class="hljs-string">&apos;12:01&apos;</span>,
-    <span class="hljs-attr">region</span>: [<span class="hljs-string">&apos;&#x5E7F;&#x4E1C;&#x7701;&apos;</span>, <span class="hljs-string">&apos;&#x5E7F;&#x5DDE;&#x5E02;&apos;</span>, <span class="hljs-string">&apos;&#x6D77;&#x73E0;&#x533A;&apos;</span>],
-    <span class="hljs-attr">customItem</span>: <span class="hljs-string">&apos;&#x5168;&#x90E8;&apos;</span>
-  },
-  bindPickerChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
-    <span class="hljs-keyword">this</span>.setData({
-      <span class="hljs-attr">index</span>: e.detail.value
-    })
-  },
-  bindMultiPickerChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
-    <span class="hljs-keyword">this</span>.setData({
-      <span class="hljs-attr">multiIndex</span>: e.detail.value
-    })
-  },
-  bindMultiPickerColumnChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4FEE;&#x6539;&#x7684;&#x5217;&#x4E3A;&apos;</span>, e.detail.column, <span class="hljs-string">&apos;&#xFF0C;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
-    <span class="hljs-keyword">const</span> data = {
-      <span class="hljs-attr">multiArray</span>: <span class="hljs-keyword">this</span>.data.multiArray,
-      <span class="hljs-attr">multiIndex</span>: <span class="hljs-keyword">this</span>.data.multiIndex
-    }
-    data.multiIndex[e.detail.column] = e.detail.value
-    <span class="hljs-keyword">switch</span> (e.detail.column) {
-      <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-        <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">0</span>]) {
-          <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-            data.multiArray[<span class="hljs-number">1</span>] = [<span class="hljs-string">&apos;&#x6241;&#x6027;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x7EBF;&#x5F62;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x73AF;&#x8282;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8F6F;&#x4F53;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8282;&#x80A2;&#x52A8;&#x7269;&apos;</span>]
-            data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>]
-            <span class="hljs-keyword">break</span>
-          <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-            data.multiArray[<span class="hljs-number">1</span>] = [<span class="hljs-string">&apos;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x4E24;&#x6816;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x722C;&#x884C;&#x52A8;&#x7269;&apos;</span>]
-            data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9CAB;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x5E26;&#x9C7C;&apos;</span>]
-            <span class="hljs-keyword">break</span>
-        }
-        data.multiIndex[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
-        data.multiIndex[<span class="hljs-number">2</span>] = <span class="hljs-number">0</span>
-        <span class="hljs-keyword">break</span>
-      <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-        <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">0</span>]) {
-          <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-            <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">1</span>]) {
-              <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-              <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x86D4;&#x866B;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-              <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x8682;&#x8681;&apos;</span>, <span class="hljs-string">&apos;&#x8682;&#x87E5;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-              <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x6CB3;&#x868C;&apos;</span>, <span class="hljs-string">&apos;&#x8717;&#x725B;&apos;</span>, <span class="hljs-string">&apos;&#x86DE;&#x8753;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-              <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x6606;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x7532;&#x58F3;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x86DB;&#x5F62;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x591A;&#x8DB3;&#x52A8;&#x7269;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-            }
-            <span class="hljs-keyword">break</span>
-          <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-            <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">1</span>]) {
-              <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9CAB;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x5E26;&#x9C7C;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-              <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9752;&#x86D9;&apos;</span>, <span class="hljs-string">&apos;&#x5A03;&#x5A03;&#x9C7C;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-              <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x8725;&#x8734;&apos;</span>, <span class="hljs-string">&apos;&#x9F9F;&apos;</span>, <span class="hljs-string">&apos;&#x58C1;&#x864E;&apos;</span>]
-                <span class="hljs-keyword">break</span>
-            }
-            <span class="hljs-keyword">break</span>
-        }
-        data.multiIndex[<span class="hljs-number">2</span>] = <span class="hljs-number">0</span>
-        <span class="hljs-keyword">break</span>
-    }
-    <span class="hljs-built_in">console</span>.log(data.multiIndex)
-    <span class="hljs-keyword">this</span>.setData(data)
-  },
-  bindDateChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
-    <span class="hljs-keyword">this</span>.setData({
-      <span class="hljs-attr">date</span>: e.detail.value
-    })
-  },
-  bindTimeChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
-    <span class="hljs-keyword">this</span>.setData({
-      <span class="hljs-attr">time</span>: e.detail.value
-    })
-  },
-  bindRegionChange(e) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
-    <span class="hljs-keyword">this</span>.setData({
-      <span class="hljs-attr">region</span>: e.detail.value
-    })
-  }
-})
-</code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/picker.png?t=19031317" alt="picker" onerror="this.src !== &apos;../image/pic/picker.png?t=19031317&apos; &amp;&amp; (this.src = &apos;../image/pic/picker.png?t=19031317&apos;)"></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section__title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>日期选择器<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picker</span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>date<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{date}}<span class="token punctuation">"</span></span> <span class="token attr-name">start</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2015-09-01<span class="token punctuation">"</span></span> <span class="token attr-name">end</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2017-09-01<span class="token punctuation">"</span></span> <span class="token attr-name">bindchange</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindDateChange<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>picker<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      当前选择: {{date}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picker</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section__title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>省市区选择器<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picker</span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>region<span class="token punctuation">"</span></span> <span class="token attr-name">bindchange</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bindRegionChange<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{region}}<span class="token punctuation">"</span></span> <span class="token attr-name">custom-item</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{customItem}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>picker<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picker</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    array<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'美国'</span><span class="token punctuation">,</span> <span class="token string">'中国'</span><span class="token punctuation">,</span> <span class="token string">'巴西'</span><span class="token punctuation">,</span> <span class="token string">'日本'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    objectArray<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'美国'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'中国'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'巴西'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'日本'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    index<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    multiArray<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'无脊柱动物'</span><span class="token punctuation">,</span> <span class="token string">'脊柱动物'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'扁性动物'</span><span class="token punctuation">,</span> <span class="token string">'线形动物'</span><span class="token punctuation">,</span> <span class="token string">'环节动物'</span><span class="token punctuation">,</span> <span class="token string">'软体动物'</span><span class="token punctuation">,</span> <span class="token string">'节肢动物'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'猪肉绦虫'</span><span class="token punctuation">,</span> <span class="token string">'吸血虫'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    objectMultiArray<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'无脊柱动物'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'脊柱动物'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'扁性动物'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'线形动物'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'环节动物'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'软体动物'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'节肢动物'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'猪肉绦虫'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'吸血虫'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    multiIndex<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    date<span class="token punctuation">:</span> <span class="token string">'2016-09-01'</span><span class="token punctuation">,</span>
+    time<span class="token punctuation">:</span> <span class="token string">'12:01'</span><span class="token punctuation">,</span>
+    region<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'广东省'</span><span class="token punctuation">,</span> <span class="token string">'广州市'</span><span class="token punctuation">,</span> <span class="token string">'海珠区'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    customItem<span class="token punctuation">:</span> <span class="token string">'全部'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">bindPickerChange</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'picker发送选择改变，携带值为'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      index<span class="token punctuation">:</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">bindMultiPickerChange</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'picker发送选择改变，携带值为'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      multiIndex<span class="token punctuation">:</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">bindMultiPickerColumnChange</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'修改的列为'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>column<span class="token punctuation">,</span> <span class="token string">'，值为'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+      multiArray<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>multiArray<span class="token punctuation">,</span>
+      multiIndex<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>multiIndex
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>column<span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>column<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'扁性动物'</span><span class="token punctuation">,</span> <span class="token string">'线形动物'</span><span class="token punctuation">,</span> <span class="token string">'环节动物'</span><span class="token punctuation">,</span> <span class="token string">'软体动物'</span><span class="token punctuation">,</span> <span class="token string">'节肢动物'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'猪肉绦虫'</span><span class="token punctuation">,</span> <span class="token string">'吸血虫'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'鱼'</span><span class="token punctuation">,</span> <span class="token string">'两栖动物'</span><span class="token punctuation">,</span> <span class="token string">'爬行动物'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'鲫鱼'</span><span class="token punctuation">,</span> <span class="token string">'带鱼'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">switch</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'猪肉绦虫'</span><span class="token punctuation">,</span> <span class="token string">'吸血虫'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'蛔虫'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'蚂蚁'</span><span class="token punctuation">,</span> <span class="token string">'蚂蟥'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'河蚌'</span><span class="token punctuation">,</span> <span class="token string">'蜗牛'</span><span class="token punctuation">,</span> <span class="token string">'蛞蝓'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'昆虫'</span><span class="token punctuation">,</span> <span class="token string">'甲壳动物'</span><span class="token punctuation">,</span> <span class="token string">'蛛形动物'</span><span class="token punctuation">,</span> <span class="token string">'多足动物'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token keyword">switch</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'鲫鱼'</span><span class="token punctuation">,</span> <span class="token string">'带鱼'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'青蛙'</span><span class="token punctuation">,</span> <span class="token string">'娃娃鱼'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                data<span class="token punctuation">.</span>multiArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'蜥蜴'</span><span class="token punctuation">,</span> <span class="token string">'龟'</span><span class="token punctuation">,</span> <span class="token string">'壁虎'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>multiIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">bindDateChange</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'picker发送选择改变，携带值为'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      date<span class="token punctuation">:</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">bindTimeChange</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'picker发送选择改变，携带值为'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      time<span class="token punctuation">:</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">bindRegionChange</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'picker发送选择改变，携带值为'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      region<span class="token punctuation">:</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/picker.d20573a8.png" alt=""></p></div></div> <!---->    
 
 
 </body></html>

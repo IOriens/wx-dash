@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>FileSystemManager.renameSync</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>FileSystemManager.renameSync(string oldPath, string newPath)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,44 +12,6 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="filesystemmanagerrenamesyncstring-oldpath-string-newpath">FileSystemManager.renameSync(string oldPath, string newPath)</h3>
-<p><a href="FileSystemManager.rename.html">FileSystemManager.rename</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-oldpath">string oldPath</h5>
-<p>&#x6E90;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x666E;&#x901A;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</p>
-<h5 id="string-newpath">string newPath</h5>
-<p>&#x65B0;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
-<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
-<table>
-<thead>
-<tr>
-<th>&#x9519;&#x8BEF;&#x7801;</th>
-<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>fail permission denied, rename ${oldPath} -&gt; ${newPath}</td>
-<td>&#x6307;&#x5B9A;&#x6E90;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x5199;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td></td>
-<td>fail no such file or directory, rename ${oldPath} -&gt; ${newPath}</td>
-<td>&#x6E90;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6216;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x4E0A;&#x5C42;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;</td>
-</tr>
-</tbody>
-</table>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="FileSystemManager-renameSync-string-oldPath-string-newPath"><a href="#FileSystemManager-renameSync-string-oldPath-string-newPath" aria-hidden="true" class="header-anchor">#</a> FileSystemManager.renameSync(string oldPath, string newPath)</h1> <p><a href="FileSystemManager.rename.html">FileSystemManager.rename</a> 的同步版本</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-oldPath"><a href="#string-oldPath" aria-hidden="true" class="header-anchor">#</a> string oldPath</h3> <p>源文件路径，支持本地路径</p> <h3 id="string-newPath"><a href="#string-newPath" aria-hidden="true" class="header-anchor">#</a> string newPath</h3> <p>新文件路径，支持本地路径</p> <h2 id="错误"><a href="#错误" aria-hidden="true" class="header-anchor">#</a> 错误</h2> <div class="table-wrp"><table><thead><tr><th>错误码</th> <th>错误信息</th> <th>说明</th></tr></thead> <tbody><tr><td></td> <td>fail permission denied, rename ${oldPath} -&gt; ${newPath}</td> <td>指定源文件或目标文件没有写权限</td></tr> <tr><td></td> <td>fail no such file or directory, rename ${oldPath} -&gt; ${newPath}</td> <td>源文件不存在，或目标文件路径的上层目录不存在</td></tr></tbody></table></div></div></div> <!---->    
 </body>
 </html>

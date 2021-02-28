@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>数据绑定</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="数据绑定"><a href="#数据绑定" aria-hidden="true" class="header-anchor">#</a> 数据绑定</h1> <p>WXML 中的动态数据均来自对应 Page 的 data。</p> <h2 id="简单绑定"><a href="#简单绑定" aria-hidden="true" class="header-anchor">#</a> 简单绑定</h2> <p>数据绑定使用 Mustache 语法（双大括号）将变量包起来，可以作用于：</p> <h3 id="内容"><a href="#内容" aria-hidden="true" class="header-anchor">#</a> 内容</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> {{ message }} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    message<span class="token punctuation">:</span> <span class="token string">'Hello MINA!'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="组件属性-需要在双引号之内"><a href="#组件属性-需要在双引号之内" aria-hidden="true" class="header-anchor">#</a> 组件属性(需要在双引号之内)</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-{{id}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="控制属性-需要在双引号之内"><a href="#控制属性-需要在双引号之内" aria-hidden="true" class="header-anchor">#</a> 控制属性(需要在双引号之内)</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{condition}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    condition<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="关键字-需要在双引号之内"><a href="#关键字-需要在双引号之内" aria-hidden="true" class="header-anchor">#</a> 关键字(需要在双引号之内)</h3> <p><code>true</code>：boolean 类型的 true，代表真值。</p> <p><code>false</code>： boolean 类型的 false，代表假值。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checkbox</span> <span class="token attr-name">checked</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{false}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>checkbox</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><em><strong>特别注意：不要直接写 <code>checked="false"</code>，其计算结果是一个字符串，转成 boolean 类型后代表真值。</strong></em></p> <h2 id="运算"><a href="#运算" aria-hidden="true" class="header-anchor">#</a> 运算</h2> <p>可以在 <code>{{}}</code> 内进行简单的运算，支持的有如下几种方式：</p> <h3 id="三元运算"><a href="#三元运算" aria-hidden="true" class="header-anchor">#</a> 三元运算</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">hidden</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{flag ? true : false}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> Hidden <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="算数运算"><a href="#算数运算" aria-hidden="true" class="header-anchor">#</a> 算数运算</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span> {{a + b}} + {{c}} + d <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    c<span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>view中的内容为 <code>3 + 3 + d</code>。</p> <h3 id="逻辑判断"><a href="#逻辑判断" aria-hidden="true" class="header-anchor">#</a> 逻辑判断</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{length &gt; 5}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="字符串运算"><a href="#字符串运算" aria-hidden="true" class="header-anchor">#</a> 字符串运算</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>{{"hello" + name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'MINA'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="数据路径运算"><a href="#数据路径运算" aria-hidden="true" class="header-anchor">#</a> 数据路径运算</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>{{object.key}} {{array[0]}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    object<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      key<span class="token punctuation">:</span> <span class="token string">'Hello '</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    array<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'MINA'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="组合"><a href="#组合" aria-hidden="true" class="header-anchor">#</a> 组合</h2> <p>也可以在 Mustache 内直接进行组合，构成新的对象或者数组。</p> <h3 id="数组"><a href="#数组" aria-hidden="true" class="header-anchor">#</a> 数组</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{[zero, 1, 2, 3, 4]}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> {{item}} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    zero<span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>最终组合成数组<code>[0, 1, 2, 3, 4]</code>。</p> <h3 id="对象"><a href="#对象" aria-hidden="true" class="header-anchor">#</a> 对象</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>objectCombine<span class="token punctuation">"</span></span> <span class="token attr-name">data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{for: a, bar: b}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>最终组合成的对象是 <code>{for: 1, bar: 2}</code></p> <p>也可以用扩展运算符 <code>...</code> 来将一个对象展开</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>objectCombine<span class="token punctuation">"</span></span> <span class="token attr-name">data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{...obj1, ...obj2, e: 5}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    obj1<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      b<span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    obj2<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      c<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      d<span class="token punctuation">:</span> <span class="token number">4</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>最终组合成的对象是 <code>{a: 1, b: 2, c: 3, d: 4, e: 5}</code>。</p> <p>如果对象的 key 和 value 相同，也可以间接地表达。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>objectCombine<span class="token punctuation">"</span></span> <span class="token attr-name">data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{foo, bar}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    foo<span class="token punctuation">:</span> <span class="token string">'my-foo'</span><span class="token punctuation">,</span>
+    bar<span class="token punctuation">:</span> <span class="token string">'my-bar'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>最终组合成的对象是 <code>{foo: 'my-foo', bar:'my-bar'}</code>。</p> <p><strong>注意</strong>：上述方式可以随意组合，但是如有存在变量名相同的情况，后边的会覆盖前面，如：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>objectCombine<span class="token punctuation">"</span></span> <span class="token attr-name">data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{...obj1, ...obj2, a, c: 6}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    obj1<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      b<span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    obj2<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      b<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      c<span class="token punctuation">:</span> <span class="token number">4</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    a<span class="token punctuation">:</span> <span class="token number">5</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>最终组合成的对象是 <code>{a: 5, b: 3, c: 6}</code>。</p> <p><strong>注意：</strong> 花括号和引号之间如果有空格，将最终被解析成为字符串</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{[1,2,3]}} <span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  {{item}}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>等同于</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{[1,2,3] + ' '}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  {{item}}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

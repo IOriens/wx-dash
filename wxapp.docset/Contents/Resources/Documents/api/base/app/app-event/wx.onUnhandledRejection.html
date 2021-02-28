@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.onUnhandledRejection(function callback)</title>
+  <link rel="stylesheet" href="../../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="wx-onUnhandledRejection-function-callback"><a href="#wx-onUnhandledRejection-function-callback" aria-hidden="true" class="header-anchor">#</a> wx.onUnhandledRejection(function callback)</h1> <blockquote><p>基础库 2.10.0 开始支持，低版本需做<a href="../../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>监听未处理的 Promise 拒绝事件。该事件与 <code>App.onUnhandledRejection</code> 的回调时机与参数一致。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="function-callback"><a href="#function-callback" aria-hidden="true" class="header-anchor">#</a> function callback</h3> <p>未处理的 Promise 拒绝事件的回调函数</p> <h4 id="参数-2"><a href="#参数-2" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-res"><a href="#Object-res" aria-hidden="true" class="header-anchor">#</a> Object res</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>reason</td> <td>string</td> <td>拒绝原因，一般是一个 Error 对象</td></tr> <tr><td>promise</td> <td>Promise.&lt;any&gt;</td> <td>被拒绝的 Promise 对象</td></tr></tbody></table></div><h2 id="注意"><a href="#注意" aria-hidden="true" class="header-anchor">#</a> 注意</h2> <ul><li>安卓平台暂时不支持该事件</li> <li>所有的 unhandledRejection 都可以被这一监听捕获，但只有 Error 类型的才会在小程序后台触发报警。</li></ul></div></div> <!---->    
+</body>
+</html>

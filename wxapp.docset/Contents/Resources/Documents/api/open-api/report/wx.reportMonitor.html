@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.reportMonitor(string name, number value)</title>
+  <link rel="stylesheet" href="../../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h1 id="wx-reportMonitor-string-name-number-value"><a href="#wx-reportMonitor-string-name-number-value" aria-hidden="true" class="header-anchor">#</a> wx.reportMonitor(string name, number value)</h1> <blockquote><p>基础库 2.0.1 开始支持，低版本需做<a href="../../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>自定义业务数据监控上报接口。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-name"><a href="#string-name" aria-hidden="true" class="header-anchor">#</a> string name</h3> <p>监控ID，在「小程序管理后台」新建数据指标后获得</p> <h3 id="number-value"><a href="#number-value" aria-hidden="true" class="header-anchor">#</a> number value</h3> <p>上报数值，经处理后会在「小程序管理后台」上展示每分钟的上报总量</p> <h2 id="使用说明"><a href="#使用说明" aria-hidden="true" class="header-anchor">#</a> 使用说明</h2> <p>使用前，需要在「小程序管理后台-运维中心-性能监控-业务数据监控」中新建监控事件，配置监控描述与告警类型。每一个监控事件对应唯一的监控ID，开发者最多可以创建128个监控事件。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">reportMonitor</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>

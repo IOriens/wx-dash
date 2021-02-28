@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.measureText</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>Object CanvasContext.measureText(string text)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,49 +12,12 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="object-canvascontextmeasuretextstring-text">Object CanvasContext.measureText(string text)</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
-<p>&#x6D4B;&#x91CF;&#x6587;&#x672C;&#x5C3A;&#x5BF8;&#x4FE1;&#x606F;&#x3002;&#x76EE;&#x524D;&#x4EC5;&#x8FD4;&#x56DE;&#x6587;&#x672C;&#x5BBD;&#x5EA6;&#x3002;&#x540C;&#x6B65;&#x63A5;&#x53E3;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-text">string text</h5>
-<p>&#x8981;&#x6D4B;&#x91CF;&#x7684;&#x6587;&#x672C;</p>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="object">Object</h5>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>width</td>
-<td>number</td>
-<td>&#x6587;&#x672C;&#x7684;&#x5BBD;&#x5EA6;</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.font = <span class="hljs-string">&apos;italic bold 20px cursive&apos;</span>
-<span class="hljs-keyword">const</span> metrics = ctx.measureText(<span class="hljs-string">&apos;Hello World&apos;</span>)
-<span class="hljs-built_in">console</span>.log(metrics.width)
-</code></pre>
+   <div id="docContent"><div class="content custom"><h1 id="Object-CanvasContext-measureText-string-text"><a href="#Object-CanvasContext-measureText-string-text" aria-hidden="true" class="header-anchor">#</a> Object CanvasContext.measureText(string text)</h1> <blockquote><p>基础库 1.9.90 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>测量文本尺寸信息。目前仅返回文本宽度。同步接口。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="string-text"><a href="#string-text" aria-hidden="true" class="header-anchor">#</a> string text</h3> <p>要测量的文本</p> <h2 id="返回值"><a href="#返回值" aria-hidden="true" class="header-anchor">#</a> 返回值</h2> <h3 id="Object"><a href="#Object" aria-hidden="true" class="header-anchor">#</a> Object</h3> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>width</td> <td>number</td> <td>文本的宽度</td></tr></tbody></table></div><h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+  <span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+  ctx<span class="token punctuation">.</span>font <span class="token operator">=</span> <span class="token string">'italic bold 20px cursive'</span>
+  <span class="token keyword">const</span> metrics <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">measureText</span><span class="token punctuation">(</span><span class="token string">'Hello World'</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>metrics<span class="token punctuation">.</span>width<span class="token punctuation">)</span>
 
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+</code></pre></div></div></div> <!---->    
 </body>
 </html>

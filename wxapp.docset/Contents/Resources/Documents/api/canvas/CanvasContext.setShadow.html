@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>CanvasContext.setShadow</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <title>CanvasContext.setShadow(number offsetX, number offsetY, number blur, string color)</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -12,34 +12,11 @@
   </style>
 </head>
 <body>
-  
-                    <div id="book-search-results">
-                        <div class="search-noresults">
-                            <section class="normal markdown-section">
-                              <h3 id="canvascontextsetshadownumber-offsetx-number-offsety-number-blur-string-color">CanvasContext.setShadow(number offsetX, number offsetY, number blur, string color)</h3>
-<p>&#x8BBE;&#x5B9A;&#x9634;&#x5F71;&#x6837;&#x5F0F;&#x3002;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="number-offsetx">number offsetX</h5>
-<p>&#x9634;&#x5F71;&#x76F8;&#x5BF9;&#x4E8E;&#x5F62;&#x72B6;&#x5728;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#x3002;</p>
-<h5 id="number-offsety">number offsetY</h5>
-<p>&#x9634;&#x5F71;&#x76F8;&#x5BF9;&#x4E8E;&#x5F62;&#x72B6;&#x5728;&#x7AD6;&#x76F4;&#x65B9;&#x5411;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#x3002;</p>
-<h5 id="number-blur">number blur</h5>
-<p>&#x9634;&#x5F71;&#x7684;&#x6A21;&#x7CCA;&#x7EA7;&#x522B;&#xFF0C;&#x6570;&#x503C;&#x8D8A;&#x5927;&#x8D8A;&#x6A21;&#x7CCA;&#x3002;&#x8303;&#x56F4; 0- 100&#x3002;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#x3002;</p>
-<h5 id="string-color">string color</h5>
-<p>&#x9634;&#x5F71;&#x7684;&#x989C;&#x8272;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; black&#x3002;</p>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
-ctx.setShadow(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-string">&apos;blue&apos;</span>)
-ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
-ctx.draw()
-</code></pre>
-<p><img src="../../image/canvas/shadow.png" alt=""></p>
-
-                            </section>
-                        </div>
-                        
-                    </div>
-                
+   <div id="docContent"><div class="content custom"><h1 id="CanvasContext-setShadow-number-offsetX-number-offsetY-number-blur-string-color"><a href="#CanvasContext-setShadow-number-offsetX-number-offsetY-number-blur-string-color" aria-hidden="true" class="header-anchor">#</a> CanvasContext.setShadow(number offsetX, number offsetY, number blur, string color)</h1> <blockquote><p>从基础库 <a href="../../framework/compatibility.html">1.9.90</a> 开始，本接口停止维护，请使用 <a href="CanvasContext.html">CanvasContext.shadowOffsetX|CanvasContext.shadowOffsetY|CanvasContext.shadowColor|CanvasContext.shadowBlur</a> 代替</p></blockquote> <p>设定阴影样式。</p> <h2 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h2> <h3 id="number-offsetX"><a href="#number-offsetX" aria-hidden="true" class="header-anchor">#</a> number offsetX</h3> <p>阴影相对于形状在水平方向的偏移，默认值为 0。</p> <h3 id="number-offsetY"><a href="#number-offsetY" aria-hidden="true" class="header-anchor">#</a> number offsetY</h3> <p>阴影相对于形状在竖直方向的偏移，默认值为 0。</p> <h3 id="number-blur"><a href="#number-blur" aria-hidden="true" class="header-anchor">#</a> number blur</h3> <p>阴影的模糊级别，数值越大越模糊。范围 0- 100。，默认值为 0。</p> <h3 id="string-color"><a href="#string-color" aria-hidden="true" class="header-anchor">#</a> string color</h3> <p>阴影的颜色。默认值为 black。</p> <h2 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'myCanvas'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setFillStyle</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">setShadow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+ctx<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/shadow.744997d7.png" alt=""></p></div></div> <!---->    
 </body>
 </html>

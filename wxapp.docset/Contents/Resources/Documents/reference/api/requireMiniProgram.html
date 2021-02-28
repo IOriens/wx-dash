@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>any requireMiniProgram()</title>
+  <link rel="stylesheet" href="../../../../../../style.css" />
+  <link rel="stylesheet" href="../../../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+   <div id="docContent"><div class="content custom"><h3 id="any-requireMiniProgram"><a href="#any-requireMiniProgram" aria-hidden="true" class="header-anchor">#</a> any requireMiniProgram()</h3> <blockquote><p>基础库 2.11.1 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a>。</p></blockquote> <p>插件引入当前使用者小程序。返回使用者小程序通过插件配置中 <code>export</code> 暴露的接口。参考 <a href="../../framework/plugin/using.html#%E5%AF%BC%E5%87%BA%E5%88%B0%E6%8F%92%E4%BB%B6">使用插件 - 导出到插件</a></p> <p><strong>该接口仅在插件中存在。</strong></p> <h4 id="参数"><a href="#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <blockquote><p>该接口不需要参数</p></blockquote> <h4 id="示例代码"><a href="#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// in plugin</span>
+<span class="token keyword">var</span> mp <span class="token operator">=</span> <span class="token function">requireMiniProgram</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>mp<span class="token punctuation">.</span>whoami<span class="token punctuation">)</span>  <span class="token comment">// 'Wechat MiniProgram'</span>
+</code></pre></div></div></div> <!---->    
+</body>
+</html>
